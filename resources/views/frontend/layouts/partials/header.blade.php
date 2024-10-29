@@ -30,7 +30,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a class="dropdown-item" href="{{ route('product', 'truspam') }}">
+                                    <a class="dropdown-item" href="{{ route('product', 'epostu') }}">
                                         EposTu
                                     </a>
                                 </li>

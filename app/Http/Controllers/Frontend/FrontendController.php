@@ -19,7 +19,11 @@ class FrontendController extends Controller
 
     public function products($slug)
     {
-        dd($slug);
+        if($slug == 'epostu') {
+            return view('frontend.epostu');
+        } else {
+            return view('frontend.product-details');
+        }
     }
     
     public function knowledge($slug)
