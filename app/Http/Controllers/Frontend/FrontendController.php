@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Mail\PHPMailerService;
-use Illuminate\Http\Request;
 use App\Models\Partner;
-use App\Models\ContactMessage;
 use App\Models\Newsletter;
+use App\Models\SupportFAQ;
+use Illuminate\Http\Request;
+use App\Mail\PHPMailerService;
+use App\Models\ContactMessage;
 use App\Http\Controllers\Controller;
 
 class FrontendController extends Controller
@@ -37,7 +38,8 @@ class FrontendController extends Controller
 
     public function support()
     {
-        return view('frontend.support');
+        $faqs = SupportFAQ::where('status', 1)->orderBy('id', 'DESC')->get();
+        return view('frontend.support', compact('faqs'));
     }
 
     public function contact()

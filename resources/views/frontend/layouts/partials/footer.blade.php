@@ -3,7 +3,8 @@
         <div class="row mb-8">
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="fs-16 text-uppercase text-primary mb-3">Stay Informed</h2>
-                <h3 class="display-4 mb-0">Get the latest updates and tips straight to your inbox. Subscribe to our newsletter today.</h3>
+                {{-- <h3 class="display-4 mb-0">Get the latest updates and tips straight to your inbox. Subscribe to our newsletter today.</h3> --}}
+                <h3 class="display-4 mb-0">Subscribe to our newsletter today.</h3>
             </div>
         </div>
 
@@ -34,7 +35,7 @@
             <div class="col-lg-4">
                 <div class="widget">
                     <img class="mb-4" src="{{ asset('assets/images/logo.png') }}" srcset="{{ asset('assets/images/logo.png') }}" alt="Footer loto">
-                    <p class="lead mb-0">We are trusted by over 5000+ clients. Join them by using our services and grow your business.</p>
+                    <p class="lead mb-0">{{ get_settings('footer_content') }}</p>
                 </div>
             </div>
             <div class="col-lg-3 offset-lg-2">
@@ -47,7 +48,7 @@
                         </div>
                         <div>
                             <h5 class="mb-1">Phone</h5>
-                            <p class="mb-0">00 (123) 456 78 90 <br>00 (987) 654 32 10</p>
+                            <p class="mb-0">{{ get_settings('footer_phone_one') }} <br>{{ get_settings('footer_phone_two') }}</p>
                         </div>
                     </div>
                 </div>
@@ -61,7 +62,7 @@
                         </div>
                         <div class="align-self-start justify-content-start">
                             <h5 class="mb-1">Address</h5>
-                            <address>Moonshine St. 14/05 Light City, London, United Kingdom</address>
+                            <address>{{ get_settings('footer_address') }}</address>
                         </div>
                     </div>
                 </div>
@@ -72,11 +73,31 @@
         <div class="d-md-flex align-items-center justify-content-between">
             <p class="mb-2 mb-lg-0">© {{ date('Y') }} Epostu. All rights reserved.</p>
             <nav class="nav social social-muted mb-0 text-md-end">
-                <a href="#"><i class="uil uil-twitter"></i></a>
-                <a href="#"><i class="uil uil-facebook-f"></i></a>
-                <a href="#"><i class="uil uil-dribbble"></i></a>
-                <a href="#"><i class="uil uil-instagram"></i></a>
-                <a href="#"><i class="uil uil-youtube"></i></a>
+                @if (get_settings('facebook_link'))
+                    <a href="{{ get_settings('facebook_link') }}" target="_blank">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+                @endif
+                @if (get_settings('twitter_link'))
+                    <a href="{{ get_settings('twitter_link') }}" target="_blank">
+                        <i class="uil uil-twitter"></i>
+                    </a>
+                @endif
+                @if (get_settings('linkedin_link'))
+                    <a href="{{ get_settings('linkedin_link') }}" target="_blank">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                @endif
+                @if (get_settings('instagram_link'))
+                    <a href="{{ get_settings('instagram_link') }}" target="_blank">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                @endif
+                @if (get_settings('youtube_link'))
+                    <a href="{{ get_settings('youtube_link') }}" target="_blank">
+                        <i class="uil uil-youtube"></i>
+                    </a>
+                @endif
             </nav>
         </div>
     </div>

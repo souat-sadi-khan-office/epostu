@@ -15,9 +15,53 @@
                 <li>
                     <a href="{{ route('admin.dashboard') }}">
                         <i class="ri-dashboard-line"></i>
-                        <span>Widgets</span>
+                        <span>Dashboard</span>
                     </a>
-                </li>                                          
+                </li>
+
+                <li class="vertical-header">Data</li>  
+                <li>
+                    <a href="{{ route('admin.report.partner') }}">
+                        <i class="ri-group-line"></i>
+                        <span>Partners</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('admin.report.contact-message') }}">
+                        <i class="ri-contacts-line"></i>
+                        <span>Contact Message</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="{{ route('admin.report.subscribers') }}">
+                        <i class="ri-mail-line"></i>
+                        <span>Subscribers</span>
+                    </a>
+                </li>
+
+                <li class="vertical-header">Content</li>  
+                <li>
+                    <a href="{{ route('admin.support-faq.index') }}">
+                        <i class="ri-question-line"></i>
+                        <span>Support FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.knowledge-base.index') }}">
+                        <i class="ri-bubble-chart-line"></i>
+                        <span>Knowledge Base</span>
+                    </a>
+                </li>
+
+                <li class="vertical-header">Configuration</li>  
+                <li>
+                    <a href="{{ route('admin.settings') }}">
+                        <i class="ri-settings-line"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

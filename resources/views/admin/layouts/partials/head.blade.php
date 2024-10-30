@@ -16,3 +16,5 @@
 <link href="{{ asset('assets/css/select2.min.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('assets/css/toaster.css') }}" rel="stylesheet" type="text/css">
+
+@stack('styles')

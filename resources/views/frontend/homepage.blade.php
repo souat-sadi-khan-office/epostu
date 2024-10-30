@@ -207,7 +207,7 @@
                 <div class="card-body py-14 px-lg-0">
                     <div class="row text-center">
                         <div class="col-lg-8 offset-lg-2">
-                            <h2 class="fs-16 text-uppercase text-primary mb-3">Happy Customers</h2>
+                            <h2 class="fs-16 text-uppercase text-primary mb-3">Our Clients</h2>
                             <h3 class="display-4 mb-10 px-xxl-10">Don't take our word for it. See what customers are saying about us.</h3>
                         </div>
                     </div>
@@ -226,11 +226,11 @@
                                         <div class="swiper-slide">
                                             <span class="ratings five mb-3"></span>
                                             <blockquote class="border-0 fs-lg mb-0">
-                                                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur nulla dapibus curabitur blandit faucibus.”</p>
+                                                <p>"epostu's seamless setup and reliability transformed our communication.”</p>
                                                 <div class="blockquote-details">
                                                 <div class="info ps-0">
-                                                    <h5 class="mb-1">Coriss Ambady</h5>
-                                                    <p class="mb-0">Financial Analyst</p>
+                                                    <h5 class="mb-1">John Doe</h5>
+                                                    <p class="mb-0">CEO of XYZ Corp</p>
                                                 </div>
                                                 </div>
                                             </blockquote>
@@ -239,11 +239,11 @@
                                         <div class="swiper-slide">
                                             <span class="ratings five mb-3"></span>
                                             <blockquote class="border-0 fs-lg mb-0">
-                                                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur nulla dapibus curabitur blandit faucibus.”</p>
+                                                <p>"epostu's seamless setup and reliability transformed our communication.”</p>
                                                 <div class="blockquote-details">
                                                 <div class="info ps-0">
-                                                    <h5 class="mb-1">Cory Zamora</h5>
-                                                    <p class="mb-0">Marketing Specialist</p>
+                                                    <h5 class="mb-1">John Doe</h5>
+                                                    <p class="mb-0">CEO of XYZ Corp</p>
                                                 </div>
                                                 </div>
                                             </blockquote>
@@ -252,11 +252,11 @@
                                         <div class="swiper-slide">
                                             <span class="ratings five mb-3"></span>
                                             <blockquote class="border-0 fs-lg mb-0">
-                                                <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur nulla dapibus curabitur blandit faucibus.”</p>
+                                                <p>Wepostu's seamless setup and reliability transformed our communication.”</p>
                                                 <div class="blockquote-details">
                                                 <div class="info ps-0">
-                                                    <h5 class="mb-1">Nikolas Brooten</h5>
-                                                    <p class="mb-0">Sales Manager</p>
+                                                    <h5 class="mb-1">John Doe</h5>
+                                                    <p class="mb-0">CEO of XYZ Corp</p>
                                                 </div>
                                                 </div>
                                             </blockquote>

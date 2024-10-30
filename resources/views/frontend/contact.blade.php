@@ -65,7 +65,7 @@
                     </div>
                     <div>
                         <h5 class="mb-1">Phone</h5>
-                        <p>00 (123) 456 78 90</p>
+                        <p>{{ get_settings('footer_phone_one') }}</p>
                     </div>
                 </div>
                 <div class="d-flex flex-row">
@@ -74,7 +74,7 @@
                     </div>
                     <div>
                         <h5 class="mb-1">E-mail</h5>
-                        <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-body">sandbox@email.com</a></p>
+                        <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-body">{{ get_settings('email_address') }}</a></p>
                     </div>
                 </div>
             </div>
@@ -149,7 +149,7 @@
 
 <section class="wrapper bg-light">
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.1581284760055!2d90.41059587589764!3d23.777382787738883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8a53a4d49f3%3A0x78d5e72cabb9544d!2sCorporate%20Projukti%20Limited!5e0!3m2!1sen!2sbd!4v1730199519292!5m2!1sen!2sbd" style="width:100%; height: 500px; border:0" allowfullscreen></iframe>
+        {!! get_settings('google_map') !!}
     </div>
 </section>
     

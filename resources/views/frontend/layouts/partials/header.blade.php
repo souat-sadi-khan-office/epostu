@@ -60,13 +60,33 @@
                     <div class="offcanvas-footer d-lg-none">
                         <div>
                             <a href="mailto:first.last@email.com" class="link-inverse">info@email.com</a>
-                            <br /> 00 (123) 456 78 90 <br />
+                            <br /> {{ get_settings('footer_phone_one') }} <br />
                             <nav class="nav social social-white mt-4">
-                                <a href="#"><i class="uil uil-twitter"></i></a>
-                                <a href="#"><i class="uil uil-facebook-f"></i></a>
-                                <a href="#"><i class="uil uil-dribbble"></i></a>
-                                <a href="#"><i class="uil uil-instagram"></i></a>
-                                <a href="#"><i class="uil uil-youtube"></i></a>
+                                @if (get_settings('facebook_link'))
+                                    <a href="{{ get_settings('facebook_link') }}" target="_blank">
+                                        <i class="uil uil-facebook-f"></i>
+                                    </a>
+                                @endif
+                                @if (get_settings('twitter_link'))
+                                    <a href="{{ get_settings('twitter_link') }}" target="_blank">
+                                        <i class="uil uil-twitter"></i>
+                                    </a>
+                                @endif
+                                @if (get_settings('linkedin_link'))
+                                    <a href="{{ get_settings('linkedin_link') }}" target="_blank">
+                                        <i class="uil uil-linkedin"></i>
+                                    </a>
+                                @endif
+                                @if (get_settings('instagram_link'))
+                                    <a href="{{ get_settings('instagram_link') }}" target="_blank">
+                                        <i class="uil uil-instagram"></i>
+                                    </a>
+                                @endif
+                                @if (get_settings('youtube_link'))
+                                    <a href="{{ get_settings('youtube_link') }}" target="_blank">
+                                        <i class="uil uil-youtube"></i>
+                                    </a>
+                                @endif
                             </nav>
                         </div>
                     </div>
