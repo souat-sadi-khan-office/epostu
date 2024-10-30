@@ -9,13 +9,17 @@
 
         <div class="row">
             <div class="col-lg-5 mx-auto">
-                <form action="#">
+                <form action="{{ route('submit.newsletter.form') }}" method="POST" id="newsletter_form">
                     <div class="form-floating input-group">
-                        <input type="url" class="form-control border-0" placeholder="Enter Email Address" id="analyze">
+                        <input type="email" name="email" required class="form-control border-0" placeholder="Enter Email Address" id="analyze" data-parsley-errors-container="#newsletter-email-error">
                         <label for="analyze">Enter Email Address</label>
-                        <button class="btn btn-primary" type="button">Submit</button>
+                        <button class="btn btn-primary" id="newsletter_submit" style="display: none;" type="submit">Submit</button>
+                        <button class="btn btn-primary" id="newsletter_submitting" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm pr-4 mr-4" role="status" aria-hidden="true"></span>
+                        </button>
                     </div>
                 </form>
+                <span id="newsletter-email-error"></span>
             </div>
         </div>
     </div>

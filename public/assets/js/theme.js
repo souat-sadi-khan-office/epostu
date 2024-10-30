@@ -784,25 +784,35 @@ var theme = {
               // Send message only if the form has class .contact-form
               var isContactForm = form.classList.contains('contact-form');
               if(isContactForm) {
+                $('#submitting').show();
+                $('#submit').hide();
+
                 var data = new FormData(form);
+                data.append('form_submit', true);
                 var alertClass = 'alert-danger';
-                fetch("assets/php/contact.php", {
+                fetch("/submit/contact-form", {
                   method: "post",
                   body: data
-                }).then((data) => {
+                }).then((data) => { 
                   if(data.ok) {
                     alertClass = 'alert-success';
                   }
                   return data.text();
-                }).then((txt) => {
-                  var alertBox = '<div class="alert ' + alertClass + ' alert-dismissible fade show"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + txt + '</div>';
-                  if(alertClass && txt) {
+                }).then((data) => {
+                  let json = JSON.parse(data);
+                  var alertBox = '<div class="alert ' + alertClass + ' alert-dismissible fade show"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + json.txt       + '</div>';
+                  if (alertClass && json.txt) {
                     form.querySelector(".messages").insertAdjacentHTML('beforeend', alertBox);
                     form.reset();
-                    grecaptcha.reset();
                   }
+
+                  $('#submitting').hide();
+                  $('#submit').show();
                 }).catch((err) => {
                   console.log(err);
+
+                  $('#submitting').hide();
+                  $('#submit').show();
                 });
               }
             }

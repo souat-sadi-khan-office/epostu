@@ -120,93 +120,94 @@
         </div>
     </section>
 
-    
-<section class="wrapper bg-light angled upper-end">
-    <div class="container py-14 py-md-16">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                <h2 class="display-4 mb-3 text-center">Partner With Us</h2>
-                <p class="lead text-center mb-10">Join our network and unlock exclusive benefits for your business.</p>
-                <form class="contact-form needs-validation" method="post" action="./assets/php/contact.php" novalidate>
-                    <div class="messages"></div>
-                    <div class="row gx-4">
-                        <div class="col-md-6">
-                            <div class="form-floating mb-4">
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-                                <label for="form_name">First Name *</label>
-                                <div class="valid-feedback"> Looks good! </div>
-                                <div class="invalid-feedback"> Please enter your first name. </div>
+    <section class="wrapper bg-light angled upper-end">
+        <div class="container py-14 py-md-16">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+                    <h2 class="display-4 mb-3 text-center">Partner With Us</h2>
+                    <p class="lead text-center mb-10">Join our network and unlock exclusive benefits for your business.</p>
+                    <form class="partner-form needs-validation" method="post" action="{{ route('submit.partner.form') }}" novalidate id="partner-form">
+                        @csrf
+                        <input type="hidden" name="session_id" id="session_id" value="{{ rand(1000000, 100000000) }}">
+                        <div class="messages"></div>
+                        <div class="row gx-4">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-4">
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
+                                    <label for="form_name">First Name *</label>
+                                    <div class="valid-feedback"> Looks good! </div>
+                                    <div class="invalid-feedback"> Please enter your first name. </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-6">
-                            <div class="form-floating mb-4">
-                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
-                                <label for="form_lastname">Last Name *</label>
-                                <div class="valid-feedback"> Looks good! </div>
-                                <div class="invalid-feedback"> Please enter your last name. </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-4">
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
+                                    <label for="form_lastname">Last Name *</label>
+                                    <div class="valid-feedback"> Looks good! </div>
+                                    <div class="invalid-feedback"> Please enter your last name. </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-6">
-                            <div class="form-floating mb-4">
-                                <input id="form_lastname" type="email" name="email" class="form-control" placeholder="Email" required>
-                                <label for="form_lastname">Email *</label>
-                                <div class="valid-feedback"> Looks good! </div>
-                                <div class="invalid-feedback"> Please enter your email. </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-4">
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <label for="form_email">Email *</label>
+                                    <div class="valid-feedback"> Looks good! </div>
+                                    <div class="invalid-feedback"> Please enter your email. </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="form-floating mb-4">
-                                <input id="form_lastname" type="text" name="phone" class="form-control" placeholder="Phone" required>
-                                <label for="form_lastname">Phone *</label>
-                                <div class="valid-feedback"> Looks good! </div>
-                                <div class="invalid-feedback"> Please enter your phone. </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating mb-4">
+                                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Phone" required>
+                                    <label for="form_phone">Phone *</label>
+                                    <div class="valid-feedback"> Looks good! </div>
+                                    <div class="invalid-feedback"> Please enter your phone. </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="form-floating mb-4">
-                                <input id="form_lastname" type="text" name="company_name" class="form-control" placeholder="Companty Name" >
-                                <label for="form_lastname">Companty Name </label>
-                                <div class="valid-feedback"> Looks good! </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating mb-4">
+                                    <input id="form_company_name" type="text" name="company_name" class="form-control" placeholder="Companty Name" >
+                                    <label for="form_company_name">Companty Name </label>
+                                    <div class="valid-feedback"> Looks good! </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="form-floating mb-4">
-                                <input id="form_lastname" type="text" name="contact_person" class="form-control" placeholder="Contact Person" >
-                                <label for="form_lastname">Contact Person </label>
-                                <div class="valid-feedback"> Looks good! </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating mb-4">
+                                    <input id="form_contact_person" type="text" name="contact_person" class="form-control" placeholder="Contact Person" >
+                                    <label for="form_contact_person">Contact Person </label>
+                                    <div class="valid-feedback"> Looks good! </div>
+                                </div>
                             </div>
-                        </div>
 
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
+                                    <label for="form_message">Message *</label>
+                                    <div class="valid-feedback"> Looks good! </div>
+                                    <div class="invalid-feedback"> Please enter your messsage. </div>
+                                </div>
+                            </div>
 
-                        <div class="col-12">
-                            <div class="form-floating mb-4">
-                                <textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
-                                <label for="form_message">Message *</label>
-                                <div class="valid-feedback"> Looks good! </div>
-                                <div class="invalid-feedback"> Please enter your messsage. </div>
+                            <div class="col-12 text-center">
+                                <input type="submit" id="submit" style="display: none;"  class="btn btn-primary rounded-pill btn-send mb-3" value="Join Our Partner Network">
+                                <button class="btn btn-primary mb-3" id="submitting" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm pr-4 mr-4" role="status" aria-hidden="true"></span>
+                                </button>
+                                <p class="text-muted"><strong>*</strong> These fields are required.</p>
                             </div>
                         </div>
-
-                        <div class="col-12 text-center">
-                            <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Join Our Partner Network">
-                            <p class="text-muted"><strong>*</strong> These fields are required.</p>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 @endsection
 
 @push('scripts')
-    <script>
-
-    </script>
+    <script src="{{ asset('assets/js/partner.js') }}"></script>
 @endpush

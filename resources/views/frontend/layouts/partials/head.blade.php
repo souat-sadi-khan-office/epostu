@@ -8,3 +8,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/navy.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/parsley.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/toaster.css') }}">

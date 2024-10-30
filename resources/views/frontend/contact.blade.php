@@ -83,13 +83,15 @@
             <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
                 <h2 class="display-4 mb-3 text-center">Drop Us a Line</h2>
                 <p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you shortly.</p>
-                <form class="contact-form needs-validation" method="post" action="./assets/php/contact.php" novalidate>
+                <form class="contact-form needs-validation" method="post" action="{{ route('submit.contact.form') }}" novalidate>
+                    @csrf
+                    <input type="hidden" name="session_id" id="session_id" value="{{ rand(1000000, 100000000) }}">
                     <div class="messages"></div>
                     <div class="row gx-4">
                         <div class="col-md-6">
                             <div class="form-floating mb-4">
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-                                <label for="form_name">First Name *</label>
+                                <input id="first_name" type="text" name="name" class="form-control" placeholder="Jane" required>
+                                <label for="first_name">First Name *</label>
                                 <div class="valid-feedback"> Looks good! </div>
                                 <div class="invalid-feedback"> Please enter your first name. </div>
                             </div>
@@ -97,8 +99,8 @@
 
                         <div class="col-md-6">
                             <div class="form-floating mb-4">
-                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
-                                <label for="form_lastname">Last Name *</label>
+                                <input id="last_name" type="text" name="surname" class="form-control" placeholder="Doe" required>
+                                <label for="last_name">Last Name *</label>
                                 <div class="valid-feedback"> Looks good! </div>
                                 <div class="invalid-feedback"> Please enter your last name. </div>
                             </div>
@@ -112,17 +114,13 @@
                                 <div class="invalid-feedback"> Please provide a valid email address. </div>
                             </div>
                         </div>
-
+                        
                         <div class="col-md-6">
-                            <div class="form-select-wrapper mb-4">
-                                <select class="form-select" id="form-select" name="department" required>
-                                    <option selected disabled value="">Select a department</option>
-                                    <option value="Sales">Sales</option>
-                                    <option value="Marketing">Marketing</option>
-                                    <option value="Customer Support">Customer Support</option>
-                                </select>
+                            <div class="form-floating mb-4">
+                                <input id="form_phone" type="text" name="phone" class="form-control" placeholder="+123456789" required>
+                                <label for="form_phone">Phone *</label>
                                 <div class="valid-feedback"> Looks good! </div>
-                                <div class="invalid-feedback"> Please select a department. </div>
+                                <div class="invalid-feedback"> Please provide a valid Phone Number. </div>
                             </div>
                         </div>
 
@@ -136,7 +134,10 @@
                         </div>
 
                         <div class="col-12 text-center">
-                            <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
+                            <input type="submit" id="submit" style="display: none;"  class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
+                            <button class="btn btn-primary mb-3" id="submitting" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm pr-4 mr-4" role="status" aria-hidden="true"></span>
+                            </button>
                             <p class="text-muted"><strong>*</strong> These fields are required.</p>
                         </div>
                     </div>
@@ -156,6 +157,36 @@
 
 @push('scripts')
     <script>
+        $(document).ready(function() {
 
+            $('#submitting').hide();
+            $('#submit').show();
+
+            $('.contact-form input, .contact-form textarea').on('input change', function() {
+                const formData = {
+                    name: $('#first_name').val(),
+                    surname: $('#last_name').val(),
+                    email: $('#form_email').val(),
+                    phone: $('#form_phone').val(),
+                    message: $('#form_message').val(),
+                    session_id: $('#session_id').val(),
+                    _token: '{{ csrf_token() }}'
+                };
+
+                $.ajax({
+                    url: '/submit/contact-form',
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        if (response.success) {
+                            console.log("Form data saved to database.");
+                        }
+                    },
+                    error: function(error) {
+                        console.log("Error saving form data:", error);
+                    }
+                });
+            });
+        });
     </script>
 @endpush
