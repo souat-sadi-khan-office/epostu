@@ -451,47 +451,42 @@ $(document).ready(function() {
      */
     $(document).on('click', '#logout', function(e) {
         e.preventDefault();
-        $('.preloader').show('fade');
         var url = $(this).data('url');
-        $.ajax({
-            url: url,
-            method: 'Post',
-            contentType: false, // The content type used when sending data to the server.
-            cache: false, // To unable request pages to be cached
-            processData: false,
-            dataType: 'JSON',
-            success: function(data) {
-                new PNotify({
-                    title: 'Well Done!',
-                    text: data.message,
-                    type: 'success',
-                    addclass: 'alert alert-styled-left',
-                });
-                new Noty({
-                    theme: 'limitless',
-                    timeout: 2000,
-                    title: 'Welcome',
-                    text: 'Be Patient. We are redirecting you to your destination.',
-                    type: 'success',
-                    modal: true,
-                    layout: 'center'
-                }).show();
-                setTimeout(function() {
-                    window.location.href = data.goto;
-                }, 2000);
-            },
-            error: function(data) {
-                var jsonValue = $.parseJSON(data.responseText);
-                const errors = jsonValue.errors
-                var i = 0;
-                $.each(errors, function(key, value) {
-                    new PNotify({
-                        title: 'Something Wrong!',
-                        text: value,
-                        type: 'error',
-                        addclass: 'alert  alert-danger alert-styled-left',
-                    });
-                    i++;
+    
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You will be logged out for this session!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Logout',
+            cancelButtonText: 'Cancel!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: url,
+                    method: 'POST',
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    dataType: 'JSON',
+                    success: function(data) {
+                        toastr.success(data.message);
+            
+                        setTimeout(function() {
+                            window.location.href = data.goto;
+                        }, 2000);
+                    },
+                    error: function(data) {
+                        var jsonValue = $.parseJSON(data.responseText);
+                        const errors = jsonValue.errors
+                        var i = 0;
+                        $.each(errors, function(key, value) {
+                            toastr.success(value);
+                            i++;
+                        });
+                    }
                 });
             }
         });
