@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Models\Partner;
 use App\Models\Newsletter;
+use App\Models\Blog;
 use App\Models\SupportFAQ;
 use Illuminate\Http\Request;
 use App\Mail\PHPMailerService;
@@ -33,13 +34,16 @@ class FrontendController extends Controller
     
     public function knowledge($slug)
     {
-        return view('frontend.knowledge');
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+        $relatedBlogs = Blog::where('id', '!=', $blog->id)->take(5)->get();
+        return view('frontend.knowledge', compact('blog', 'relatedBlogs'));
     }
 
     public function support()
     {
         $faqs = SupportFAQ::where('status', 1)->orderBy('id', 'DESC')->get();
-        return view('frontend.support', compact('faqs'));
+        $blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->get();
+        return view('frontend.support', compact('faqs', 'blogs'));
     }
 
     public function contact()

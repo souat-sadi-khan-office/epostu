@@ -1,6 +1,28 @@
-@extends('frontend.layouts.app')
-@section('title', 'Epostu')
+@extends('frontend.layouts.app', ['title' => 'Welcome to Epostu'])
+@section('meta')
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:site_name" content="Epostu">
+ 
+<meta name="title" content="Welcome to Epostu">
+<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Welcome to Epostu">	
 
+<!-- For Open Graph -->
+<meta property="og:url" content="{{ url()->current() }}">	
+<meta property="og:type" content="article">
+<meta property="og:title" content="Welcome to Epostu">	
+<meta property="og:description" content="Welcome to Epostu}">	
+<meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
+
+<!-- For Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="Welcome to Epostu" /> 
+<meta name="twitter:title" content="Welcome to Epostu" />
+<meta name="twitter:description" content="Welcome to Epostu" />	
+<meta name="twitter:site" content="{{ route('home') }}" />		
+<meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+@endsection
 @section('content')
     <!-- hero section -->
     <section class="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray" data-image-src="{{ asset('assets/images/home-page-hero-background.jpg') }}">

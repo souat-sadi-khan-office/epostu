@@ -68,7 +68,7 @@ class BlogController extends Controller
             $main_image = Images::upload('knowledge-base', $request->main_image);
         }
 
-        Blog::create([
+        $blog = Blog::create([
             'name' => $request->name,
             'slug' => $request->slug,
             'tag' => $request->tag,
@@ -109,7 +109,6 @@ class BlogController extends Controller
     public function update(Request $request, string $id)
     {
 
-        dd($request->description);
         $model = Blog::findOrFail($id);
         $model->name = $request->name;
         $model->slug = $request->slug;
@@ -143,7 +142,7 @@ class BlogController extends Controller
         $model = Blog::findOrFail($id);
         $model->delete();
 
-        return response()->json(['status' => true, 'goto' => route('admin.knowledge-base.index'), 'message' => 'Record deleted successfully']);
+        return response()->json(['status' => true, 'load' => true, 'message' => 'Record deleted successfully']);
     }
 
     public function checkSlug(Request $request)

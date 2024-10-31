@@ -1,10 +1,10 @@
-@extends('admin.layouts.app', ['title' => 'Contact Messages'])
+@extends('admin.layouts.app', ['title' => 'Subscriber Records'])
 
 @section('content')
     <div class="breadcrumbbar">
         <div class="row align-items-center">
             <div class="col-md-8 col-lg-8">
-                <h4 class="page-title">Contact Message Records</h4>
+                <h4 class="page-title">Subscriber Records</h4>
                 <div class="breadcrumb-list">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
@@ -12,7 +12,7 @@
                                 Home
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact Message</li>
+                        <li class="breadcrumb-item active" aria-current="page">Subscriber Records</li>
                     </ol>
                 </div>
             </div>
@@ -29,10 +29,9 @@
             <div class="col-lg-12">
                 <div class="card m-b-30">
                     <div class="card-header">
-                        <h5 class="card-title">Contact Message</h5>
+                        <h5 class="card-title">Subscriber Records</h5>
                     </div>
                     <div class="card-body">
-                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel & Note.</h6>
                         <div class="row">
                             <div class="col-md-12 table-responsive">
                                 <table id="datatable-buttons" class="table table-striped table-bordered">

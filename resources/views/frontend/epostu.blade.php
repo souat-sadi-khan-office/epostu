@@ -1,6 +1,28 @@
-@extends('frontend.layouts.app')
-@section('title', 'EposTu | Epostu')
+@extends('frontend.layouts.app', ['title' => 'EposTu | Epostu'])
+@section('meta')
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:site_name" content="Epostu">
+ 
+<meta name="title" content="Epostu">
+<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Epostu Meta Description">	
 
+<!-- For Open Graph -->
+<meta property="og:url" content="{{ url()->current() }}">	
+<meta property="og:type" content="article">
+<meta property="og:title" content="Epostu">	
+<meta property="og:description" content="Epostu}">	
+<meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
+
+<!-- For Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="Epostu" /> 
+<meta name="twitter:title" content="Epostu" />
+<meta name="twitter:description" content="Epostu" />	
+<meta name="twitter:site" content="{{ route('home') }}" />		
+<meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+@endsection
 @section('content')
 <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/bg2.jpg') }}">
     <div class="container pt-10 pt-md-15 pb-18 pb-md-20 text-center">

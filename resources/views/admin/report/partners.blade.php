@@ -32,7 +32,6 @@
                         <h5 class="card-title">Partner Records</h5>
                     </div>
                     <div class="card-body">
-                        <h6 class="card-subtitle">Export data to Copy, CSV, Excel & Note.</h6>
                         <div class="row">
                             <div class="col-md-12 table-responsive">
                                 <table id="datatable-buttons" class="table table-striped table-bordered">

@@ -1,6 +1,29 @@
-@extends('frontend.layouts.app')
-@section('title', 'Truspam | Truspam')
+@extends('frontend.layouts.app', ['title' => 'Truspam | Truspam'])
+@section('meta')
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:site_name" content="Epostu">
+ 
+<meta name="title" content="Truspam}">
+<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="keywords" content="Truspam" />
+<meta name="description" content="Truspam">	
 
+<!-- For Open Graph -->
+<meta property="og:url" content="{{ url()->current() }}">	
+<meta property="og:type" content="article">
+<meta property="og:title" content="Truspam">	
+<meta property="og:description" content="Truspamz">	
+<meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
+
+<!-- For Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="Epostu" /> 
+<meta name="twitter:title" content="Truspan" />
+<meta name="twitter:description" content="Truspan" />	
+<meta name="twitter:site" content="{{ route('home') }}" />		
+<meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+@endsection
 @section('content')
 <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/bg2.jpg') }}">
     <div class="container pt-10 pt-md-15 pb-18 pb-md-20 text-center">

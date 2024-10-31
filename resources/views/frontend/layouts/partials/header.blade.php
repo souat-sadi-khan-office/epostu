@@ -25,7 +25,7 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ Request::is('products') ? 'active' : '' }}" href="javascript:;">
+                            <a class="nav-link dropdown-toggle {{ Request::is('products') ? 'active' : '' }}" data-bs-toggle="dropdown"  href="javascript:;" aria-expanded="false">
                                 Products
                             </a>
                             <ul class="dropdown-menu">
@@ -59,7 +59,7 @@
                     </ul>
                     <div class="offcanvas-footer d-lg-none">
                         <div>
-                            <a href="mailto:first.last@email.com" class="link-inverse">info@email.com</a>
+                            <a href="mailto:first.last@email.com" class="link-inverse">{{ get_settings('email_address') }}</a>
                             <br /> {{ get_settings('footer_phone_one') }} <br />
                             <nav class="nav social social-white mt-4">
                                 @if (get_settings('facebook_link'))

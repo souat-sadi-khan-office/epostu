@@ -1,22 +1,42 @@
-@extends('frontend.layouts.app')
-@section('title', 'Epostu')
+@extends('frontend.layouts.app', ['title' => 'Become a Partner'])
+@section('meta')
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:site_name" content="Epostu">
+ 
+<meta name="title" content="Become a Partner | Epostu">
+<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Become a Partner Meta Description">	
 
+<!-- For Open Graph -->
+<meta property="og:url" content="{{ url()->current() }}">	
+<meta property="og:type" content="article">
+<meta property="og:title" content="Become a Partner | Epostu">	
+<meta property="og:description" content="Become a Partner | Epostu}">	
+<meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
+
+<!-- For Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="Epostu" /> 
+<meta name="twitter:title" content="Become a Partner| Epostu" />
+<meta name="twitter:description" content="Become a Partner | Epostu" />	
+<meta name="twitter:site" content="{{ route('home') }}" />		
+<meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+@endsection
 @section('content')
-<section class="wrapper bg-gray">
-    <div class="container pt-10 pt-md-14 text-center">
-        <div class="row">
-            <div class="col-xl-6 mx-auto">
-                <h1 class="display-1 mb-4">Become a Partner</h1>
-                <p class="lead fs-lg mb-0">A company turning ideas into beautiful things.</p>
+    <section class="wrapper bg-gray">
+        <div class="container pt-10 pt-md-14 text-center">
+            <div class="row">
+                <div class="col-xl-6 mx-auto">
+                    <h1 class="display-1 mb-4">Become a Partner</h1>
+                    <p class="lead fs-lg mb-0">A company turning ideas into beautiful things.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;">
-        <img src="{{ asset('assets/images/about-page-bg.jpg') }}" alt="About Page Banner" />
-    </figure>
-</section>
-
-    
+        <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;">
+            <img src="{{ asset('assets/images/about-page-bg.jpg') }}" alt="Become a Partner Banner" />
+        </figure>
+    </section>
     
     <section class="wrapper bg-light">
         <div class="container py-15 py-md-17">

@@ -86,112 +86,41 @@
             <div class="col-lg-12 order-lg-2">
                 <div class="blog grid grid-view">
                     <div class="row isotope gx-md-8 gy-8 mb-8">
-                        <article class="item post col-md-4">
-                            <div class="card">
-                                <figure class="card-img-top overlay overlay-1 hover-scale">
-                                    <a href="{{ route('knowledge', 'one') }}"> 
-                                        <img src="{{ asset('assets/images/b4.jpg') }}" alt="Knowledge One" />
-                                    </a>
-                                    <figcaption>
-                                        <h5 class="from-top mb-0">Read More</h5>
-                                    </figcaption>
-                                </figure>
-                                <div class="card-body">
-                                    <div class="post-header">
-                                        <div class="post-category text-line">
-                                            <a href="{{ route('knowledge', 'one') }}" class="hover" rel="category">Coding</a>
+                        @foreach ($blogs as $blog)
+                            <article class="item post col-md-4">
+                                <div class="card">
+                                    <figure class="card-img-top overlay overlay-1 hover-scale">
+                                        <a href="{{ route('knowledge', $blog->slug) }}"> 
+                                            <img src="{{ $blog->thumb_image ? asset($blog->thumb_image) : asset('assets/images/b6.jpg') }}" alt="Knowledge three" />
+                                        </a>
+                                        <figcaption>
+                                            <h5 class="from-top mb-0">Read More</h5>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="card-body">
+                                        <div class="post-header">
+                                            <div class="post-category text-line">
+                                                <a href="{{ route('knowledge', $blog->slug) }}" class="hover" rel="category">{{ $blog->tag }}</a>
+                                            </div>
+                                            <h2 class="post-title h3 mt-1 mb-3">
+                                                <a class="link-dark" href="{{ route('knowledge', $blog->slug) }}">{{ $blog->name }}</a>
+                                            </h2>
                                         </div>
-                                        <h2 class="post-title h3 mt-1 mb-3">
-                                            <a class="link-dark" href=".{{ route('knowledge', 'one') }}">Ligula tristique quis risus</a></h2>
-                                    </div>
-                                    <div class="post-content">
-                                        <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus
-                                            vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <ul class="post-meta d-flex mb-0">
-                                        <li class="post-date">
-                                            <i class="uil uil-calendar-alt"></i>
-                                            <span>14 Apr {{ date('Y') }}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="item post col-md-4">
-                            <div class="card">
-                                <figure class="card-img-top overlay overlay-1 hover-scale">
-                                    <a href="{{ route('knowledge', 'one') }}"> 
-                                        <img src="{{ asset('assets/images/b5.jpg') }}" alt="Knowlegde two" />
-                                    </a>
-                                    <figcaption>
-                                        <h5 class="from-top mb-0">Read More</h5>
-                                    </figcaption>
-                                </figure>
-                                <div class="card-body">
-                                    <div class="post-header">
-                                        <div class="post-category text-line">
-                                            <a href="{{ route('knowledge', 'one') }}" class="hover" rel="category">Workspace</a>
+                                        <div class="post-content">
+                                            <p>{{ $blog->short_details }}</p>
                                         </div>
-                                        <h2 class="post-title h3 mt-1 mb-3">
-                                            <a class="link-dark" href="{{ route('knowledge', 'one') }}">
-                                                Nullam id dolor elit id nibh
-                                            </a>
-                                        </h2>
                                     </div>
-                                    <div class="post-content">
-                                        <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus
-                                            vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.
-                                        </p>
+                                    <div class="card-footer">
+                                        <ul class="post-meta d-flex mb-0">
+                                            <li class="post-date">
+                                                <i class="uil uil-calendar-alt"></i>
+                                                <span>{{ date('d F, Y', strtotime($blog->created_at)) }}</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="card-footer">
-                                    <ul class="post-meta d-flex mb-0">
-                                        <li class="post-date">
-                                            <i class="uil uil-calendar-alt"></i>
-                                            <span>29 Mar 2022</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="item post col-md-4">
-                            <div class="card">
-                                <figure class="card-img-top overlay overlay-1 hover-scale">
-                                    <a href="{{ route('knowledge', 'one') }}"> 
-                                        <img src="{{ asset('assets/images/b6.jpg') }}" alt="Knowledge three" />
-                                    </a>
-                                    <figcaption>
-                                        <h5 class="from-top mb-0">Read More</h5>
-                                    </figcaption>
-                                </figure>
-                                <div class="card-body">
-                                    <div class="post-header">
-                                        <div class="post-category text-line">
-                                            <a href="{{ route('knowledge', 'one') }}" class="hover" rel="category">Meeting</a>
-                                        </div>
-                                        <h2 class="post-title h3 mt-1 mb-3">
-                                            <a class="link-dark" href="{{ route('knowledge', 'one') }}">Ultricies fusce porta elit</a>
-                                        </h2>
-                                    </div>
-                                    <div class="post-content">
-                                        <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus
-                                            vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <ul class="post-meta d-flex mb-0">
-                                        <li class="post-date">
-                                            <i class="uil uil-calendar-alt"></i>
-                                            <span>26 Feb {{ date('Y') }}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        @endforeach
                     </div>
                 </div>
                 <nav class="d-flex" aria-label="pagination">
