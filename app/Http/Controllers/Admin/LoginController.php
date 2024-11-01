@@ -3,6 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\CPU\Helpers;
+
+use App\Models\Partner;
+use App\Models\ContactMessage;
+use App\Models\Newsletter;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -59,6 +64,15 @@ class LoginController extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $total_partner_active = Partner::where('status', 1)->count();
+        $total_partner = Partner::count();
+        $total_contact_message = ContactMessage::count();
+        $total_subscribers = Newsletter::count();
+
+        $latest_partners = Partner::orderBy('id', 'DESC')->take(5)->get();
+        $latest_messages = ContactMessage::orderBy('id', 'DESC')->take(5)->get();
+        $latest_subscribers = Newsletter::orderBy('id', 'DESC')->take(5)->get();
+
+        return view('admin.dashboard', compact('latest_partners', 'latest_messages', 'latest_subscribers', 'total_partner_active', 'total_partner', 'total_contact_message', 'total_subscribers'));
     }
 }

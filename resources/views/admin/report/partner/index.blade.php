@@ -1,4 +1,4 @@
-@extends('admin.layouts.app', ['title' => 'Partner Records'])
+@extends('admin.layouts.app', ['title' => 'Partner Records', 'modal' => 'lg'])
 
 @section('content')
     <div class="breadcrumbbar">
@@ -37,12 +37,11 @@
                                 <table id="datatable-buttons" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>Date</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
-                                            <th>Company</th>
-                                            <th>CT Person</th>
-                                            <th>Message</th>
+                                            <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -92,19 +91,23 @@
                 serverSide: true,
                 ajax: "{{ route('admin.report.partner') }}",
                 columns: [
+                    {data: 'created_at', name: 'created_at'},
                     {data: 'name', name: 'name'},
                     {data: 'email', name: 'email'},
                     {data: 'phone', name: 'phone'},
-                    {data: 'company_name', name: 'company_name'},
-                    {data: 'contact_person', name: 'contact_person', orderable: false, searchable: false},
-                    {data: 'message', name: 'message', orderable: false, searchable: false},
+                    {data: 'status', name: 'status'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
                 lengthChange: false,
                 responsive: true,
-                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+                order: [0, 'desc']
             });
             table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
+
+            _componentRemoteModalLoadAfterAjax();
+
         });
+
     </script>
 @endpush

@@ -25,7 +25,7 @@
 @endsection
 @section('content')
     <!-- hero section -->
-    <section class="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray" data-image-src="{{ asset('assets/images/home-page-hero-background.jpg') }}">
+    <section class="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray" data-image-src="{{ asset('assets/images/home-page-hero-background.webp') }}">
         <div class="container pt-17 pb-15 py-sm-17 py-xxl-20">
             <div class="row">
                 <div class="col-sm-6 col-xxl-5 text-center text-sm-start" data-cues="slideInDown" data-group="page-title" data-interval="-200" data-delay="500">
@@ -171,7 +171,7 @@
 
     <!-- Benifits of choosing us -->
     <section class="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
-        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/bg38.jpg') }}">
+        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/bg38.webp') }}">
             <div class="divider text-gray divider-v-end d-none d-lg-block">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200">
                     <g />
@@ -237,7 +237,7 @@
                     <div class="row gx-lg-8 gx-xl-12 align-items-center">
                         <div class="col-lg-5 ms-auto col-xl-4 d-none d-lg-flex">
                             <div class="img-mask">
-                                <img src="{{ asset('assets/images/about28.jpg') }}" alt="Client Testimonial" />
+                                <img src="{{ asset('assets/images/about28.webp') }}" alt="Client Testimonial" />
                             </div>
                         </div>
 

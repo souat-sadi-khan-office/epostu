@@ -35,7 +35,7 @@
         </div>
     </div>
     <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;">
-        <img src="{{ asset('assets/images/about-page-bg.jpg') }}" alt="About Page Banner" />
+        <img src="{{ asset('assets/images/about-page-bg.webp') }}" alt="About Page Banner" />
     </figure>
 </section>
 
@@ -47,12 +47,12 @@
                 <div class="overlap-grid overlap-grid-2">
                     <div class="item">
                         <figure class="rounded shadow">
-                            <img src="{{ asset('assets/images/about2.jpg') }}" srcset="{{ asset('assets/images/about2.jpg') }} 2x" alt="About Image One">
+                            <img src="{{ asset('assets/images/about2.webp') }}" srcset="{{ asset('assets/images/about2.webp') }} 2x" alt="About Image One">
                         </figure>
                     </div>
                     <div class="item">
                         <figure class="rounded shadow">
-                            <img src="{{ asset('assets/images/about3.jpg') }}" srcset="{{ asset('assets/images/about3.jpg') }} 2x" alt="About Image Two">
+                            <img src="{{ asset('assets/images/about3.webp') }}" srcset="{{ asset('assets/images/about3.webp') }} 2x" alt="About Image Two">
                         </figure>
                     </div>
                 </div>

@@ -14,6 +14,7 @@ class Partner extends Model
         'phone',
         'company_name',
         'contact_person',
-        'message'
+        'message',
+        'status'
     ];
 }

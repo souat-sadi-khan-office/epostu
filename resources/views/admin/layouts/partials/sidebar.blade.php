@@ -41,6 +41,28 @@
                     </a>
                 </li>
 
+                <li class="vertical-header">Product Details</li>
+                <li>
+                    <a href="javaScript:void();">
+                        <i class="ri-pen-nib-line"></i>
+                        <span>EposTu</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <ul class="vertical-submenu">
+                        <li><a href="{{ route('admin.epostu-pricing-plan.index') }}">Pricing Plan</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javaScript:void();">
+                        <i class="ri-pen-nib-line"></i>
+                        <span>TrusPan</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <ul class="vertical-submenu">
+                        <li><a href="{{ route('admin.truspan-pricing-plan.index') }}">Pricing Plan</a></li>
+                    </ul>
+                </li>
+
                 <li class="vertical-header">Content</li>  
                 <li>
                     <a href="{{ route('admin.support-faq.index') }}">

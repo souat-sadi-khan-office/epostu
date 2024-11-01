@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\SupportFAQController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\EposTuPricingPlanController;
+use App\Http\Controllers\Admin\TrusPanPricingPlanController;
 
 Route::get('/', function () {
     return redirect()->route('admin.login');
@@ -25,7 +27,13 @@ Route::middleware(['isAdmin', 'web'])->group(function () {
     Route::get('/check-slug', [BlogController::class, 'checkSlug'])->name('check.slug');
     Route::resource('knowledge-base', BlogController::class);
 
+    Route::resource('epostu-pricing-plan', EposTuPricingPlanController::class);
+    Route::resource('truspan-pricing-plan', TrusPanPricingPlanController::class);
+
     Route::get('report/partner', [ReportController::class, 'partners'])->name('report.partner');
+    Route::get('report/partner/show/{id}', [ReportController::class, 'partnersShow'])->name('report.partner.show');
+    Route::get('report/partner/edit/{id}', [ReportController::class, 'partnersEdit'])->name('report.partner.edit');
+    Route::patch('report/partner/update/{id}', [ReportController::class, 'partnersUpdate'])->name('report.partner.update');
     Route::delete('report/partner/destroy/{id}', [ReportController::class, 'destroyPartnerRecord'])->name('report.partner.destroy');
     Route::get('report/contact-message', [ReportController::class, 'contactMessages'])->name('report.contact-message');
     Route::delete('report/contact-message/destroy/{id}', [ReportController::class, 'destroyContactMessage'])->name('report.contact-message.destroy');

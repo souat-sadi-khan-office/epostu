@@ -53,7 +53,8 @@ class FrontendController extends Controller
 
     public function findPartner()
     {
-        return view('frontend.find-partner');
+        $models = Partner::where('status', 1)->orderBy('id', 'DESC')->get();
+        return view('frontend.find-partner', compact('models'));
     }
 
     public function becomePartner()

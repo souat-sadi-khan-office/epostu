@@ -34,7 +34,7 @@
             </div>
         </div>
         <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;">
-            <img src="{{ asset('assets/images/about-page-bg.jpg') }}" alt="Become a Partner Banner" />
+            <img src="{{ asset('assets/images/about-page-bg.webp') }}" alt="Become a Partner Banner" />
         </figure>
     </section>
     
@@ -88,7 +88,7 @@
 
     <!-- Benifits of choosing us -->
     <section class="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
-        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/bg38.jpg') }}">
+        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/bg38.webp') }}">
             <div class="divider text-gray divider-v-end d-none d-lg-block">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200">
                     <g />

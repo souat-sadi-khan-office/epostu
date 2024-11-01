@@ -17,17 +17,29 @@ class ReportController extends Controller
             $models = Partner::all();
             return Datatables::of($models)
                 ->addIndexColumn()
+                ->editColumn('created_at', function ($model) {
+                    return date('d F, Y h:i A', strtotime($model->created_at));
+                })
                 ->editColumn('name', function ($model) {
                     return $model->first_name. ' '. $model->last_name;
                 })
-                ->addColumn('action', function ($model) {
-                    return view('admin.report.partners_action', compact('model'));
+                ->editColumn('status', function ($model) {
+                    if($model->status) {
+                        $status = '<span class="badge badge-success">Verified</span>';
+                    } else {
+                        $status = '<span class="badge badge-danger">Unverified</span>';
+                    }
+
+                    return $status;
                 })
-                ->rawColumns(['action', 'name'])
+                ->addColumn('action', function ($model) {
+                    return view('admin.report.partner.action', compact('model'));
+                })
+                ->rawColumns(['action', 'status', 'created_at', 'name'])
                 ->make(true);
         }
 
-        return view('admin.report.partners');
+        return view('admin.report.partner.index');
     }
 
     public function destroyPartnerRecord($id) 
@@ -39,6 +51,37 @@ class ReportController extends Controller
             'status' => true, 
             'load' => true,
             'message' => "Record deleted successfully"
+        ]);
+    }
+
+    public function partnersShow($id)
+    {
+        $model = Partner::findOrFail($id);
+        return view('admin.report.partner.show', compact('model'));
+    }
+
+    public function partnersEdit($id)
+    {
+        $model = Partner::findOrFail($id);
+        return view('admin.report.partner.edit', compact('model'));
+    }
+    
+    public function partnersUpdate(Request $request, $id)
+    {
+        $model = Partner::findOrFail($id);
+        $model->first_name = $request->first_name;
+        $model->last_name = $request->last_name;
+        $model->email = $request->email;
+        $model->phone = $request->phone;
+        $model->company_name = $request->company_name;
+        $model->contact_person = $request->contact_person;
+        $model->status = $request->status;
+        $model->save();
+
+        return response()->json([
+            'status' => true, 
+            'load' => true,
+            'message' => "Record updated successfully"
         ]);
     }
 

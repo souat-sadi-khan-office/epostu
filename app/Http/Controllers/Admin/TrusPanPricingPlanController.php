@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Models\SupportFAQ;
+use App\Models\TruspanPricingPlan;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
 
-class SupportFAQController extends Controller
+class TrusPanPricingPlanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,14 +16,18 @@ class SupportFAQController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $models = SupportFAQ::all();
+            $models = TruspanPricingPlan::all();
             return Datatables::of($models)
                 ->addIndexColumn()
-                ->editColumn('question', function ($model) {
-                    return Str::limit($model->question, 50);
-                })
-                ->editColumn('answer', function ($model) {
-                    return Str::limit($model->answer, 50);
+                ->editColumn('plan', function($model) {
+                    $plan = get_settings('basic_plan_name');
+                    if($model->plan_id == 2) {
+                        $plan = get_settings('premium_plan_name');
+                    } else if($model->plan_id == 3) {
+                        $plan = get_settings('corporate_plan_name');
+                    }
+
+                    return $plan;
                 })
                 ->editColumn('status', function ($model) {
 
@@ -35,14 +39,24 @@ class SupportFAQController extends Controller
 
                     return $status;
                 })
-                ->addColumn('action', function ($model) {
-                    return view('admin.support.faq.action', compact('model'));
+                ->editColumn('checked', function ($model) {
+
+                    if($model->checked == 1) {
+                        $checked = '<span class="badge badge-success">Checked</span>';
+                    } else {
+                        $checked = '<span class="badge badge-danger">Unchecked</span>';
+                    }
+
+                    return $checked;
                 })
-                ->rawColumns(['action', 'answer', 'question', 'status'])
+                ->addColumn('action', function ($model) {
+                    return view('admin.truspan.pricing.action', compact('model'));
+                })
+                ->rawColumns(['action', 'plan', 'checked', 'status'])
                 ->make(true);
         }
 
-        return view('admin.support.faq.index');
+        return view('admin.truspan.pricing.index');
     }
 
     /**
@@ -50,7 +64,7 @@ class SupportFAQController extends Controller
      */
     public function create()
     {
-        return view('admin.support.faq.create');
+        return view('admin.truspan.pricing.create');
     }
 
     /**
@@ -58,9 +72,10 @@ class SupportFAQController extends Controller
      */
     public function store(Request $request)
     {
-        SupportFAQ::create([
-            'question' => $request->question,
-            'answer' => $request->answer,
+        TruspanPricingPlan::create([
+            'name' => $request->name,
+            'plan_id' => $request->plan_id,
+            'checked' => $request->checked,
             'status' => $request->status
         ]);
 
@@ -80,8 +95,8 @@ class SupportFAQController extends Controller
      */
     public function edit(string $id)
     {
-        $model = SupportFAQ::findOrFail($id);
-        return view('admin.support.faq.edit', compact('model'));
+        $model = TruspanPricingPlan::findOrFail($id);
+        return view('admin.truspan.pricing.edit', compact('model'));
     }
 
     /**
@@ -89,9 +104,10 @@ class SupportFAQController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $model = SupportFAQ::findOrFail($id);
-        $model->question = $request->question;
-        $model->answer = $request->answer;
+        $model = TruspanPricingPlan::findOrFail($id);
+        $model->name = $request->name;
+        $model->plan_id = $request->plan_id;
+        $model->checked = $request->checked;
         $model->status = $request->status;
         $model->save();
 
@@ -103,7 +119,7 @@ class SupportFAQController extends Controller
      */
     public function destroy(string $id)
     {
-        $model = SupportFAQ::findOrFail($id);
+        $model = TruspanPricingPlan::findOrFail($id);
         $model->delete();
 
         return response()->json(['status' => true, 'load' => true, 'message' => 'Record deleted successfully']);

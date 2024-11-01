@@ -106,7 +106,7 @@
                                                         </figure>
                                                         <div class="post-header">
                                                             <div class="post-category text-line">
-                                                                <a href="{{ route('knowledge', $related_blog->slug) }}" class="hover" rel="category">{{ $related_blog->name }}</a>
+                                                                <a href="{{ route('knowledge', $related_blog->slug) }}" class="hover" rel="category">{{ $related_blog->tag }}</a>
                                                             </div>
                                                             <h2 class="post-title h3 mt-1 mb-3">
                                                                 <a class="link-dark" href="{{ route('knowledge', $related_blog->slug) }}">{{ $related_blog->name }}</a>

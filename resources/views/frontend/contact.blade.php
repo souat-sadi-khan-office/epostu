@@ -49,14 +49,14 @@
                 <div class="row gx-md-5 gy-5">
                     <div class="col-md-6">
                         <figure class="rounded mt-md-10 position-relative">
-                            <img src="{{ asset('assets/images/g5.jpg') }}" srcset="{{ asset('assets/images/g5.jpg') }} 2x" alt="Contact Image One"></figure>
+                            <img src="{{ asset('assets/images/g5.webp') }}" srcset="{{ asset('assets/images/g5.webp') }} 2x" alt="Contact Image One"></figure>
                     </div>
 
                     <div class="col-md-6">
                         <div class="row gx-md-5 gy-5">
                             <div class="col-md-12 order-md-2">
                                 <figure class="rounded">
-                                    <img src="{{ asset('assets/images/g6.jpg') }}" srcset="{{ asset('assets/images/g6.jpg') }} 2x" alt="Contact Image Two"></figure>
+                                    <img src="{{ asset('assets/images/g6.webp') }}" srcset="{{ asset('assets/images/g6.webp') }} 2x" alt="Contact Image Two"></figure>
                             </div>
                             <div class="col-md-10">
                                 <div class="card bg-pale-primary text-center counter-wrapper">

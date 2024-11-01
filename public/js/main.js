@@ -98,7 +98,7 @@ var _formValidation = function () {
         var submit_url = $('.content_form').attr('action');
         var formData = new FormData($(".content_form")[0]);
 
-        if (CKEDITOR.instances['details']) {
+        if (typeof CKEDITOR !== 'undefined' && CKEDITOR.instances['details']) {
             const descriptionData = CKEDITOR.instances['details'].getData();
             formData.append('description', descriptionData);
         }
