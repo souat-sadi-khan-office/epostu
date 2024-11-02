@@ -29,8 +29,8 @@
     <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-                <h1 class="display-1 text-white mb-3">Hello! We are <br> epostu and truspan!</h1>
-                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">A company turning ideas into beautiful things.</p>
+                <h1 class="display-1 text-white mb-3">Hello! We are Epostu!</h1>
+                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">Welcome to Epostu—your trusted partner in reliable, cloud-based email hosting</p>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/images/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="Who we are" />
                 <h2 class="display-4 mb-3">Our Mission & Vision</h2>
-                <p class="lead fs-lg">At epostu and truspam, we strive to empower businesses through secure and scalable email solutions that enhance productivity and ensure data integrity.</p>
+                <p class="lead fs-lg">At epostu, we strive to empower businesses through secure and scalable email solutions that enhance productivity and ensure data integrity.</p>
                 <p class="mb-6">We believe in the transformative power of effective communication and aim to provide our clients with the tools necessary for success. Our commitment to innovation and excellence drives us to deliver top-tier services that meet the evolving needs of modern businesses.</p>
                 <div class="row gy-3 gx-xl-8">
                     <div class="col-xl-6">
