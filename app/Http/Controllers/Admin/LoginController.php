@@ -7,6 +7,7 @@ use App\CPU\Helpers;
 use App\Models\Partner;
 use App\Models\ContactMessage;
 use App\Models\Newsletter;
+use App\Models\Order;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -73,6 +74,9 @@ class LoginController extends Controller
         $latest_messages = ContactMessage::orderBy('id', 'DESC')->take(5)->get();
         $latest_subscribers = Newsletter::orderBy('id', 'DESC')->take(5)->get();
 
-        return view('admin.dashboard', compact('latest_partners', 'latest_messages', 'latest_subscribers', 'total_partner_active', 'total_partner', 'total_contact_message', 'total_subscribers'));
+        $total_checked_order = Order::where('status', 1)->count();
+        $total_unchecked_order = Order::where('status', 0)->count();
+
+        return view('admin.dashboard', compact('latest_partners', 'latest_messages', 'latest_subscribers', 'total_partner_active', 'total_checked_order', 'total_unchecked_order', 'total_partner', 'total_contact_message', 'total_subscribers'));
     }
 }

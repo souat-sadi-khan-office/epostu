@@ -30,6 +30,12 @@ Route::middleware(['isAdmin', 'web'])->group(function () {
     Route::resource('epostu-pricing-plan', EposTuPricingPlanController::class);
     Route::resource('truspan-pricing-plan', TrusPanPricingPlanController::class);
 
+    Route::get('report/order', [ReportController::class, 'orders'])->name('report.order');
+    Route::get('report/order/show/{id}', [ReportController::class, 'ordersShow'])->name('report.order.show');
+    Route::get('report/order/edit/{id}', [ReportController::class, 'ordersEdit'])->name('report.order.edit');
+    Route::patch('report/order/update/{id}', [ReportController::class, 'ordersUpdate'])->name('report.order.update');
+    Route::delete('report/order/destroy/{id}', [ReportController::class, 'destroyOrderRecord'])->name('report.order.destroy');
+
     Route::get('report/partner', [ReportController::class, 'partners'])->name('report.partner');
     Route::get('report/partner/show/{id}', [ReportController::class, 'partnersShow'])->name('report.partner.show');
     Route::get('report/partner/edit/{id}', [ReportController::class, 'partnersEdit'])->name('report.partner.edit');

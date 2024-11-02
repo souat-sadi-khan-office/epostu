@@ -44,6 +44,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col-8">
+                                        <p class="font-15">Total Checked Order</p>
+                                        <h4 class="card-title mb-0">{{ $total_checked_order }}</h4>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <span class="iconbar iconbar-md bg-success text-white rounded">
+                                            <i class="ri-shopping-cart-line align-unset"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card m-b-30">
@@ -68,6 +83,21 @@
                                     </div>
                                     <div class="col-4 text-right">
                                         <span class="iconbar iconbar-md bg-warning text-white rounded"><i class="ri-mail-line align-unset"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col-8">
+                                        <p class="font-15">Total Unchecked Order</p>
+                                        <h4 class="card-title mb-0">{{ $total_unchecked_order }}</h4>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <span class="iconbar iconbar-md bg-danger text-white rounded">
+                                            <i class="ri-shopping-cart-line align-unset"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>

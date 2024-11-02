@@ -9,7 +9,7 @@
 <script src="{{ asset('backend/js/switchery.min.js') }}"></script>
 <script src="{{ asset('backend/js/core.js') }}"></script>
 <script src="{{ asset('js/parsley.min.js') }}"></script>
-{{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('js/select2.min.js') }}"></script>
 <script>
     $.ajaxSetup({

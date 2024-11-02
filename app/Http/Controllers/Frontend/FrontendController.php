@@ -6,10 +6,13 @@ use App\Models\Partner;
 use App\Models\Newsletter;
 use App\Models\Blog;
 use App\Models\SupportFAQ;
+use App\Models\EpostuPricingPlan;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Mail\PHPMailerService;
 use App\Models\ContactMessage;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class FrontendController extends Controller
 {
@@ -26,7 +29,11 @@ class FrontendController extends Controller
     public function products($slug)
     {
         if($slug == 'epostu') {
-            return view('frontend.epostu');
+            $basic_pricing = EpostuPricingPlan::where('status', 1)->where('plan_id', 1)->orderBy('id', 'DESC')->get();
+            $premium_pricing = EpostuPricingPlan::where('status', 1)->where('plan_id', 2)->orderBy('id', 'DESC')->get();
+            $corporate_pricing = EpostuPricingPlan::where('status', 1)->where('plan_id', 3)->orderBy('id', 'DESC')->get();
+
+            return view('frontend.epostu', compact('basic_pricing', 'premium_pricing', 'corporate_pricing'));
         } else {
             return view('frontend.product-details');
         }
@@ -156,5 +163,98 @@ class FrontendController extends Controller
             'status' => true,
             'message' => 'Thank you for subscribing!'
         ]);
+    }
+
+    public function checkoutProduct($product, $plan)
+    {
+        if($plan != 'basic' && $plan != 'premium' && $plan != 'corporate') {
+            abort(404);
+        }
+
+        if($product == 'epostu') {
+            return view('frontend.checkout', compact('product', 'plan'));
+        }
+
+        abort(404);
+    }
+
+    public function proceedCheckout(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'product' => 'required|string',
+            'plan' => 'required|string',
+            'pricing_plan_id' => 'required|integer',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|digits_between:10,15',
+            'address' => 'required|string|max:255',
+            'address2' => 'nullable|string|max:255',
+            'country' => 'required|string|max:255',
+            'zip' => 'required|digits_between:4,10'
+        ]);
+    
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Validation Failed',
+                'errors' => $validator->errors()
+            ]);
+        }
+
+        if($request->product != 'epostu' && $request->product != 'truspan') {
+            return response()->json(['status' => false, 'message' => 'Product not found.']);
+        }
+
+        $pricing_plan = 'monthly';
+        if($request->pricing_plan_id == 1) {
+            $pricing_plan = 'yearly';
+        }
+
+        $formEntry = Order::create(
+            [
+                'product' => $request->product,
+                'plan' => $request->plan,
+                'pricing_plan' => $request->pricing_plan_id == 0 ? 'monthly' : 'yearly',
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'address' => $request->address,
+                'address2' => $request->address2,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'country' => $request->country, 
+                'zip' => $request->zip 
+            ]
+        );
+
+        if($formEntry) {
+            $to = "sadi.khan@projukti-bd.com"; 
+            $subject = "New Order Submission";
+            $body = "
+                <h3>Order Form Details</h3>
+                <p><strong>Product:</strong> {$request->product}</p>
+                <p><strong>Pricing Plan:</strong> {$pricing_plan}</p>
+                <p><strong>First Name:</strong> {$request->first_name}</p>
+                <p><strong>Last Name:</strong> {$request->last_name}</p>
+                <p><strong>Email:</strong> {$request->email}</p>
+                <p><strong>Phone:</strong> {$request->phone}</p>
+                <p><strong>Address:</strong> {$request->address}</p>
+                <p><strong>Address 2:</strong> {$request->address2}</p>
+                <p><strong>Country:</strong> {$request->country}</p>
+                <p><strong>Zip:</strong> {$request->zip}</p>
+            ";
+
+            PHPMailerService::sendEmail($to, $subject, $body);
+            // if (!$result) {
+            //     return response()->json(['success' => true, 'txt' => $result, 'id' => $formEntry->id]);
+            // }
+        }
+
+        if($request->product == 'epostu') {
+            return response()->json(['success' => true, 'message' => 'Thank you for your submission. We will be in touch shortly.', 'goto' => route('product', 'epostu')]);
+        } else {
+            return response()->json(['success' => true, 'message' => 'Thank you for your submission. We will be in touch shortly.', 'goto' => route('product', 'truspan')]);
+        }
+        
     }
 }

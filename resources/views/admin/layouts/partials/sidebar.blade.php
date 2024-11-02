@@ -21,6 +21,12 @@
 
                 <li class="vertical-header">Data</li>  
                 <li>
+                    <a href="{{ route('admin.report.order') }}">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('admin.report.partner') }}">
                         <i class="ri-group-line"></i>
                         <span>Partners</span>

@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h5 class="modal-title">Partner Details: {{ $model->first_name . ' '. $model->last_name }}</h5>
+    <h5 class="modal-title">Order Details: {{ $model->first_name . ' '. $model->last_name }}</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">×</span>
     </button>
@@ -12,15 +12,27 @@
                     <td width="30%">Status</td>
                     <td>
                         @if ($model->status)
-                            <span class="badge badge-success">Verified</span>
+                            <span class="badge badge-success">Checked</span>
                         @else 
-                            <span class="badge badge-danger">Unverified</span>
+                            <span class="badge badge-danger">Unchecked</span>
                         @endif
                     </td>
                 </tr>
                 <tr>
                     <td width="30%">Date</td>
                     <td>{{ date('d F, Y h:i A', strtotime($model->created_at)) }}</td>
+                </tr>
+                <tr>
+                    <td width="30%">Product</td>
+                    <td>{{ ucfirst($model->product) }}</td>
+                </tr>
+                <tr>
+                    <td width="30%">Plan</td>
+                    <td>{{ ucfirst($model->plan) }}</td>
+                </tr>
+                <tr>
+                    <td width="30%">Pricing Plan</td>
+                    <td>{{ ucfirst($model->pricing_plan) }}</td>
                 </tr>
                 <tr>
                     <td width="30%">First Name</td>
@@ -39,18 +51,20 @@
                     <td>{{ $model->phone }}</td>
                 </tr>
                 <tr>
-                    <td width="30%">Company</td>
-                    <td>{{ $model->company_name }}</td>
+                    <td width="30%">Address</td>
+                    <td>{{ $model->address }}</td>
                 </tr>
                 <tr>
-                    <td width="30%">Contact</td>
-                    <td>{{ $model->contact_person }}</td>
+                    <td width="30%">Address 2</td>
+                    <td>{{ $model->address2 }}</td>
                 </tr>
                 <tr>
-                    <td colspan="2">Message</td>
+                    <td width="30%">Country</td>
+                    <td>{{ $model->country }}</td>
                 </tr>
                 <tr>
-                    <td colspan="2">{{ nl2br($model->message) }}</td>
+                    <td width="30%">Zip</td>
+                    <td>{{ $model->zip }}</td>
                 </tr>
             </table>
         </div>

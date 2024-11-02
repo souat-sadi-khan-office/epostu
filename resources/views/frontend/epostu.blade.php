@@ -165,58 +165,37 @@
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                                <h4 class="card-title">Basic Plan</h4>
+                                <h4 class="card-title">{{ get_settings('basic_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
                                         <span class="price-currency">$</span>
-                                        <span class="price-value">9</span> 
+                                        <span class="price-value">{{ get_settings('basic_plan_price_monthly') }}</span> 
                                         <span class="price-duration">mo</span>
                                     </div>
                                     <div class="price price-hide price-hidden">
                                         <span class="price-currency">$</span>
-                                        <span class="price-value">99</span> 
+                                        <span class="price-value">{{ get_settings('basic_plan_price_yearly') }}</span> 
                                         <span class="price-duration">yr</span>
                                     </div>
                                 </div>
 
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
-                                    <li>
-                                        <i class="uil uil-check"></i>
-                                        <span>
-                                            <strong>1</strong> 
-                                            Project 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-check"></i>
-                                        <span>
-                                            <strong>100K</strong> 
-                                            API Access 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-check"></i>
-                                        <span>
-                                            <strong>100MB</strong> 
-                                            Storage 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-times bullet-soft-red"></i>
-                                        <span> 
-                                            Weekly 
-                                            <strong>Reports</strong> 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-times bullet-soft-red"></i>
-                                        <span> 
-                                            7/24 
-                                            <strong>Support</strong>
-                                        </span>
-                                    </li>
+                                    @if (count($basic_pricing))
+                                        @foreach ($basic_pricing as $basic_price)
+                                            <li>
+                                                @if ($basic_price->checked == 1)
+                                                    <i class="uil uil-check"></i>
+                                                @else
+                                                    <i class="uil uil-times bullet-soft-red"></i>
+                                                @endif
+                                                <span>
+                                                    {{ $basic_price->name }}
+                                                </span>
+                                            </li>
+                                        @endforeach
+                                    @endif
                                 </ul>
-                                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'basic']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>
@@ -225,19 +204,36 @@
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                                <h4 class="card-title">Premium Plan</h4>
+                                <h4 class="card-title">{{ get_settings('premimum_plan_name') }}</h4>
                                 <div class="prices text-dark">
-                                <div class="price price-show"><span class="price-currency">$</span><span class="price-value">19</span> <span class="price-duration">mo</span></div>
-                                <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">199</span> <span class="price-duration">yr</span></div>
+                                    <div class="price price-show">
+                                        <span class="price-currency">$</span>
+                                        <span class="price-value">{{ get_settings('premium_plan_price_monthly') }}</span> 
+                                        <span class="price-duration">mo</span>
+                                    </div>
+                                    <div class="price price-hide price-hidden">
+                                        <span class="price-currency">$</span>
+                                        <span class="price-value">{{ get_settings('premium_plan_price_yearly') }}</span> 
+                                        <span class="price-duration">yr</span>
+                                    </div>
                                 </div>
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
-                                <li><i class="uil uil-check"></i><span><strong>5</strong> Projects </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>100K</strong> API Access </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>200MB</strong> Storage </span></li>
-                                <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                                <li><i class="uil uil-times bullet-soft-red"></i><span> 7/24 <strong>Support</strong></span></li>
+                                    @if (count($premium_pricing))
+                                        @foreach ($premium_pricing as $premium_price)
+                                            <li>
+                                                @if ($premium_price->checked == 1)
+                                                    <i class="uil uil-check"></i>
+                                                @else
+                                                    <i class="uil uil-times bullet-soft-red"></i>
+                                                @endif
+                                                <span>
+                                                    {{ $premium_price->name }}
+                                                </span>
+                                            </li>
+                                        @endforeach
+                                    @endif
                                 </ul>
-                                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'premium']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>
@@ -246,19 +242,36 @@
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                                <h4 class="card-title">Corporate Plan</h4>
+                                <h4 class="card-title">{{ get_settings('corporate_plan_name') }}</h4>
                                 <div class="prices text-dark">
-                                <div class="price price-show"><span class="price-currency">$</span><span class="price-value">49</span> <span class="price-duration">mo</span></div>
-                                <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">499</span> <span class="price-duration">yr</span></div>
+                                    <div class="price price-show">
+                                        <span class="price-currency">$</span>
+                                        <span class="price-value">{{ get_settings('corporate_plan_pricing_monthly') }}</span> 
+                                        <span class="price-duration">mo</span>
+                                    </div>
+                                    <div class="price price-hide price-hidden">
+                                        <span class="price-currency">$</span>
+                                        <span class="price-value">{{ get_settings('corporate_plan_pricing_yearly') }}</span> 
+                                        <span class="price-duration">yr</span>
+                                    </div>
                                 </div>
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
-                                <li><i class="uil uil-check"></i><span><strong>20</strong> Projects </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>300K</strong> API Access </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>500MB</strong> Storage </span></li>
-                                <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                                <li><i class="uil uil-check"></i><span> 7/24 <strong>Support</strong></span></li>
+                                    @if (count($corporate_pricing))
+                                        @foreach ($corporate_pricing as $corporate_price)
+                                            <li>
+                                                @if ($corporate_price->checked == 1)
+                                                    <i class="uil uil-check"></i>
+                                                @else
+                                                    <i class="uil uil-times bullet-soft-red"></i>
+                                                @endif
+                                                <span>
+                                                    {{ $corporate_price->name }}
+                                                </span>
+                                            </li>
+                                        @endforeach
+                                    @endif
                                 </ul>
-                                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'corporate']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>
