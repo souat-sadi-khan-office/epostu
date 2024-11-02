@@ -3112,6 +3112,10 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
+  .support-container {
+    text-align: center;
+  }
 }
 @media (max-width: 1199.98px) {
   .table-responsive-xl {

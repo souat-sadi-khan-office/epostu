@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-    <section class="wrapper">
+    <section class="wrapper bg-gray">
         <div class="container py-3 py-md-5">
             <nav class="d-inline-block" aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
@@ -39,7 +39,7 @@
                                 Epostu
                             </a>
                         @else   
-                            <a href="{{ route('product', 'truspan') }}">
+                            <a href="{{ route('product', 'truspam') }}">
                                 Truspan
                             </a>
                         @endif
@@ -72,6 +72,17 @@
                                         @else   
                                             <option value="0">Pricing Plan: Monthly ${{ get_settings('corporate_plan_pricing_monthly') }}</option>
                                             <option value="1">Pricing Plan: Yearly ${{ get_settings('corporate_plan_pricing_yearly') }}</option>
+                                        @endif
+                                    @else    
+                                        @if ($plan == 'basic')
+                                            <option value="0">Pricing Plan: Monthly ${{ get_settings('truspan_basic_plan_price_monthly') }}</option>
+                                            <option value="1">Pricing Plan: Yearly ${{ get_settings('truspan_basic_plan_price_yearly') }}</option>
+                                        @elseif ($plan == 'premium') 
+                                            <option value="0">Pricing Plan: Monthly ${{ get_settings('truspan_premium_plan_price_monthly') }}</option>
+                                            <option value="1">Pricing Plan: Yearly ${{ get_settings('truspan_premium_plan_price_yearly') }}</option>
+                                        @else   
+                                            <option value="0">Pricing Plan: Monthly ${{ get_settings('truspan_corporate_plan_pricing_monthly') }}</option>
+                                            <option value="1">Pricing Plan: Yearly ${{ get_settings('truspan_corporate_plan_pricing_yearly') }}</option>
                                         @endif
                                     @endif
                                 </select>
@@ -146,6 +157,15 @@
                                                 @else   
                                                     {{ get_settings('corporate_plan_name') }}
                                                 @endif
+                                            @else    
+                                                Truspan - 
+                                                @if ($plan == 'basic')
+                                                    {{ get_settings('truspan_basic_plan_name') }}
+                                                @elseif ($plan == 'premium')
+                                                    {{ get_settings('truspan_premium_plan_name') }}
+                                                @else   
+                                                    {{ get_settings('truspan_corporate_plan_name') }}
+                                                @endif
                                             @endif
                                         </h3>
                                         <div class="pricing-plan small">Montly Pricing Plan</div>
@@ -154,12 +174,22 @@
                                 <div class="ms-2 d-flex align-items-center">
                                     <p class="price fs-sm">
                                         <span class="amount">
-                                            @if ($plan == 'basic')
-                                                ${{ get_settings('basic_plan_price_monthly') }}
-                                            @elseif ($plan == 'premium')
-                                                ${{ get_settings('premium_plan_price_monthly') }}
-                                            @else   
-                                                ${{ get_settings('corporate_plan_pricing_monthly') }}
+                                            @if ($product == 'epostu')
+                                                @if ($plan == 'basic')
+                                                    ${{ get_settings('basic_plan_price_monthly') }}
+                                                @elseif ($plan == 'premium')
+                                                    ${{ get_settings('premium_plan_price_monthly') }}
+                                                @else   
+                                                    ${{ get_settings('corporate_plan_pricing_monthly') }}
+                                                @endif
+                                            @else    
+                                                @if ($plan == 'basic')
+                                                    ${{ get_settings('truspan_basic_plan_price_monthly') }}
+                                                @elseif ($plan == 'premium')
+                                                    ${{ get_settings('truspan_premium_plan_price_monthly') }}
+                                                @else   
+                                                    ${{ get_settings('truspan_corporate_plan_pricing_monthly') }}
+                                                @endif
                                             @endif
                                         </span>
                                     </p>
@@ -176,12 +206,22 @@
                                         </td>
                                         <td class="pe-0 text-end">
                                             <p class="price">
-                                                @if ($plan == 'basic')
-                                                    ${{ get_settings('basic_plan_price_monthly') }}
-                                                @elseif ($plan == 'premium')
-                                                    ${{ get_settings('premium_plan_price_monthly') }}
-                                                @else   
-                                                    ${{ get_settings('corporate_plan_pricing_monthly') }}
+                                                @if ($product == 'epostu')
+                                                    @if ($plan == 'basic')
+                                                        ${{ get_settings('basic_plan_price_monthly') }}
+                                                    @elseif ($plan == 'premium')
+                                                        ${{ get_settings('premium_plan_price_monthly') }}
+                                                    @else   
+                                                        ${{ get_settings('corporate_plan_pricing_monthly') }}
+                                                    @endif
+                                                @else    
+                                                    @if ($plan == 'basic')
+                                                        ${{ get_settings('truspan_basic_plan_price_monthly') }}
+                                                    @elseif ($plan == 'premium')
+                                                        ${{ get_settings('truspan_premium_plan_price_monthly') }}
+                                                    @else   
+                                                        ${{ get_settings('truspan_corporate_plan_pricing_monthly') }}
+                                                    @endif
                                                 @endif
                                             </p>
                                         </td>
@@ -192,12 +232,22 @@
                                         </td>
                                         <td class="pe-0 text-end">
                                             <p class="price text-dark fw-bold">
-                                                @if ($plan == 'basic')
-                                                    ${{ get_settings('basic_plan_price_monthly') }}
-                                                @elseif ($plan == 'premium')
-                                                    ${{ get_settings('premium_plan_price_monthly') }}
-                                                @else   
-                                                    ${{ get_settings('corporate_plan_pricing_monthly') }}
+                                                @if ($product == 'epostu')
+                                                    @if ($plan == 'basic')
+                                                        ${{ get_settings('basic_plan_price_monthly') }}
+                                                    @elseif ($plan == 'premium')
+                                                        ${{ get_settings('premium_plan_price_monthly') }}
+                                                    @else   
+                                                        ${{ get_settings('corporate_plan_pricing_monthly') }}
+                                                    @endif
+                                                @else    
+                                                    @if ($plan == 'basic')
+                                                        ${{ get_settings('truspan_basic_plan_price_monthly') }}
+                                                    @elseif ($plan == 'premium')
+                                                        ${{ get_settings('truspan_premium_plan_price_monthly') }}
+                                                    @else   
+                                                        ${{ get_settings('truspan_corporate_plan_pricing_monthly') }}
+                                                    @endif
                                                 @endif
                                             </p>
                                         </td>

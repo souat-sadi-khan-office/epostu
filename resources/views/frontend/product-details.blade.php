@@ -25,8 +25,8 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/bg2.webp') }}">
-    <div class="container pt-10 pt-md-15 pb-18 pb-md-20 text-center">
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/truspan-bg.webp') }}">
+    <div class="container pt-10 pt-md-20 pb-18 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <h1 class="display-1 text-white mb-3">Advanced Email Security Gateway</h1>
@@ -81,8 +81,8 @@
             </div>
             <div class="col-lg-5">
                 <h2 class="fs-15 text-uppercase text-muted mb-3">Overview</h2>
-                <h3 class="display-4 mb-5">Reliable, cloud-based email hosting designed for seamless communication.</h3>
-                <p>Truspam offers unmatched reliability, security, and flexibility. With a commitment to supporting remote teams and global communication, Truspam empowers businesses to operate smoothly and efficiently. Its rich set of features simplifies your workflow, helping teams focus on what matters most. Whether for startups, SMEs, or large enterprises, Truspam is designed to meet the diverse needs of the modern workforce</p>
+                <h3 class="display-4 mb-5">Why Choose Truspam for Your Business Email Needs.</h3>
+                <p>Truspam offers an advanced, secure, and user-friendly email hosting solution built to serve modern businesses. This comprehensive platform goes beyond traditional email hosting by focusing on efficient communication, privacy, and productivity, making it the perfect choice for managing your business email needs</p>
                 <a href="#" class="btn btn-navy rounded-pill mt-3">More Details</a>
             </div>
         </div>
@@ -99,19 +99,19 @@
                 <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9">
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="High Availability with Built-in Auto-Scaling" />
-                        <h4 class="mb-1">High Availability with Built-in Auto-Scaling</h4>
-                        <p>Truspam ensures high availability with automatic scaling to handle sudden traffic spikes, maintaining seamless performance and uninterrupted service for all users.</p>
+                        <h4 class="mb-1">Advanced Email Security</h4>
+                        <p>Truspam prioritizes your email security by incorporating advanced threat detection and filtering mechanisms to guard against phishing, spam, malware, and other email-based attacks. Your business communications remain safe and uninterrupted.</p>
                     </div>
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Multi-Device Sync with Outlook Connector and ActiveSync Pictures" />
-                        <h4 class="mb-1">Multi-Device Sync with Outlook Connector and ActiveSync</h4>
-                        <p>Easily sync emails, calendars, and contacts across all your devices, with Outlook Connector and ActiveSync support for real-time updates.</p>
+                        <h4 class="mb-1">User-Friendly Interface</h4>
+                        <p>With a clean and intuitive design, Truspam ensures a seamless user experience. Both administrators and end-users can effortlessly manage their email settings, organize mail efficiently.</p>
                     </div>
 
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Backup and Archiving Tools for Disaster Recovery Picture" />
-                        <h4 class="mb-1">Backup and Archiving Tools for Disaster Recovery</h4>
-                        <p>Advanced backup and archiving tools allow businesses to recover vital emails and data quickly, minimizing data loss during unexpected incidents.</p>
+                        <h4 class="mb-1">High Reliability and Uptime</h4>
+                        <p>Truspam guarantees exceptional reliability with enterprise-grade infrastructure, ensuring that your business email remains operational 24/7. Enjoy peace of mind with minimal downtime and high-speed email delivery.</p>
                     </div>
 
                     <div class="col-md-4"> 
@@ -121,8 +121,8 @@
                     </div>
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/price-tag.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Customizable Subscription Options with Flexible Terms" />
-                        <h4 class="mb-1">Customizable Subscription Options with Flexible Terms</h4>
-                        <p>Choose from various customizable plans with flexible terms, designed to meet the unique requirements of businesses of all sizes.</p>
+                        <h4 class="mb-1">Comprehensive Privacy Protection</h4>
+                        <p>Your data privacy is paramount. Truspam uses state-of-the-art encryption technologies to secure all email communication, keeping sensitive business information protected from unauthorized access and breaches.</p>
                     </div>
 
                     <div class="col-md-4"> 
@@ -166,58 +166,37 @@
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                                <h4 class="card-title">Basic Plan</h4>
+                                <h4 class="card-title">{{ get_settings('truspan_basic_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
                                         <span class="price-currency">$</span>
-                                        <span class="price-value">9</span> 
+                                        <span class="price-value">{{ get_settings('truspan_basic_plan_price_monthly') }}</span> 
                                         <span class="price-duration">mo</span>
                                     </div>
                                     <div class="price price-hide price-hidden">
                                         <span class="price-currency">$</span>
-                                        <span class="price-value">99</span> 
+                                        <span class="price-value">{{ get_settings('truspan_basic_plan_price_yearly') }}</span> 
                                         <span class="price-duration">yr</span>
                                     </div>
                                 </div>
 
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
-                                    <li>
-                                        <i class="uil uil-check"></i>
-                                        <span>
-                                            <strong>1</strong> 
-                                            Project 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-check"></i>
-                                        <span>
-                                            <strong>100K</strong> 
-                                            API Access 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-check"></i>
-                                        <span>
-                                            <strong>100MB</strong> 
-                                            Storage 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-times bullet-soft-red"></i>
-                                        <span> 
-                                            Weekly 
-                                            <strong>Reports</strong> 
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="uil uil-times bullet-soft-red"></i>
-                                        <span> 
-                                            7/24 
-                                            <strong>Support</strong>
-                                        </span>
-                                    </li>
+                                    @if (count($basic_pricing))
+                                        @foreach ($basic_pricing as $basic_price)
+                                            <li>
+                                                @if ($basic_price->checked == 1)
+                                                    <i class="uil uil-check"></i>
+                                                @else
+                                                    <i class="uil uil-times bullet-soft-red"></i>
+                                                @endif
+                                                <span>
+                                                    {{ $basic_price->name }}
+                                                </span>
+                                            </li>
+                                        @endforeach
+                                    @endif
                                 </ul>
-                                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a href="{{ route('checkout', ['product' => 'truspan', 'model' => 'basic']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>
@@ -226,19 +205,28 @@
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                                <h4 class="card-title">Premium Plan</h4>
+                                <h4 class="card-title">{{ get_settings('truspan_premium_plan_name') }}</h4>
                                 <div class="prices text-dark">
-                                <div class="price price-show"><span class="price-currency">$</span><span class="price-value">19</span> <span class="price-duration">mo</span></div>
-                                <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">199</span> <span class="price-duration">yr</span></div>
+                                <div class="price price-show"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_premium_plan_price_monthly') }}</span> <span class="price-duration">mo</span></div>
+                                <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_premium_plan_price_yearly') }}</span> <span class="price-duration">yr</span></div>
                                 </div>
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
-                                <li><i class="uil uil-check"></i><span><strong>5</strong> Projects </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>100K</strong> API Access </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>200MB</strong> Storage </span></li>
-                                <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                                <li><i class="uil uil-times bullet-soft-red"></i><span> 7/24 <strong>Support</strong></span></li>
+                                    @if (count($premium_pricing))
+                                        @foreach ($premium_pricing as $premium_price)
+                                            <li>
+                                                @if ($premium_price->checked == 1)
+                                                    <i class="uil uil-check"></i>
+                                                @else
+                                                    <i class="uil uil-times bullet-soft-red"></i>
+                                                @endif
+                                                <span>
+                                                    {{ $premium_price->name }}
+                                                </span>
+                                            </li>
+                                        @endforeach
+                                    @endif
                                 </ul>
-                                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a href="{{ route('checkout', ['product' => 'truspan', 'model' => 'premium']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>
@@ -247,19 +235,28 @@
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                                <h4 class="card-title">Corporate Plan</h4>
+                                <h4 class="card-title">{{ get_settings('truspan_corporate_plan_name') }}</h4>
                                 <div class="prices text-dark">
-                                <div class="price price-show"><span class="price-currency">$</span><span class="price-value">49</span> <span class="price-duration">mo</span></div>
-                                <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">499</span> <span class="price-duration">yr</span></div>
+                                <div class="price price-show"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_corporate_plan_pricing_monthly') }}</span> <span class="price-duration">mo</span></div>
+                                <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_corporate_plan_pricing_yearly') }}</span> <span class="price-duration">yr</span></div>
                                 </div>
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
-                                <li><i class="uil uil-check"></i><span><strong>20</strong> Projects </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>300K</strong> API Access </span></li>
-                                <li><i class="uil uil-check"></i><span><strong>500MB</strong> Storage </span></li>
-                                <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                                <li><i class="uil uil-check"></i><span> 7/24 <strong>Support</strong></span></li>
+                                    @if (count($corporate_pricing))
+                                        @foreach ($corporate_pricing as $corporate_price)
+                                            <li>
+                                                @if ($corporate_price->checked == 1)
+                                                    <i class="uil uil-check"></i>
+                                                @else
+                                                    <i class="uil uil-times bullet-soft-red"></i>
+                                                @endif
+                                                <span>
+                                                    {{ $corporate_price->name }}
+                                                </span>
+                                            </li>
+                                        @endforeach
+                                    @endif
                                 </ul>
-                                <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a href="{{ route('checkout', ['product' => 'truspan', 'model' => 'corporate']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>
@@ -270,7 +267,7 @@
 
 <section class="wrapper bg-gray">
     <div class="container py-md-16">
-        <h2 class="display-4 mb-3 text-center">Pricing FAQ</h2>
+        <h2 class="display-4 mb-3 text-center">Truspan FAQ</h2>
         <p class="lead text-center mb-10 px-md-16 px-lg-0">If you don't see an answer to your question, you can send us an email from our contact form.</p>
         <div class="row">
             <div class="col-lg-6 mb-0">

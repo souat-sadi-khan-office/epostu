@@ -24,8 +24,8 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/bg2.webp') }}">
-    <div class="container pt-10 pt-md-15 pb-18 pb-md-20 text-center">
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/epostu-bg.webp') }}">
+    <div class="container pt-10 pt-md-20 pb-18 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <h1 class="display-1 text-white mb-3">Comprehensive Email Hosting Solution</h1>

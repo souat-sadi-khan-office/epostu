@@ -61,7 +61,11 @@ class SettingsController extends Controller
             }
 
             Session::put('settings.' . $key, $value);
+
+            Cache::forget("settings_{$key}");
+
         }
+
 
         return response()->json([
             'status' => true, 

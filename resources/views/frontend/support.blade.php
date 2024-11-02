@@ -15,7 +15,7 @@
 </section>
 
 <section class="wrapper bg-light">
-    <div class="container  py-md-16">
+    <div class="container pt-10 pb-12 pt-md-14 pb-md-16 support-container">
         <div class="row">
             <div class="col-lg-4">
                 <h2 class=" display-6 text-uppercase text-primary mb-3">Support Level</h2>
@@ -27,19 +27,19 @@
                     <div class="col-md-4">
                         <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />
                         <h3 class="counter">Standard</h3>
-                        <p class="mb-0">Business-Hours support only, respond to troubleshooting regularly</p>
+                        <p class="mb-0">Business-Hours support only, regular troubleshooting</p>
                     </div>
 
                     <div class="col-md-4">
-                        <img src="{{ asset('assets/images/icons/lineal/cloud-computing-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
+                        <img src="{{ asset('assets/images/icons/lineal/web.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
                         <h3 class="counter">Silver</h3>
-                        <p class="mb-0">7*24 phone support, regular troubleshooting check</p>
+                        <p class="mb-0">7*24 phone support, regular troubleshooting reviews</p>
                     </div>
 
                     <div class="col-md-4">
-                        <img src="{{ asset('assets/images/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                        <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
                         <h3 class="counter">Gold</h3>
-                        <p class="mb-0">7*24 phone support included data migration</p>
+                        <p class="mb-0">7*24 phone support, includes data migration task</p>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
 </section>
 
 <section class="wrapper bg-gray">
-    <div class="container py-md-16">
+    <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
         <h2 class="display-4 mb-3 text-center">Pricing FAQ</h2>
         <p class="lead text-center mb-10 px-md-16 px-lg-0">If you don't see an answer to your question, you can send us an email from our contact form.</p>
         <div class="row">
@@ -86,44 +86,50 @@
             <div class="col-lg-12 order-lg-2">
                 <div class="blog grid grid-view">
                     <div class="row isotope gx-md-8 gy-8 mb-8">
-                        @foreach ($blogs as $blog)
-                            <article class="item post col-md-4">
-                                <div class="card">
-                                    <figure class="card-img-top overlay overlay-1 hover-scale">
-                                        <a href="{{ route('knowledge', $blog->slug) }}"> 
-                                            <img src="{{ $blog->thumb_image ? asset($blog->thumb_image) : asset('assets/images/b6.jpg') }}" alt="Knowledge three" />
-                                        </a>
-                                        <figcaption>
-                                            <h5 class="from-top mb-0">Read More</h5>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="card-body">
-                                        <div class="post-header">
-                                            <div class="post-category text-line">
-                                                <a href="{{ route('knowledge', $blog->slug) }}" class="hover" rel="category">{{ $blog->tag }}</a>
+                        @if (count($blogs) > 0)
+                            @foreach ($blogs as $blog)
+                                <article class="item post col-md-4">
+                                    <div class="card">
+                                        <figure class="card-img-top overlay overlay-1 hover-scale">
+                                            <a href="{{ route('knowledge', $blog->slug) }}"> 
+                                                <img src="{{ $blog->thumb_image ? asset($blog->thumb_image) : asset('assets/images/b6.jpg') }}" alt="Knowledge three" />
+                                            </a>
+                                            <figcaption>
+                                                <h5 class="from-top mb-0">Read More</h5>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="card-body">
+                                            <div class="post-header">
+                                                <div class="post-category text-line">
+                                                    <a href="{{ route('knowledge', $blog->slug) }}" class="hover" rel="category">{{ $blog->tag }}</a>
+                                                </div>
+                                                <h2 class="post-title h3 mt-1 mb-3">
+                                                    <a class="link-dark" href="{{ route('knowledge', $blog->slug) }}">{{ $blog->name }}</a>
+                                                </h2>
                                             </div>
-                                            <h2 class="post-title h3 mt-1 mb-3">
-                                                <a class="link-dark" href="{{ route('knowledge', $blog->slug) }}">{{ $blog->name }}</a>
-                                            </h2>
+                                            <div class="post-content">
+                                                <p>{{ $blog->short_details }}</p>
+                                            </div>
                                         </div>
-                                        <div class="post-content">
-                                            <p>{{ $blog->short_details }}</p>
+                                        <div class="card-footer">
+                                            <ul class="post-meta d-flex mb-0">
+                                                <li class="post-date">
+                                                    <i class="uil uil-calendar-alt"></i>
+                                                    <span>{{ date('d F, Y', strtotime($blog->created_at)) }}</span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <ul class="post-meta d-flex mb-0">
-                                            <li class="post-date">
-                                                <i class="uil uil-calendar-alt"></i>
-                                                <span>{{ date('d F, Y', strtotime($blog->created_at)) }}</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        @endforeach
+                                </article>
+                            @endforeach
+                        @else   
+                            <div class="col-md-12 text-center text-muted">
+                                <h4 class="h2">Nothing to show.</h4>
+                            </div>
+                        @endif
                     </div>
                 </div>
-                <nav class="d-flex" aria-label="pagination">
+                {{-- <nav class="d-flex" aria-label="pagination">
                     <ul class="pagination">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" aria-label="Previous">
@@ -139,7 +145,7 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav> --}}
             </div>
             
         </div>

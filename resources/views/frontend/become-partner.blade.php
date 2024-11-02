@@ -24,18 +24,15 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-    <section class="wrapper bg-gray">
-        <div class="container pt-10 pt-md-14 text-center">
+    <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/become-partner.webp') }}" style="background-image: url('{{ asset('assets/images/become-partner.webp') }}');">
+        <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
             <div class="row">
-                <div class="col-xl-6 mx-auto">
-                    <h1 class="display-1 mb-4">Become a Partner</h1>
-                    <p class="lead fs-lg mb-0">A company turning ideas into beautiful things.</p>
+                <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+                    <h1 class="display-1 text-white mb-3">Become a Partner</h1>
+                    <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">A company turning ideas into beautiful things.</p>
                 </div>
             </div>
         </div>
-        <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;">
-            <img src="{{ asset('assets/images/about-page-bg.webp') }}" alt="Become a Partner Banner" />
-        </figure>
     </section>
     
     <section class="wrapper bg-light">
@@ -88,7 +85,7 @@
 
     <!-- Benifits of choosing us -->
     <section class="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
-        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/bg38.webp') }}">
+        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/partnership.webp') }}">
             <div class="divider text-gray divider-v-end d-none d-lg-block">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200">
                     <g />

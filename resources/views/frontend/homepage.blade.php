@@ -24,12 +24,11 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-    <!-- hero section -->
-    <section class="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray" data-image-src="{{ asset('assets/images/home-page-hero-background.webp') }}">
-        <div class="container pt-17 pb-15 py-sm-17 py-xxl-20">
+    <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/home-page-bg.webp') }}" style="background-image: url('{{ asset('assets/images/home-page-bg.webp') }}');">
+        <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
             <div class="row">
                 <div class="col-sm-6 col-xxl-5 text-center text-sm-start" data-cues="slideInDown" data-group="page-title" data-interval="-200" data-delay="500">
-                    <h2 class="display-1 fs-56 mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
+                    <h2 class="display-1 text-white fs-56 mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
                         Secure, Reliable, and Scalable Email Solutions for 
                         <span class="underline-3 style-3 yellow">
                             Every Business
@@ -38,11 +37,6 @@
                     <p class="lead fs-23 lh-sm mb-7 pe-lg-5 pe-xl-5 pe-xxl-0">
                         Experience seamless communication with epostu and safeguard your inbox with truspam.
                     </p>
-                    <div>
-                        <a href="#" class="btn btn-lg btn-primary rounded">
-                            Learn More
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -133,7 +127,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Email Encryption</h4>
@@ -145,7 +139,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">DLP Policies</h4>
@@ -157,7 +151,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/video-camera.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Real-Time Protection</h4>
@@ -171,7 +165,7 @@
 
     <!-- Benifits of choosing us -->
     <section class="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
-        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/bg38.webp') }}">
+        <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/home-page-choosing.webp') }}">
             <div class="divider text-gray divider-v-end d-none d-lg-block">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200">
                     <g />
@@ -237,7 +231,7 @@
                     <div class="row gx-lg-8 gx-xl-12 align-items-center">
                         <div class="col-lg-5 ms-auto col-xl-4 d-none d-lg-flex">
                             <div class="img-mask">
-                                <img src="{{ asset('assets/images/about28.webp') }}" alt="Client Testimonial" />
+                                <img src="{{ asset('assets/images/cm.webp') }}" alt="Client Testimonial" />
                             </div>
                         </div>
 

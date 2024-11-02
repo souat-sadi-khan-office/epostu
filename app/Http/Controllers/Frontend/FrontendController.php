@@ -7,6 +7,7 @@ use App\Models\Newsletter;
 use App\Models\Blog;
 use App\Models\SupportFAQ;
 use App\Models\EpostuPricingPlan;
+use App\Models\TruspanPricingPlan;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Mail\PHPMailerService;
@@ -34,9 +35,16 @@ class FrontendController extends Controller
             $corporate_pricing = EpostuPricingPlan::where('status', 1)->where('plan_id', 3)->orderBy('id', 'DESC')->get();
 
             return view('frontend.epostu', compact('basic_pricing', 'premium_pricing', 'corporate_pricing'));
-        } else {
-            return view('frontend.product-details');
+        } elseif ($slug == 'truspam') {
+
+            $basic_pricing = TruspanPricingPlan::where('status', 1)->where('plan_id', 1)->orderBy('id', 'DESC')->get();
+            $premium_pricing = TruspanPricingPlan::where('status', 1)->where('plan_id', 2)->orderBy('id', 'DESC')->get();
+            $corporate_pricing = TruspanPricingPlan::where('status', 1)->where('plan_id', 3)->orderBy('id', 'DESC')->get();
+
+            return view('frontend.product-details', compact('basic_pricing', 'premium_pricing', 'corporate_pricing'));
         }
+
+        abort(404);
     }
     
     public function knowledge($slug)
@@ -173,6 +181,8 @@ class FrontendController extends Controller
 
         if($product == 'epostu') {
             return view('frontend.checkout', compact('product', 'plan'));
+        } else if ($product == 'truspan') {
+            return view('frontend.checkout', compact('product', 'plan'));
         }
 
         abort(404);
@@ -253,7 +263,7 @@ class FrontendController extends Controller
         if($request->product == 'epostu') {
             return response()->json(['success' => true, 'message' => 'Thank you for your submission. We will be in touch shortly.', 'goto' => route('product', 'epostu')]);
         } else {
-            return response()->json(['success' => true, 'message' => 'Thank you for your submission. We will be in touch shortly.', 'goto' => route('product', 'truspan')]);
+            return response()->json(['success' => true, 'message' => 'Thank you for your submission. We will be in touch shortly.', 'goto' => route('product', 'truspam')]);
         }
         
     }
