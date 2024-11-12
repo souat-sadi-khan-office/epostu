@@ -117,6 +117,33 @@
 
                 <div class="col-md-12">
                     <div class="card m-b-30">
+                        <div class="card-header">
+                            <h5 class="card-title">Gift Email Template</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label for="gift_template_subject">Subject</label>
+                                    <input type="text" name="gift_template_subject" id="gift_template_subject" class="form-control" value="{{ get_settings('gift_template_subject') }}">
+                                </div>
+                                <div class="col-md-12 mt-3 form-group">
+                                    <label for="gift_template_body">Body</label>
+                                    <textarea name="gift_template_body" id="gift_template_body" cols="30" rows="4" class="form-control">{{ get_settings('gift_template_body') }}</textarea>
+                                    <small class="text-muted">
+                                        Name - [-NAME-] <br>
+                                        Email - [-EMAIL-] <br>
+                                        Phone - [-PHONE-] <br>
+                                        Gift Picture - [-GIFT_PICTURE-] <br>
+                                        Gift Item Name - [-GIFT_NAME-]
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card m-b-30">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4 mx-auto">

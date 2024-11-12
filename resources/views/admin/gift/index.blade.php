@@ -1,10 +1,10 @@
-@extends('admin.layouts.app', ['title' => 'Contact Messages'])
+@extends('admin.layouts.app', ['title' => 'Gift Items', 'modal' => 'md'])
 
 @section('content')
     <div class="breadcrumbbar">
         <div class="row align-items-center">
             <div class="col-md-8 col-lg-8">
-                <h4 class="page-title">Contact Message Records</h4>
+                <h4 class="page-title">Gift Items</h4>
                 <div class="breadcrumb-list">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
@@ -12,13 +12,16 @@
                                 Home
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact Message</li>
+                        <li class="breadcrumb-item active" aria-current="page">Gift Items</li>
                     </ol>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="widgetbar">
                     <button class="btn btn-primary"><i class="ri-refresh-line mr-2"></i>Refresh</button>
+                    <a href="{{ route('admin.gift-item.create') }}" class="btn btn-success">
+                        Create New
+                    </a>
                 </div>                        
             </div>
         </div>          
@@ -29,7 +32,7 @@
             <div class="col-lg-12">
                 <div class="card m-b-30">
                     <div class="card-header">
-                        <h5 class="card-title">Contact Message</h5>
+                        <h5 class="card-title">Gift Items</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -38,10 +41,10 @@
                                     <thead>
                                         <tr>
                                             <th width="5%">ID</th>
+                                            <th width="25">Image</th>
                                             <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Message</th>
+                                            <th width="5%">Stock</th>
+                                            <th width="15%">Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -89,21 +92,23 @@
             var table = $('#datatable-buttons').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.report.contact-message') }}",
+                ajax: "{{ route('admin.gift-item.index') }}",
                 columns: [
                     {data: 'id', name: 'id', orderable: true},
+                    {data: 'image', name: 'image'},
                     {data: 'name', name: 'name'},
-                    {data: 'email', name: 'email'},
-                    {data: 'phone', name: 'phone'},
-                    {data: 'message', name: 'message', orderable: false, searchable: false},
+                    {data: 'quantity', name: 'stock'},
+                    {data: 'status', name: 'status', orderable: false, searchable: false},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
-                order: [[0, 'desc']], 
                 lengthChange: false,
                 responsive: true,
                 buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
             });
             table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
+
+            _componentRemoteModalLoadAfterAjax();
+
         });
     </script>
 @endpush

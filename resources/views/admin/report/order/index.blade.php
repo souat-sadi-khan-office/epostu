@@ -37,6 +37,7 @@
                                 <table id="datatable-buttons" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
+                                            <th width="5%">ID</th>
                                             <th>Date</th>
                                             <th>Product</th>
                                             <th>Plan</th>
@@ -93,6 +94,7 @@
                 serverSide: true,
                 ajax: "{{ route('admin.report.order') }}",
                 columns: [
+                    {data: 'id', name: 'id', orderable: true},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'name', name: 'name'},
                     {data: 'product', name: 'product'},

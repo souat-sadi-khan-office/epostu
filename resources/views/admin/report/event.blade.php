@@ -1,10 +1,10 @@
-@extends('admin.layouts.app', ['title' => 'Contact Messages'])
+@extends('admin.layouts.app', ['title' => 'Event Records'])
 
 @section('content')
     <div class="breadcrumbbar">
         <div class="row align-items-center">
             <div class="col-md-8 col-lg-8">
-                <h4 class="page-title">Contact Message Records</h4>
+                <h4 class="page-title">Event Registratoin Records</h4>
                 <div class="breadcrumb-list">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
@@ -12,7 +12,7 @@
                                 Home
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact Message</li>
+                        <li class="breadcrumb-item active" aria-current="page">Event Registratoin Records</li>
                     </ol>
                 </div>
             </div>
@@ -29,7 +29,7 @@
             <div class="col-lg-12">
                 <div class="card m-b-30">
                     <div class="card-header">
-                        <h5 class="card-title">Contact Message</h5>
+                        <h5 class="card-title">Event Registratoin Records</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -41,7 +41,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
-                                            <th>Message</th>
+                                            <th>Gift</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -89,13 +89,13 @@
             var table = $('#datatable-buttons').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.report.contact-message') }}",
+                ajax: "{{ route('admin.report.event') }}",
                 columns: [
                     {data: 'id', name: 'id', orderable: true},
                     {data: 'name', name: 'name'},
                     {data: 'email', name: 'email'},
                     {data: 'phone', name: 'phone'},
-                    {data: 'message', name: 'message', orderable: false, searchable: false},
+                    {data: 'gift', name: 'gift'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
                 order: [[0, 'desc']], 

@@ -21,6 +21,12 @@
 
                 <li class="vertical-header">Data</li>  
                 <li>
+                    <a href="{{ route('admin.report.event') }}">
+                        <i class="ri-gift-2-line"></i>
+                        <span>Event Registration</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('admin.report.order') }}">
                         <i class="ri-shopping-cart-line"></i>
                         <span>Orders</span>
@@ -70,6 +76,12 @@
                 </li>
 
                 <li class="vertical-header">Content</li>  
+                <li class="{{ Request::is('admin/gift-item*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.gift-item.index') }}">
+                        <i class="ri-gift-2-line"></i>
+                        <span>Gift Items</span>
+                    </a>
+                </li>
                 <li>
                     <a href="{{ route('admin.support-faq.index') }}">
                         <i class="ri-question-line"></i>
