@@ -37,6 +37,7 @@
                                 <table id="datatable-buttons" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
+                                            <th width="5%">ID</th>
                                             <th>Date</th>
                                             <th>Name</th>
                                             <th>Email</th>
@@ -91,6 +92,7 @@
                 serverSide: true,
                 ajax: "{{ route('admin.report.partner') }}",
                 columns: [
+                    {data: 'id', name: 'id', orderable: true},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'name', name: 'name'},
                     {data: 'email', name: 'email'},
@@ -98,10 +100,10 @@
                     {data: 'status', name: 'status'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
+                order: [[0, 'desc']], 
                 lengthChange: false,
                 responsive: true,
                 buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
-                order: [0, 'desc']
             });
             table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
 

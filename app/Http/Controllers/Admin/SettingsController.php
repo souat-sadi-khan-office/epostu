@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Setting;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -63,9 +64,7 @@ class SettingsController extends Controller
             Session::put('settings.' . $key, $value);
 
             Cache::forget("settings_{$key}");
-
         }
-
 
         return response()->json([
             'status' => true, 

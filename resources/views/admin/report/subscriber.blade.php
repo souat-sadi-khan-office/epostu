@@ -37,6 +37,7 @@
                                 <table id="datatable-buttons" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
+                                            <th width="5%">ID</th>
                                             <th>Email</th>
                                             <th>Action</th>
                                         </tr>
@@ -85,11 +86,13 @@
             var table = $('#datatable-buttons').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.report.partner') }}",
+                ajax: "{{ route('admin.report.subscribers') }}",
                 columns: [
+                    {data: 'id', name: 'id', orderable: true},
                     {data: 'email', name: 'email'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
+                order: [[0, 'desc']], 
                 lengthChange: false,
                 responsive: true,
                 buttons: ['copy', 'csv', 'excel', 'pdf', 'print']

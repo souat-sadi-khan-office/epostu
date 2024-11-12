@@ -5,9 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Yajra\DataTables\Facades\DataTables;
 use App\Models\Partner;
 use App\Models\Order;
-use App\Models\Subscriber;
+use App\Models\Newsletter;
 use App\Models\ContactMessage;
 use App\Http\Controllers\Controller;
+use App\Models\EventRegistration;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -16,7 +17,7 @@ class ReportController extends Controller
     {
         if ($request->ajax()) {
             $models = Partner::all();
-            return Datatables::of($models)
+            return DataTables::of($models)
                 ->addIndexColumn()
                 ->editColumn('created_at', function ($model) {
                     return date('d F, Y h:i A', strtotime($model->created_at));
@@ -47,7 +48,7 @@ class ReportController extends Controller
     {
         if ($request->ajax()) {
             $models = Order::all();
-            return Datatables::of($models)
+            return DataTables::of($models)
                 ->addIndexColumn()
                 ->editColumn('created_at', function ($model) {
                     return date('d F, Y h:i A', strtotime($model->created_at));
@@ -74,9 +75,52 @@ class ReportController extends Controller
         return view('admin.report.order.index');
     }
 
+    public function events(Request $request)
+    {
+        if ($request->ajax()) {
+            $models = EventRegistration::all();
+            return DataTables::of($models)
+                ->addIndexColumn()
+                ->editColumn('created_at', function ($model) {
+                    return date('d F, Y h:i A', strtotime($model->created_at));
+                })
+                ->editColumn('name', function ($model) {
+                    return $model->first_name. ' '. $model->last_name;
+                })
+                ->editColumn('gift', function ($model) {
+                    $name = null;
+
+                    if($model->gift) {
+                        $name = $model->gift->name;
+                    }
+
+                    return $name;
+                })
+                ->addColumn('action', function ($model) {
+                    return view('admin.report.event_action', compact('model'));
+                })
+                ->rawColumns(['action', 'gift', 'created_at', 'name'])
+                ->make(true);
+        }
+
+        return view('admin.report.event');
+    }
+
     public function destroyPartnerRecord($id) 
     {
         $model = Partner::findOrFail($id);
+        $model->delete();
+
+        return response()->json([
+            'status' => true, 
+            'load' => true,
+            'message' => "Record deleted successfully"
+        ]);
+    }
+    
+    public function destroyEvent($id) 
+    {
+        $model = EventRegistration::findOrFail($id);
         $model->delete();
 
         return response()->json([
@@ -169,7 +213,7 @@ class ReportController extends Controller
     {
         if ($request->ajax()) {
             $models = ContactMessage::all();
-            return Datatables::of($models)
+            return DataTables::of($models)
                 ->addIndexColumn()
                 ->editColumn('name', function ($model) {
                     return $model->first_name. ' '. $model->last_name;
@@ -199,8 +243,8 @@ class ReportController extends Controller
     public function subscriber(Request $request)
     {
         if ($request->ajax()) {
-            $models = Subscriber::all();
-            return Datatables::of($models)
+            $models = Newsletter::all();
+            return DataTables::of($models)
                 ->addIndexColumn()
                 ->addColumn('action', function ($model) {
                     return view('admin.report.subscriber_action', compact('model'));
@@ -214,7 +258,7 @@ class ReportController extends Controller
 
     public function destroySubscriber($id)
     {
-        $model = Subscriber::findOrFail($id);
+        $model = Newsletter::findOrFail($id);
         $model->delete();
 
         return response()->json([

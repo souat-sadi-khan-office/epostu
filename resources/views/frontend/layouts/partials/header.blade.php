@@ -1,6 +1,6 @@
-@if (Request::is('become-partner') || Request::is('find-partner') || Request::is('about-us') || Request::is('/') || Request::is('product/epostu') || Request::is('product/truspam'))
+@if (Request::is('become-partner') || Request::is('find-partner') || Request::is('about-us') || Request::is('/') || Request::is('product/epostu') || Request::is('product/truspam') || Request::is('event-registration*'))
     <header class="wrapper bg-soft-primary">
-        <nav class="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark">
+        <nav class="navbar navbar-expand-lg center-nav transparent position-absolute {{ env('APP_ENV') != 'maintenance' ? 'navbar-dark' : '' }}">
             <div class="container flex-lg-row flex-nowrap align-items-center">
                 <div class="navbar-brand w-100">
                     <a href="{{ route('home') }}">
@@ -56,6 +56,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
                                         Contact
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
+                                        Event Registration
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -167,6 +172,11 @@
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
                                     Contact
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
+                                    Event Registration
                                 </a>
                             </li>
                             <li class="nav-item">

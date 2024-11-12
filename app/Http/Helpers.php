@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Setting;
+use Illuminate\Support\Facades\Cache;
 
 if (!function_exists('get_setting')) {
     function get_settings($key, $default = null)
@@ -19,4 +20,14 @@ if (!function_exists('get_setting')) {
         });
     
     }
+}
+
+function encode($value)
+{
+    return base64_encode(urlencode(base64_encode($value))); 
+}
+
+function decode($encoded)
+{
+    return base64_decode(urldecode(base64_decode($encoded)));
 }

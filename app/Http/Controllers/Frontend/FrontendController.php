@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 use App\Mail\PHPMailerService;
 use App\Models\ContactMessage;
 use App\Http\Controllers\Controller;
+use App\Models\EventRegistration;
+use App\Models\GiftItem;
 use Illuminate\Support\Facades\Validator;
 
 class FrontendController extends Controller
@@ -25,6 +27,11 @@ class FrontendController extends Controller
     public function about()
     {
         return view('frontend.about');
+    }
+
+    public function eventRegistration()
+    {
+        return view('frontend.eventRegistration');
     }
 
     public function products($slug)
@@ -170,6 +177,103 @@ class FrontendController extends Controller
         return response()->json([
             'status' => true,
             'message' => 'Thank you for subscribing!'
+        ]);
+    }
+
+    public function eventRegistrationSuccess($id) 
+    {
+        $event = EventRegistration::findOrFail(decode($id));
+
+        return view('frontend.registration-successful', compact('event'));
+    }
+
+    public function submitEventRegistrationForm(Request $request)
+    {
+
+        $request->validate([
+            'name' => 'required',
+            'surname' => 'required',
+            'phone' => 'required',
+            'email' => [
+                'required',
+                'email',
+                    function ($attribute, $value, $fail) {
+                        $personalDomains = [
+                            'gmail.com',
+                            'yahoo.com',
+                            'outlook.com',
+                            'hotmail.com',
+                            'aol.com',
+                            'icloud.com',
+                            'protonmail.com',
+                            'zoho.com',
+                            'gmx.com',
+                        ];
+
+                        $emailDomain = substr(strrchr($value, "@"), 1);
+
+                        if (in_array($emailDomain, $personalDomains)) {
+                            $fail("The $attribute must be a corporate email address.");
+                        }
+                    },
+                ],
+            ]
+        );
+
+        if (EventRegistration::where('email', $request->email)->exists()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'You are already registered.'
+            ]);
+        }
+
+        // Fetch all GiftItems matching the conditions
+        $giftId = null;
+        $gifts = GiftItem::where('status', 1)->where('quantity', '>', 0)->get();
+
+        // Check if there are any matching results
+        if ($gifts->isNotEmpty()) {
+            // Pick a random item from the collection
+            $gift = $gifts->random();
+            $giftId = $gift->id;
+        }
+
+        // Save the email if it doesn't exist
+        $model = EventRegistration::create([
+            'first_name' => $request->name,
+            'last_name' => $request->surname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'gift_id' => $giftId
+        ]);
+
+        if ($model) {
+            $gift->quantity -= 1;
+            $gift->save();
+        
+            $subject = get_settings('gift_template_subject') ?? 'Thank you for registering for our event | ePostU';
+        
+            // Prepare the data for the email template
+            $data = [
+                'subject' => $subject,
+                'name' => $model->first_name . ' ' . $model->last_name,
+                'email' => $model->email,
+                'phone' => $model->phone,
+                'gift_name' => $gift->name,
+                'gift_picture' => asset($gift->photo),
+            ];
+        
+            // Render the Blade template
+            $body = view('emails.gift_notification', $data)->render();
+        
+            // Send the email (uncomment and use your preferred mail service)
+            $mailer = PHPMailerService::sendEmail($model->email, $subject, $body);
+        }
+        
+        return response()->json([
+            'status' => true,
+            'message' => 'Thank you for subscribing!',
+            'goto' => route('event.registration.success', encode($model->id))
         ]);
     }
 
