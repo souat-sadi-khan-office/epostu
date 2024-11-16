@@ -43,7 +43,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="dropdown-item" href="{{ route('product', 'truspam') }}">
-                                                Truspam
+                                                TruSpam
                                             </a>
                                         </li>
                                     </ul>
@@ -67,6 +67,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('find-partner') ? 'active' : '' }}" href="{{ route('find.partner') }}">
                                         Find a Partner
+                                    </a>
+                                </li>
+                                <li class="nav-item become-partner-mobile">
+                                    <a class="nav-link {{ Request::is('become-partner') ? 'active' : '' }}" href="{{ route('become.partner') }}">
+                                        Become a Partner
                                     </a>
                                 </li>
                             </ul>
@@ -160,7 +165,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item" href="{{ route('product', 'truspam') }}">
-                                            Truspam
+                                            TruSpam
                                         </a>
                                     </li>
                                 </ul>
@@ -184,6 +189,11 @@
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('find-partner') ? 'active' : '' }}" href="{{ route('find.partner') }}">
                                     Find a Partner
+                                </a>
+                            </li>
+                            <li class="nav-item become-partner-mobile">
+                                <a class="nav-link {{ Request::is('become-partner') ? 'active' : '' }}" href="{{ route('become.partner') }}">
+                                    Become a Partner
                                 </a>
                             </li>
                         </ul>

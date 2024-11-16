@@ -39645,3 +39645,13 @@ footer.bg-dark.angled.upper-start:before {
   font-size: 50px;
   color: #f07c22;
 }
+
+.become-partner-mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .become-partner-mobile {
+    display: block;
+  }
+}

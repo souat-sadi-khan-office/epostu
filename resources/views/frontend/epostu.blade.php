@@ -25,7 +25,7 @@
 @endsection
 @section('content')
 <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/epostu-bg.webp') }}">
-    <div class="container pt-10 pt-md-20 pb-18 pb-md-20 text-center">
+    <div class="container pt-18 pt-md-20 pb-12 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <h1 class="display-1 text-white mb-3">Comprehensive Email Hosting Solution</h1>
@@ -89,10 +89,10 @@
 </section>
 
 <section class="wrapper bg-soft-primary">
-    <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
+    <div class="container py-10 pt-md-16 pt-lg-0 pb-md-10">
         <div class="row text-center">
             <div class="col-lg-9 mx-auto">
-                <h2 class="fs-15 text-uppercase text-muted mb-3 mt-12">Key Features</h2>
+                <h2 class="fs-15 text-uppercase text-muted mb-3 pt-md-12">Key Features</h2>
                 <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about creating a business process model</h3>
 
                 <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9">
@@ -136,7 +136,7 @@
 </section>
 
 <section class="wrapper bg-soft-primary">
-    <div class="container pt-14 pb-18  pb-md-22 text-center">
+    <div class="container pt-14 pb-18 pt-md-1 pb-md-22 text-center">
         <div class="row">
             <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
                 <h2 class="fs-15 text-uppercase text-muted mb-3">Our Pricing</h2>
@@ -281,7 +281,7 @@
 </section>
 
 <section class="wrapper bg-gray">
-    <div class="container py-md-16">
+    <div class="container pt-10 pb-10 py-md-16">
         <h2 class="display-4 mb-3 text-center">Pricing FAQ</h2>
         <p class="lead text-center mb-10 px-md-16 px-lg-0">If you don't see an answer to your question, you can send us an email from our contact form.</p>
         <div class="row">

@@ -1,19 +1,19 @@
-@extends('frontend.layouts.app', ['title' => 'Truspam | Truspam'])
+@extends('frontend.layouts.app', ['title' => 'TruSpam'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 <meta property="og:site_name" content="Epostu">
  
-<meta name="title" content="Truspam}">
+<meta name="title" content="TruSpam">
 <meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="keywords" content="Truspam" />
-<meta name="description" content="Truspam">	
+<meta name="keywords" content="TruSpam" />
+<meta name="description" content="TruSpam">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="Truspam">	
-<meta property="og:description" content="Truspamz">	
+<meta property="og:title" content="TruSpam">	
+<meta property="og:description" content="TruSpam">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
@@ -26,11 +26,11 @@
 @endsection
 @section('content')
 <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/truspan-bg.webp') }}">
-    <div class="container pt-10 pt-md-20 pb-18 pb-md-20 text-center">
+    <div class="container pt-18 pt-md-20 pb-12 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <h1 class="display-1 text-white mb-3">Advanced Email Security Gateway</h1>
-                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">Truspam is a robust, user-friendly, and secure email hosting solution tailored to meet the needs of modern businesses. With Truspam, you gain more than just an email host; it’s an all-encompassing platform designed for efficient communication, privacy, and productivity. Here’s why Truspam is the ideal choice for managing business email needs.</p>
+                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">TruSpam is a robust, user-friendly, and secure email hosting solution tailored to meet the needs of modern businesses. With TruSpam, you gain more than just an email host; it’s an all-encompassing platform designed for efficient communication, privacy, and productivity. Here’s why TruSpam is the ideal choice for managing business email needs.</p>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
                     <div class="col-md-5 offset-md-1 align-self-end">
                         <div class="card bg-pale-yellow">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="Truspam Services" />
+                                <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="TruSpam Services" />
                                 <h4>Reliable Uptime</h4>
                                 <p class="mb-0">Guaranteed 99.9% uptime, ensuring you’re always connected with minimal downtime.</p>
                             </div>
@@ -81,8 +81,8 @@
             </div>
             <div class="col-lg-5">
                 <h2 class="fs-15 text-uppercase text-muted mb-3">Overview</h2>
-                <h3 class="display-4 mb-5">Why Choose Truspam for Your Business Email Needs.</h3>
-                <p>Truspam offers an advanced, secure, and user-friendly email hosting solution built to serve modern businesses. This comprehensive platform goes beyond traditional email hosting by focusing on efficient communication, privacy, and productivity, making it the perfect choice for managing your business email needs</p>
+                <h3 class="display-4 mb-5">Why Choose TruSpam for Your Business Email Needs.</h3>
+                <p>TruSpam offers an advanced, secure, and user-friendly email hosting solution built to serve modern businesses. This comprehensive platform goes beyond traditional email hosting by focusing on efficient communication, privacy, and productivity, making it the perfect choice for managing your business email needs</p>
                 <a href="#" class="btn btn-navy rounded-pill mt-3">More Details</a>
             </div>
         </div>
@@ -90,28 +90,28 @@
 </section>
 
 <section class="wrapper bg-soft-primary">
-    <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
+    <div class="container py-10 pt-md-16 pt-lg-0 pb-md-10">
         <div class="row text-center">
             <div class="col-lg-9 mx-auto">
-                <h2 class="fs-15 text-uppercase text-muted mb-3 mt-12">Key Features</h2>
+                <h2 class="fs-15 text-uppercase text-muted mb-3 pt-md-12">Key Features</h2>
                 <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about creating a business process model</h3>
 
                 <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9">
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="High Availability with Built-in Auto-Scaling" />
                         <h4 class="mb-1">Advanced Email Security</h4>
-                        <p>Truspam prioritizes your email security by incorporating advanced threat detection and filtering mechanisms to guard against phishing, spam, malware, and other email-based attacks. Your business communications remain safe and uninterrupted.</p>
+                        <p>TruSpam prioritizes your email security by incorporating advanced threat detection and filtering mechanisms to guard against phishing, spam, malware, and other email-based attacks. Your business communications remain safe and uninterrupted.</p>
                     </div>
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Multi-Device Sync with Outlook Connector and ActiveSync Pictures" />
                         <h4 class="mb-1">User-Friendly Interface</h4>
-                        <p>With a clean and intuitive design, Truspam ensures a seamless user experience. Both administrators and end-users can effortlessly manage their email settings, organize mail efficiently.</p>
+                        <p>With a clean and intuitive design, TruSpam ensures a seamless user experience. Both administrators and end-users can effortlessly manage their email settings, organize mail efficiently.</p>
                     </div>
 
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Backup and Archiving Tools for Disaster Recovery Picture" />
                         <h4 class="mb-1">High Reliability and Uptime</h4>
-                        <p>Truspam guarantees exceptional reliability with enterprise-grade infrastructure, ensuring that your business email remains operational 24/7. Enjoy peace of mind with minimal downtime and high-speed email delivery.</p>
+                        <p>TruSpam guarantees exceptional reliability with enterprise-grade infrastructure, ensuring that your business email remains operational 24/7. Enjoy peace of mind with minimal downtime and high-speed email delivery.</p>
                     </div>
 
                     <div class="col-md-4"> 
@@ -122,13 +122,13 @@
                     <div class="col-md-4"> 
                         <img src="{{ asset('assets/images/icons/lineal/price-tag.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Customizable Subscription Options with Flexible Terms" />
                         <h4 class="mb-1">Comprehensive Privacy Protection</h4>
-                        <p>Your data privacy is paramount. Truspam uses state-of-the-art encryption technologies to secure all email communication, keeping sensitive business information protected from unauthorized access and breaches.</p>
+                        <p>Your data privacy is paramount. TruSpam uses state-of-the-art encryption technologies to secure all email communication, keeping sensitive business information protected from unauthorized access and breaches.</p>
                     </div>
 
                     <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/sitemap.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Find Answers to Common Questions About Truspam" />
-                        <h4 class="mb-1">Find Answers to Common Questions About Truspam</h4>
-                        <p>Get quick answers to frequently asked questions and discover helpful tips about managing your Truspam email hosting service.</p>
+                        <img src="{{ asset('assets/images/icons/lineal/sitemap.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Find Answers to Common Questions About TruSpam" />
+                        <h4 class="mb-1">Find Answers to Common Questions About TruSpam</h4>
+                        <p>Get quick answers to frequently asked questions and discover helpful tips about managing your TruSpam email hosting service.</p>
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
 </section>
 
 <section class="wrapper bg-soft-primary">
-    <div class="container pt-14 pb-18  pb-md-22 text-center">
+    <div class="container pt-14 pb-18 pt-md-1 pb-md-22 text-center">
         <div class="row">
             <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
                 <h2 class="fs-15 text-uppercase text-muted mb-3">Our Pricing</h2>
@@ -266,7 +266,7 @@
 </section>
 
 <section class="wrapper bg-gray">
-    <div class="container py-md-16">
+    <div class="container pt-10 pb-10 py-md-16">
         <h2 class="display-4 mb-3 text-center">Truspan FAQ</h2>
         <p class="lead text-center mb-10 px-md-16 px-lg-0">If you don't see an answer to your question, you can send us an email from our contact form.</p>
         <div class="row">

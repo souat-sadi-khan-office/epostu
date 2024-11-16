@@ -12,7 +12,7 @@
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
 <meta property="og:title" content="Epostu">	
-<meta property="og:description" content="Epostu}">	
+<meta property="og:description" content="Epostu">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
@@ -40,7 +40,7 @@
                             </a>
                         @else   
                             <a href="{{ route('product', 'truspam') }}">
-                                Truspan
+                                TruSpam
                             </a>
                         @endif
                     </li>
@@ -158,7 +158,7 @@
                                                     {{ get_settings('corporate_plan_name') }}
                                                 @endif
                                             @else    
-                                                Truspan - 
+                                                TruSpam - 
                                                 @if ($plan == 'basic')
                                                     {{ get_settings('truspan_basic_plan_name') }}
                                                 @elseif ($plan == 'premium')

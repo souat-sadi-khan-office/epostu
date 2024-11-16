@@ -22,7 +22,7 @@
                 <h3 class="fs-15 pe-xl-15">We offers different Technical Support Levels, so you can select the one that best fits your Business needs.</h3>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-lg-8 pt-10 pt-md-0">
                 <div class="row align-items-center counter-wrapper gy-6 text-center">
                     <div class="col-md-4">
                         <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />

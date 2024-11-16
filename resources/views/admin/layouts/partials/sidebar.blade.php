@@ -67,7 +67,7 @@
                 <li>
                     <a href="javaScript:void();">
                         <i class="ri-pen-nib-line"></i>
-                        <span>TrusPan</span>
+                        <span>TruSpam</span>
                         <i class="ri-arrow-right-s-line"></i>
                     </a>
                     <ul class="vertical-submenu">

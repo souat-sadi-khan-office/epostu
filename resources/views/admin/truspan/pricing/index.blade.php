@@ -1,10 +1,10 @@
-@extends('admin.layouts.app', ['title' => 'Truspan Pricing Plan', 'modal' => 'md'])
+@extends('admin.layouts.app', ['title' => 'TruSpam Pricing Plan', 'modal' => 'md'])
 
 @section('content')
     <div class="breadcrumbbar">
         <div class="row align-items-center">
             <div class="col-md-8 col-lg-8">
-                <h4 class="page-title">Truspan Pricing Plan</h4>
+                <h4 class="page-title">TruSpam Pricing Plan</h4>
                 <div class="breadcrumb-list">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
@@ -12,7 +12,7 @@
                                 Home
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Truspan Pricing Plan</li>
+                        <li class="breadcrumb-item active" aria-current="page">TruSpam Pricing Plan</li>
                     </ol>
                 </div>
             </div>
@@ -99,7 +99,7 @@
             <div class="col-lg-12 mt-3">
                 <div class="card m-b-30">
                     <div class="card-header">
-                        <h5 class="card-title">Truspan Pricing Plan</h5>
+                        <h5 class="card-title">TruSpam Pricing Plan</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
