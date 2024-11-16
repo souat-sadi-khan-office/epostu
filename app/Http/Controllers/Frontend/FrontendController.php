@@ -249,13 +249,13 @@ class FrontendController extends Controller
         if ($model) {
 
             if($gifts->isNotEmpty() && isset($gift)) {
-                // $gift->quantity -= 1;
-                // $gift->save();
+                $gift->quantity -= 1;
+                $gift->save();
 
                 $giftName = $gift->name;
                 $giftPicture = asset($gift->photo);
             } else {
-                $giftName = null;
+                $giftName = "Chocolate/Drinking Water Bottle";
                 $giftPicture = null;
             }
             

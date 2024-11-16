@@ -56,8 +56,10 @@
                                     <div class="card-body">
                                         <h2>
                                             @if ($event->gift)
-                                            {{ $event->gift->name }}
-                                        @endif
+                                                {{ $event->gift->name }}
+                                            @else    
+                                                Chocolate/Drinking Water Bottle
+                                            @endif
                                         </h2>
                                     </div>
                                     @if ($event->gift)
