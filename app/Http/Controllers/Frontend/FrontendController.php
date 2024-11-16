@@ -220,12 +220,12 @@ class FrontendController extends Controller
             ]
         );
 
-        if (EventRegistration::where('email', $request->email)->exists()) {
-            return response()->json([
-                'status' => false,
-                'message' => 'You are already registered.'
-            ]);
-        }
+        // if (EventRegistration::where('email', $request->email)->exists()) {
+        //     return response()->json([
+        //         'status' => false,
+        //         'message' => 'You are already registered.'
+        //     ]);
+        // }
 
         // Fetch all GiftItems matching the conditions
         $giftId = null;
@@ -271,15 +271,15 @@ class FrontendController extends Controller
             $body = str_replace('[-GIFT_PICTURE-]', '<img src="'. $giftPicture .'" alt="'. $giftName .'" style="width:250px">', $body);
         
             // Send the email (uncomment and use your preferred mail service)
-            $mailer = PHPMailerService::sendEmail($model->email, $subject, $body);
+            // $mailer = PHPMailerService::sendEmail($model->email, $subject, $body);
 
-            if($mailer != true) {
-                return response()->json([
-                    'status' => true,
-                    'message' => 'Email is not sent. But you won a gift!',
-                    'goto' => route('event.registration.success', encode($model->id))
-                ]);
-            }
+            // if($mailer != true) {
+            //     return response()->json([
+            //         'status' => true,
+            //         'message' => 'Email is not sent. But you won a gift!',
+            //         'goto' => route('event.registration.success', encode($model->id))
+            //     ]);
+            // }
         }
         
         return response()->json([

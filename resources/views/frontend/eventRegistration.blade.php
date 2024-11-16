@@ -28,7 +28,13 @@
         <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
             <div class="row">
                 <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-                    <h1 class="display-1 text-white mb-3">Event Regsitration</h1>
+                    <h1 class="display-1 text-white mb-3">Event 
+                        <span class="underline-2 underline-gradient-2">
+                            <span class="typer text-white" 
+                            data-delay="100" 
+                            data-words="Registration"></span><span class="cursor text-primary" data-owner="typer"></span>
+                        </span>
+                    </h1>
                     <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">Book your seat before it finished.</p>
                 </div>
             </div>
@@ -39,7 +45,13 @@
         <div class="container py-14 py-md-16">
             <div class="row">
                 <div class="col-lg-11 offset-lg-1 col-xl-8 offset-xl-2">
-                    <h2 class="display-4 mb-3 text-center">Visitor Registration</h2>
+                    <h2 class="display-4 mb-3 text-center">
+                        <span class="underline-2 underline-gradient-2">
+                            <span class="typer" 
+                            data-delay="100" 
+                            data-words="Visitor Registration"></span><span class="cursor text-primary" data-owner="typer"></span>
+                        </span>
+                    </h2>
                     <p class="lead text-center mb-10">Thank you for visiting at DigiTech ASEAN Thailand & AI Connect 2024! <br> Please register and collect your gift.</p>
                     <form class="partner-form needs-validation" method="post" action="{{ route('submit.event.registration.form') }}" novalidate id="partner-form">
                         @csrf

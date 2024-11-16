@@ -35,6 +35,12 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12 form-group">
+                                    <label for="event_notification_time">Event Deadline Time</label>
+                                    <input type="text" name="event_notification_time" id="event_notification_time" class="form-control number" value="{{ get_settings('event_notification_time') > 0 ? get_settings('event_notification_time') : 2 }}">
+                                    <small class="text-danger text-muted">Enter in minutes</small>
+                                </div>
+
+                                <div class="col-md-12 form-group">
                                     <label for="email_address">Email Address</label>
                                     <input type="text" name="email_address" id="email_address" class="form-control" value="{{ get_settings('email_address') }}">
                                 </div>
