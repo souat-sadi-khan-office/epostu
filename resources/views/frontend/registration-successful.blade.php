@@ -41,9 +41,9 @@
         <div class="row">
             <div class="col-lg-7 col-xl-6 col-xxl-5 mx-auto mt-n20">
                 <div class="card">
-                    <div class="card-body p-11 text-center">
-                        <h2 class="mb-3 ">Event Registration Successful</h2>
-                        <p class="lead mb-6 ">Thank you for your registration. We sent you an email. You won a gift item.</p>
+                    <div class="card-body p-5 text-center">
+                        <h2 class="mb-3 ">Your Registration is Successful</h2>
+                        <p class="lead mb-6 ">Thank you for your registration. Please show this screen at our stall within 2 minutes to collect your gift. Your Registration time is: <b>{{ date('d F, Y h:i:a', strtotime($event->created_at)) }}</b></p>
                         <div class="row">
                             <div class="col-md-8 mx-auto">
                                 <div class="card">

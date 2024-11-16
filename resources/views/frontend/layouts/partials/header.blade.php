@@ -60,6 +60,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
+                                        <i id="gift-box-icon" class="uil uil-gift"></i>
                                         Event Registration
                                     </a>
                                 </li>
@@ -126,7 +127,7 @@
             <div class="container flex-lg-row flex-nowrap align-items-center">
                 <div class="navbar-brand w-100">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }}" alt="System Logo" />
+                        <img style="width: 100px;" src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }}" alt="System Logo" />
                     </a>
                 </div>
                 <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -176,6 +177,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
+                                    <i id="gift-box-icon" class="uil uil-gift"></i>
                                     Event Registration
                                 </a>
                             </li>

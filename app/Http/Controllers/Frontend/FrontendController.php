@@ -233,7 +233,6 @@ class FrontendController extends Controller
 
         // Check if there are any matching results
         if ($gifts->isNotEmpty()) {
-            // Pick a random item from the collection
             $gift = $gifts->random();
             $giftId = $gift->id;
         }
@@ -248,26 +247,39 @@ class FrontendController extends Controller
         ]);
 
         if ($model) {
-            $gift->quantity -= 1;
-            $gift->save();
-        
+
+            if($gifts->isNotEmpty() && isset($gift)) {
+                // $gift->quantity -= 1;
+                // $gift->save();
+
+                $giftName = $gift->name;
+                $giftPicture = asset($gift->photo);
+            } else {
+                $giftName = null;
+                $giftPicture = null;
+            }
+            
             $subject = get_settings('gift_template_subject') ?? 'Thank you for registering for our event | ePostU';
-        
-            // Prepare the data for the email template
-            $data = [
-                'subject' => $subject,
-                'name' => $model->first_name . ' ' . $model->last_name,
-                'email' => $model->email,
-                'phone' => $model->phone,
-                'gift_name' => $gift->name,
-                'gift_picture' => asset($gift->photo),
-            ];
-        
-            // Render the Blade template
-            $body = view('emails.gift_notification', $data)->render();
+            $body = get_settings('gift_template_body');
+
+
+            $body = str_replace('[-NAME-]', $model->first_name. ' '. $model->last_name, $body);
+            $body = str_replace('[-EMAIL-]', $model->email, $body);
+            $body = str_replace('[-PHONE-]', $model->phone, $body);
+            $body = str_replace('[-GIFT_NAME-]', $giftName, $body);
+            $body = str_replace('[-REGISTRATION_TIME-]', date("d F, Y h:i:s", strtotime($model->created_at)), $body);
+            $body = str_replace('[-GIFT_PICTURE-]', '<img src="'. $giftPicture .'" alt="'. $giftName .'" style="width:250px">', $body);
         
             // Send the email (uncomment and use your preferred mail service)
             $mailer = PHPMailerService::sendEmail($model->email, $subject, $body);
+
+            if($mailer != true) {
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Email is not sent. But you won a gift!',
+                    'goto' => route('event.registration.success', encode($model->id))
+                ]);
+            }
         }
         
         return response()->json([

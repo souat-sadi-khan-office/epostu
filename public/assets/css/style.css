@@ -4399,12 +4399,12 @@ fieldset:disabled .btn {
   --bs-btn-disabled-border-color: #aab0bc;
 }
 .btn-success {
-  --bs-btn-color: #343f52;
-  --bs-btn-bg: #45c4a0;
-  --bs-btn-border-color: #45c4a0;
-  --bs-btn-hover-color: #343f52;
-  --bs-btn-hover-bg: #45c4a0;
-  --bs-btn-hover-border-color: #45c4a0;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #23ac4b;
+  --bs-btn-border-color: #23ac4b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #23ac4b;
+  --bs-btn-hover-border-color: #23ac4b;
   --bs-btn-focus-shadow-rgb: 66, 176, 148;
   --bs-btn-active-color: #343f52;
   --bs-btn-active-bg: #45c4a0;
@@ -39609,4 +39609,17 @@ footer.bg-dark.angled.upper-start:before {
 
 .partner-list li a:hover {
   text-decoration: none !important;
+}
+
+@keyframes glowing {
+  0% { text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00; /* সবুজ */ }
+  33% { text-shadow: 0 0 8px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff; /* নীল */ }
+  66% { text-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000; /* লাল */ }
+  100% { text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00; /* সবুজ */ }
+}
+
+#gift-box-icon {
+  color: #fff;
+  margin-right: 5px;
+  animation: glowing 3s infinite;
 }

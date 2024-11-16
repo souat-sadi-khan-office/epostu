@@ -68,4 +68,13 @@ $(document).ready(function () {
 
     $('#newsletter_submit').show();
     $('#newsletter_submitting').hide();
-})
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (!sessionStorage.getItem('modalShown')) {
+        var modal = new bootstrap.Modal(document.getElementById('event-registration-banner'));
+        modal.show();
+        
+        sessionStorage.setItem('modalShown', 'true');
+    }
+});

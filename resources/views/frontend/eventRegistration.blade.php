@@ -38,9 +38,9 @@
     <section class="wrapper bg-light angled upper-end">
         <div class="container py-14 py-md-16">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                    <h2 class="display-4 mb-3 text-center">Book Your Seat</h2>
-                    <p class="lead text-center mb-10">Book your event seat effortlessly with modern registration systems, ensuring a smooth experience and instant confirmation, giving you peace of mind and convenience.</p>
+                <div class="col-lg-11 offset-lg-1 col-xl-8 offset-xl-2">
+                    <h2 class="display-4 mb-3 text-center">Visitor Registration</h2>
+                    <p class="lead text-center mb-10">Thank you for visiting at DigiTech ASEAN Thailand & AI Connect 2024! <br> Please register and collect your gift.</p>
                     <form class="partner-form needs-validation" method="post" action="{{ route('submit.event.registration.form') }}" novalidate id="partner-form">
                         @csrf
                         <div class="messages"></div>
@@ -80,9 +80,13 @@
                                     <div class="invalid-feedback"> Please enter your phone. </div>
                                 </div>
                             </div>
+                            
+                            <div class="col-md-12">
+                                <p><b>Data Privacy Terms</b>: <br>By submitting this form, you agree your data will be used for marketing purposes. Your data will not be used for any other purpose.</p>
+                            </div>
 
                             <div class="col-12 text-center">
-                                <input type="submit" id="submit" style="display: none;"  class="btn btn-primary rounded-pill btn-send mb-3" value="Book My Seat">
+                                <input type="submit" id="submit" style="display: none;"  class="btn btn-primary rounded-pill btn-send mb-3" value="Submit">
                                 <button class="btn btn-primary mb-3" id="submitting" type="button" disabled>
                                     <span class="spinner-border spinner-border-sm pr-4 mr-4" role="status" aria-hidden="true"></span>
                                 </button>

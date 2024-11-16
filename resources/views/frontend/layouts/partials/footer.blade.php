@@ -14,8 +14,8 @@
                     <div class="form-floating input-group">
                         <input type="email" name="email" required class="form-control border-0" placeholder="Enter Email Address" id="analyze" data-parsley-errors-container="#newsletter-email-error">
                         <label for="analyze">Enter Email Address</label>
-                        <button class="btn btn-primary" id="newsletter_submit" style="display: none;" type="submit">Submit</button>
-                        <button class="btn btn-primary" id="newsletter_submitting" type="button" disabled>
+                        <button class="btn btn-success" id="newsletter_submit" style="display: none;" type="submit">Submit</button>
+                        <button class="btn btn-success" id="newsletter_submitting" type="button" disabled>
                             <span class="spinner-border spinner-border-sm pr-4 mr-4" role="status" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -107,4 +107,31 @@
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
+</div>
+  
+<div class="modal fade" id="event-registration-banner" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content text-center">
+            <div class="modal-body" style="padding: 0px;">
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="row">
+                    <div class="col-md-12">
+                        <figure>
+                            <img src="{{ asset('assets/images/popup-banner.png') }}" srcset="{{ asset('assets/images/popup-banner.png') }} 2x" alt="Register & Collec Your Gift" />
+                        </figure>
+                    </div>
+                </div>
+                <div class="newsletter-wrapper">
+                    <div class="row">
+                        <div class="col-md-12 py-3">
+                            <a href="{{ route('event.registration') }}" class="btn btn-expand btn-dark rounded-pill">
+                                <i class="uil uil-arrow-right"></i>
+                                <span>Register Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

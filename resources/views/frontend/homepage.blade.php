@@ -24,14 +24,16 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-    <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/home-page-bg.webp') }}" style="background-image: url('{{ asset('assets/images/home-page-bg.webp') }}');">
-        <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
+    <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/epostu-bg.webp') }}" style="background-image: url('{{ asset('assets/images/epostu-bg.webp') }}');">
+        <div class="container pt-19 pt-md-18 pb-18 pb-md-20 text-center">
             <div class="row">
                 <div class="col-sm-12 col-xxl-12 text-center text-sm-start" data-cues="slideInDown" data-group="page-title" data-interval="-200" data-delay="500">
                     <h2 class="display-1 text-white fs-56 mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
                         Secure, Reliable, and Scalable Email Solutions for 
-                        <span class="underline-3 style-3 yellow">
-                            Every Business
+                        <span class="underline-2 underline-gradient-2">
+                            <span class="typer text-white" 
+                            data-delay="100" 
+                            data-words="Every Business!"></span><span class="cursor text-primary" data-owner="typer"></span>
                         </span>
                     </h2>
                     <p class="lead fs-23 lh-sm mb-7 pe-lg-5 pe-xl-5 pe-xxl-0">
