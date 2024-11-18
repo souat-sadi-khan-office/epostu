@@ -49,7 +49,7 @@
                             <div id="log"></div>
                         </div>
                         <h2 class="mb-3 ">Your Registration is Successful</h2>
-                        <p class="lead mb-6 ">Thank you for your registration. Please show this screen at our stall within 2 minutes to collect your gift. Your Registration time is: <b>{{ date('d F, Y h:i:a', strtotime($event->created_at)) }}</b></p>
+                        <p class="lead mb-6 ">Thank you for your registration. Please show this screen at our stall within <b>2 minutes</b> to collect your gift. Your Registration as below: <br> <b>{{ date('d F, Y h:i:a', strtotime($event->created_at)) }}</b></p>
                         <div class="row">
                             <div class="col-md-8 mx-auto">
                                 <div class="card">
@@ -90,7 +90,7 @@
                 {{ date('H', strtotime($event->created_at)) }},
                 {{ date('i', strtotime($event->created_at . ' + '. (get_settings('event_notification_time') > 2 ? get_settings('event_notification_time') : 2) .' minutes')) }},
                 {{ date('s', strtotime($event->created_at)) }}
-            );
+            ).toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
 
             endTime = Date.parse(endTime) / 1000;
 

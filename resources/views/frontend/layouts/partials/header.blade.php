@@ -1,4 +1,4 @@
-@if (Request::is('become-partner') || Request::is('find-partner') || Request::is('about-us') || Request::is('/') || Request::is('product/epostu') || Request::is('product/truspam') || Request::is('event-registration*'))
+@if (Request::is('become-partner') || Request::is('find-partner') || Request::is('about-us') || Request::is('/') || Request::is('product/epostu') || Request::is('product/truspam') || Request::is('event-registration*') || Request::is('contact'))
     <header class="wrapper bg-soft-primary">
         <nav class="navbar navbar-expand-lg center-nav transparent position-absolute {{ env('APP_ENV') != 'maintenance' ? 'navbar-dark' : '' }}">
             <div class="container flex-lg-row flex-nowrap align-items-center">
@@ -31,7 +31,14 @@
                                         About
                                     </a>
                                 </li>
-                                <li class="nav-item dropdown">
+
+                                <li class="nav-item">
+                                    <a class="nav-link {{ Request::is('products') ? 'active' : '' }}" href="{{ route('product', 'epostu') }}">
+                                        Pricing
+                                    </a>
+                                </li>
+
+                                {{-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle {{ Request::is('products') ? 'active' : '' }}" data-bs-toggle="dropdown"  href="javascript:;" aria-expanded="false">
                                         Products
                                     </a>
@@ -47,7 +54,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('support') ? 'active' : '' }}" href="{{ route('support') }}">
                                         Support
@@ -127,7 +134,7 @@
         </nav>
     </header>
 @else    
-    <header class="wrapper {{ Request::is('contact') ? 'bg-soft-primary' : 'bg-gray' }}">
+    <header class="wrapper">
         <nav class="navbar navbar-expand-lg center-logo transparent navbar-light">
             <div class="container flex-lg-row flex-nowrap align-items-center">
                 <div class="navbar-brand w-100">
@@ -153,7 +160,12 @@
                                     About
                                 </a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::is('products') ? 'active' : '' }}" href="{{ route('product', 'epostu') }}">
+                                    Pricing
+                                </a>
+                            </li>
+                            {{-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle {{ Request::is('products') ? 'active' : '' }}" data-bs-toggle="dropdown"  href="javascript:;" aria-expanded="false">
                                     Products
                                 </a>
@@ -169,7 +181,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('support') ? 'active' : '' }}" href="{{ route('support') }}">
                                     Support

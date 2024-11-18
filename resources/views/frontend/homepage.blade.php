@@ -29,11 +29,11 @@
             <div class="row">
                 <div class="col-sm-12 col-xxl-12 text-center text-sm-start" data-cues="slideInDown" data-group="page-title" data-interval="-200" data-delay="500">
                     <h2 class="display-1 text-white fs-56 mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
-                        Secure, Reliable, and Scalable Email Solutions for 
+                        Reliable, cloud-based email hosting designed for 
                         <span class="underline-2 underline-gradient-2">
                             <span class="typer text-white" 
                             data-delay="100" 
-                            data-words="Every Business!"></span><span class="cursor text-primary" data-owner="typer"></span>
+                            data-words="Your Business, Seamless Communication!, Competitive Pricing!, Seamless Collaboration!, Reliable Support!"></span><span class="cursor text-primary" data-owner="typer"></span>
                         </span>
                     </h2>
                     <p class="lead fs-23 lh-sm mb-7 pe-lg-5 pe-xl-5 pe-xxl-0">
@@ -58,7 +58,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/telephone-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/padlock.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Secure Hosting</h4>
@@ -81,47 +81,11 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/cloud-computing-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/networking.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
                         </div>
                         <div>
-                            <h4 class="fs-20 ls-sm">Easy Restoration</h4>
-                            <p class="mb-0">Provides a user-friendly interface for easy data restoration, allowing users to quickly recover lost files and minimize downtime in case of data loss.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="d-flex flex-row">
-                        <div>
-                            <img src="{{ asset('assets/images/icons/lineal/cloud-computing-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
-                        </div>
-                        <div>
-                            <h4 class="fs-20 ls-sm">Built-in Backup</h4>
-                            <p class="mb-0">Regularly scheduled backups protect against accidental data loss, ensuring that important emails and documents are safe and recoverable in case of emergencies.</p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-6 col-lg-4">
-                    <div class="d-flex flex-row">
-                        <div>
-                            <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-pink me-5" alt="" />
-                        </div>
-                        <div>
-                            <h4 class="fs-20 ls-sm">Platform Sync</h4>
-                            <p class="mb-0">Offers synchronization across desktop, mobile, and webmail platforms, delivering a consistent user experience regardless of the device being used to access email..</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="d-flex flex-row">
-                        <div>
-                            <img src="{{ asset('assets/images/icons/lineal/chat-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="" />
-                        </div>
-                        <div>
-                            <h4 class="fs-20 ls-sm">AI Threat Detection</h4>
-                            <p class="mb-0">Employs advanced AI technology to effectively detect and block spam, phishing attempts, and other malicious emails before they reach your inbox, ensuring security.</p>
+                            <h4 class="fs-20 ls-sm">Seamless Device Control</h4>
+                            <p class="mb-0">Easily manage and secure mobile devices with features like remote lock, wipe, and customizable policies.</p>
                         </div>
                     </div>
                 </div>
@@ -137,6 +101,41 @@
                         </div>
                     </div>
                 </div>
+            
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex flex-row">
+                        <div>
+                            <img src="{{ asset('assets/images/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-md text-pink me-5" alt="" />
+                        </div>
+                        <div>
+                            <h4 class="fs-20 ls-sm">Platform Sync</h4>
+                            <p class="mb-0">Offers synchronization across desktop, mobile, and webmail platforms, delivering a consistent user experience regardless of the device being used to access email..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex flex-row">
+                        <div>
+                            <img src="{{ asset('assets/images/icons/lineal/chat-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="" />
+                        </div>
+                        <div>
+                            <h4 class="fs-20 ls-sm">In-build Threat Detection</h4>
+                            <p class="mb-0">Employs advanced technology to effectively detect and block spam, phishing attempts, and other malicious emails before they reach your inbox, ensuring security.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex flex-row">
+                        <div>
+                            <img src="{{ asset('assets/images/icons/lineal/networking-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
+                        </div>
+                        <div>
+                            <h4 class="fs-20 ls-sm">Bulletproof Email Security</h4>
+                            <p class="mb-0">Protect your communications with tools like DMARC, DKIM, SPF, encryption, spam filtering, and AI spam detection.</p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
@@ -144,8 +143,8 @@
                             <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
                         </div>
                         <div>
-                            <h4 class="fs-20 ls-sm">DLP Policies</h4>
-                            <p class="mb-0">Implements comprehensive Data Loss Prevention policies that help to safeguard against unauthorized data sharing, keeping sensitive information secure and private.</p>
+                            <h4 class="fs-20 ls-sm">Unbreakable Uptime</h4>
+                            <p class="mb-0">Ensure uninterrupted service with robust multi-server clustering and built-in protection against outages.</p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +193,7 @@
                             <p class="mb-0">Our affordable SaaS plans minimize operational costs and improve budgeting.</p>
                             </div>
                         </div>
-                        <div class="d-flex flex-row">
+                        <div class="d-flex flex-row mb-5">
                             <div>
                                 <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />
                             </div>
@@ -204,7 +203,7 @@
                             </div>
                         </div>
 
-                        <div class="d-flex flex-row mb-5">
+                        <div class="d-flex flex-row">
                             <div>
                                 <img src="{{ asset('assets/images/icons/lineal/pie-chart-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="" />
                             </div>

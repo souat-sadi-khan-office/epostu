@@ -17,6 +17,8 @@ class Order extends Model
         'address',
         'address2',
         'country',
-        'zip'
+        'zip',
+        'storage',
+        'security_gateway'
     ];
 }

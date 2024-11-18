@@ -39,11 +39,8 @@
                                         <tr>
                                             <th width="5%">ID</th>
                                             <th>Date</th>
-                                            <th>Product</th>
-                                            <th>Plan</th>
                                             <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
+                                            <th>Plan</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -97,10 +94,7 @@
                     {data: 'id', name: 'id', orderable: true},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'name', name: 'name'},
-                    {data: 'product', name: 'product'},
                     {data: 'plan', name: 'plan'},
-                    {data: 'email', name: 'email'},
-                    {data: 'phone', name: 'phone'},
                     {data: 'status', name: 'status'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],

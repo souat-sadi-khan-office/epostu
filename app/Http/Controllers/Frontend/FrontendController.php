@@ -109,7 +109,7 @@ class FrontendController extends Controller
                 <p><strong>Message:</strong> {$request->message}</p>
             ";
 
-            $result = PHPMailerService::sendEmail($to, $subject, $body);
+            // $result = PHPMailerService::sendEmail($to, $subject, $body);
             // if (!$result) {
             //     return response()->json(['success' => true, 'txt' => $result, 'id' => $formEntry->id]);
             // }
@@ -147,7 +147,7 @@ class FrontendController extends Controller
                 <p><strong>Message:</strong> {$request->message}</p>
             ";
 
-            $result = PHPMailerService::sendEmail($to, $subject, $body);
+            // $result = PHPMailerService::sendEmail($to, $subject, $body);
             // if (!$result) {
             //     return response()->json(['success' => true, 'txt' => $result, 'id' => $formEntry->id]);
             // }
@@ -319,6 +319,17 @@ class FrontendController extends Controller
             'country' => 'required|string|max:255',
             'zip' => 'required|digits_between:4,10'
         ]);
+
+        $storage = 0;
+        $security_gateway = 0;
+
+        if(isset($request->more_storage)) {
+            $storage = 1;
+        }
+
+        if(isset($request->security_gateway_addon)) {
+            $security_gateway = 1;
+        }
     
         if ($validator->fails()) {
             return response()->json([
@@ -349,7 +360,9 @@ class FrontendController extends Controller
                 'email' => $request->email,
                 'phone' => $request->phone,
                 'country' => $request->country, 
-                'zip' => $request->zip 
+                'zip' => $request->zip,
+                'security_gateway' => $security_gateway,
+                'storage' => $storage,
             ]
         );
 
@@ -370,7 +383,7 @@ class FrontendController extends Controller
                 <p><strong>Zip:</strong> {$request->zip}</p>
             ";
 
-            PHPMailerService::sendEmail($to, $subject, $body);
+            // PHPMailerService::sendEmail($to, $subject, $body);
             // if (!$result) {
             //     return response()->json(['success' => true, 'txt' => $result, 'id' => $formEntry->id]);
             // }

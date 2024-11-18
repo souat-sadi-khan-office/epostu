@@ -56,6 +56,17 @@
                 </select>
             </div>
 
+            <div class="col-md-12">
+                <div class="form-check">
+                    <input class="form-check-input" {{ $model->storage == 1 ? 'checked' : '' }} type="checkbox" value=".50" name="storage" id="more_storage">
+                    <label class="form-check-label" for="more_storage">$ 0.50 per 10 GB </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" {{ $model->security_gateway == 1 ? 'checked' : '' }} type="checkbox" value=".50" name="security_gateway" id="security_gateway_addon">
+                    <label class="form-check-label" for="security_gateway_addon"> $ 0.50 Security Gateway Addon </label>
+                </div>
+            </div>
+
             <div class="col-md-12 mt-3 text-end">
                 <button class="btn btn-success" type="submit" id="submit">
                     <i class="bi bi-send"></i>

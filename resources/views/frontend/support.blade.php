@@ -27,19 +27,19 @@
                     <div class="col-md-4">
                         <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />
                         <h3 class="counter">Standard</h3>
-                        <p class="mb-0">Business-Hours support only, regular troubleshooting</p>
+                        <p class="mb-0">Get essential business-hours support with regular troubleshooting to keep your email services running efficiently.</p>
                     </div>
 
                     <div class="col-md-4">
                         <img src="{{ asset('assets/images/icons/lineal/web.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
                         <h3 class="counter">Silver</h3>
-                        <p class="mb-0">7*24 phone support, regular troubleshooting reviews</p>
+                        <p class="mb-0">Enjoy 24/7 phone support along with comprehensive troubleshooting reviews, ensuring your operations stay uninterrupted</p>
                     </div>
 
                     <div class="col-md-4">
                         <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
                         <h3 class="counter">Gold</h3>
-                        <p class="mb-0">7*24 phone support, includes data migration task</p>
+                        <p class="mb-0">Access premium 24/7 support, including seamless data migration assistance, ensuring complete peace of mind and robust service continuity.</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
     </div>
 </section>
   
-<section class="wrapper bg-light">
+{{-- <section class="wrapper bg-light">
     <div class="container py-14 py-md-16">
         <h2 class="display-4 mb-3 text-center">Knowledge Base</h2>
         <p class="lead text-center mb-10 px-md-16 px-lg-0">Access our extensive documentation, covering everything from onboarding to troubleshooting..</p>
@@ -129,28 +129,11 @@
                         @endif
                     </div>
                 </div>
-                {{-- <nav class="d-flex" aria-label="pagination">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
-                            </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav> --}}
             </div>
             
         </div>
     </div>
-</section>
+</section> --}}
 
 @endsection
 

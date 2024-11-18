@@ -64,7 +64,7 @@
                         <li><a href="{{ route('admin.epostu-pricing-plan.index') }}">Pricing Plan</a></li>
                     </ul>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="javaScript:void();">
                         <i class="ri-pen-nib-line"></i>
                         <span>TruSpam</span>
@@ -73,7 +73,7 @@
                     <ul class="vertical-submenu">
                         <li><a href="{{ route('admin.truspan-pricing-plan.index') }}">Pricing Plan</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
                 <li class="vertical-header">Content</li>  
                 <li class="{{ Request::is('admin/gift-item*') ? 'active' : '' }}">

@@ -48,10 +48,17 @@ class ReportController extends Controller
     {
         if ($request->ajax()) {
             $models = Order::all();
+            $counter = 0;
             return DataTables::of($models)
                 ->addIndexColumn()
+                ->editColumn('id', function () use(&$counter) {
+                    return ++$counter;
+                })
                 ->editColumn('created_at', function ($model) {
                     return date('d F, Y h:i A', strtotime($model->created_at));
+                })
+                ->editColumn('plan', function ($model) {
+                    return $model->plan != 'basic' ? 'Pro' : 'Basic';
                 })
                 ->editColumn('name', function ($model) {
                     return $model->first_name. ' '. $model->last_name;
@@ -68,7 +75,7 @@ class ReportController extends Controller
                 ->addColumn('action', function ($model) {
                     return view('admin.report.order.action', compact('model'));
                 })
-                ->rawColumns(['action', 'status', 'created_at', 'name'])
+                ->rawColumns(['action', 'id', 'plan', 'status', 'created_at', 'name'])
                 ->make(true);
         }
 
@@ -81,6 +88,9 @@ class ReportController extends Controller
             $models = EventRegistration::all();
             return DataTables::of($models)
                 ->addIndexColumn()
+                ->editColumn('id', function () use(&$counter) {
+                    return ++$counter;
+                })
                 ->editColumn('created_at', function ($model) {
                     return date('d F, Y h:i A', strtotime($model->created_at));
                 })
@@ -99,7 +109,7 @@ class ReportController extends Controller
                 ->addColumn('action', function ($model) {
                     return view('admin.report.event_action', compact('model'));
                 })
-                ->rawColumns(['action', 'gift', 'created_at', 'name'])
+                ->rawColumns(['action', 'id', 'gift', 'created_at', 'name'])
                 ->make(true);
         }
 
@@ -200,6 +210,16 @@ class ReportController extends Controller
         $model->country = $request->country;
         $model->zip = $request->zip;
         $model->status = $request->status;
+        if(isset($request->storage)) {
+            $model->storage = 1;
+        } else {
+            $model->storage = 0;
+        }
+        if(isset($request->security_gateway)) {
+            $model->security_gateway = 1;
+        } else {
+            $model->security_gateway = 0;
+        }
         $model->save();
 
         return response()->json([

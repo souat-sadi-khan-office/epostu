@@ -25,44 +25,59 @@
 @endsection
 @section('content')
 
-<section class="wrapper bg-soft-primary">
-    <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/contact.jpg') }}">
+    <div class="container pt-18 pt-md-20 pb-12 pb-md-20 text-center">
         <div class="row">
-            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5 mx-auto">
-                <h1 class="display-1 mb-3">Get in Touch</h1>
-                <nav class="d-inline-block" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                    </ol>
-                </nav>
+            <div class="col-md-10 mx-auto">
+                <h1 class="display-1 text-white mb-3">Get in Touch with Us</h1>
+                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">We’re here to help! Reach out for any inquiries, support, or feedback. Our team is ready to assist you with prompt and reliable service, ensuring you get the answers and assistance you need.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="wrapper bg-light angled upper-end">
-    <div class="container py-14 py-md-16">
-        <div class="row gy-10 gx-lg-8 gx-xl-12 mb-16 align-items-center">
-            <div class="col-lg-7 position-relative">
-                <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0; left: -1.4rem; z-index: 0;"></div>
-                <div class="row gx-md-5 gy-5">
-                    <div class="col-md-6">
-                        <figure class="rounded mt-md-10 position-relative">
-                            <img src="{{ asset('assets/images/contact-one.webp') }}" srcset="{{ asset('assets/images/contact-one.webp') }} 2x" alt="Contact Image One"></figure>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="row gx-md-5 gy-5">
-                            <div class="col-md-12 order-md-2">
-                                <figure class="rounded">
-                                    <img src="{{ asset('assets/images/contact-two.webp') }}" srcset="{{ asset('assets/images/contact-two.webp') }} 2x" alt="Contact Image Two"></figure>
+<section class="wrapper">
+    <div class="container py-14 py-md-8">
+        <div class="row">
+            <div class="col-xl-10 mx-auto">
+                <div class="card">
+                    <div class="row gx-0">
+                        <div class="col-lg-6 align-self-stretch">
+                            <div class="map map-full rounded-top rounded-lg-start">
+                                {!! get_settings('google_map') !!}
                             </div>
-                            <div class="col-md-10">
-                                <div class="card bg-pale-primary text-center counter-wrapper">
-                                    <div class="card-body py-11">
-                                    <h3 class="counter text-nowrap">5000+</h3>
-                                    <p class="mb-0">Satisfied Customers</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-10 p-md-11 p-lg-14">
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <div class="icon text-primary fs-28 me-4 mt-n1"> 
+                                            <i class="uil uil-location-pin-alt"></i> 
+                                        </div>
+                                    </div>
+                                    <div class="align-self-start justify-content-start">
+                                        <h5 class="mb-1">Address</h5>
+                                        <address>{{ get_settings('footer_address') }}</address>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <div class="icon text-primary fs-28 me-4 mt-n1"> 
+                                            <i class="uil uil-phone-volume"></i> 
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Phone</h5>
+                                        <p>{{ get_settings('footer_phone_one') }} <br class="d-none d-md-block" />{{ get_settings('footer_phone_two') }}</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">E-mail</h5>
+                                        <p class="mb-0"><a href="mailto:{{ get_settings('email_address') }}" class="link-body">{{ get_settings('email_address') }}</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -70,37 +85,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <h2 class="display-4 mb-8">Convinced yet? Let's make something great together.</h2>
-                <div class="d-flex flex-row">
-                    <div>
-                        <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
-                    </div>
-                    <div>
-                        <h5 class="mb-1">Address</h5>
-                        <address>Moonshine St. 14/05 Light City, <br class="d-none d-md-block" />London, United Kingdom</address>
-                    </div>
-                </div>
-                <div class="d-flex flex-row">
-                    <div>
-                        <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
-                    </div>
-                    <div>
-                        <h5 class="mb-1">Phone</h5>
-                        <p>{{ get_settings('footer_phone_one') }}</p>
-                    </div>
-                </div>
-                <div class="d-flex flex-row">
-                    <div>
-                        <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-envelope"></i> </div>
-                    </div>
-                    <div>
-                        <h5 class="mb-1">E-mail</h5>
-                        <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-body">{{ get_settings('email_address') }}</a></p>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
+</section>
+
+<section class="wrapper">
+    <div class="container py-14 py-md-0">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
                 <h2 class="display-4 mb-3 text-center">Drop Us a Line</h2>
@@ -166,12 +156,6 @@
                 </form>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="wrapper bg-light">
-    <div class="map">
-        {!! get_settings('google_map') !!}
     </div>
 </section>
     

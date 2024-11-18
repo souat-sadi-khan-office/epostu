@@ -60,7 +60,17 @@
                     <div class="col-lg-8">
                         <h3 class="mb-4">Billing address</h3>
                         <div class="row g-3">
-                            <div class="col-md-12 form-group">
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value=".50" name="more_storage" id="more_storage">
+                                    <label class="form-check-label" for="more_storage"> $ 0.50 per 10 GB </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value=".50" name="security_gateway_addon" id="security_gateway_addon">
+                                    <label class="form-check-label" for="security_gateway_addon"> $ 0.50 Security Gateway Addon </label>
+                                </div>
+                            </div>
+                            <div style="display: none;" class="col-md-12 form-group">
                                 <select name="pricing_plan_id" id="pricing_plan_id" class="form-control">
                                     @if ($product == 'epostu')
                                         @if ($plan == 'basic')
@@ -124,12 +134,9 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-select-wrapper">
-                                    <select class="form-select" name="country" id="country" required>
-                                        <option value="">Country</option>
-                                        <option value="United States">United States</option>
-                                        <option value="Bangladesh">Bangladesh</option>
-                                    </select>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" required name="country" id="country" placeholder="Country">
+                                    <label for="address2" class="form-label">Country</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -173,7 +180,7 @@
                                 </div>
                                 <div class="ms-2 d-flex align-items-center">
                                     <p class="price fs-sm">
-                                        <span class="amount">
+                                        <span>
                                             @if ($product == 'epostu')
                                                 @if ($plan == 'basic')
                                                     ${{ get_settings('basic_plan_price_monthly') }}
@@ -192,6 +199,34 @@
                                                 @endif
                                             @endif
                                         </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="more_storage_area" style="display: none;" class="shopping-cart-item justify-content-between mb-4">
+                                <div class="d-flex flex-row d-flex align-items-center">
+                                    <div class="w-100">
+                                        <h6 class="h6 mb-1">
+                                            10 GB Storage
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="ms-2 d-flex align-items-center">
+                                    <p class="fs-sm">
+                                        $0.50
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="security_gateway_addon_area" style="display: none;" class="shopping-cart-item justify-content-between mb-4">
+                                <div class="d-flex flex-row d-flex align-items-center">
+                                    <div class="w-100">
+                                        <h6 class="h6 mb-1">
+                                            Security Gateway Addon
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="ms-2 d-flex align-items-center">
+                                    <p class="fs-sm">
+                                        $0.50
                                     </p>
                                 </div>
                             </div>
@@ -310,5 +345,41 @@
                 $('.price').html('$'+pricing_plan_yearly);
             }
         })
+
+        $(document).ready(function() {
+            function calculateTotal() {
+                let pricing_plan_monthly = parseFloat($('#pricing_plan_montly').val()) || 0;
+                let more_storage = $('#more_storage').is(':checked') ? 0.50 : 0;
+                let gateway = $('#security_gateway_addon').is(':checked') ? 0.50 : 0;
+
+                if(more_storage > 0) {
+                    $('#more_storage_area').show();
+                    $('#more_storage_area').addClass('d-flex');
+                } else {
+                    $('#more_storage_area').hide();
+                    $('#more_storage_area').removeClass('d-flex');
+                }
+
+                if(gateway > 0) {
+                    $('#security_gateway_addon_area').show();
+                    $('#security_gateway_addon_area').addClass('d-flex');
+                } else {
+                    $('#security_gateway_addon_area').hide();
+                    $('#security_gateway_addon_area').removeClass('d-flex');
+                }
+
+                let total = pricing_plan_monthly + more_storage + gateway;
+
+                $('.amount').html('$' + total.toFixed(2));
+                $('.price').html('$' + total.toFixed(2));
+            }
+
+            $('#more_storage, #security_gateway_addon').on('change', function() {
+                calculateTotal();
+            });
+
+            calculateTotal();
+        });
+
     </script>
 @endpush

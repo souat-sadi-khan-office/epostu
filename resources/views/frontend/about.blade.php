@@ -25,7 +25,7 @@
 @endsection
 @section('content')
 
-<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/about-bg.webp') }}" style="background-image: url('{{ asset('assets/images/about-bg.webp') }}');">
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/about-us-background.png') }}" style="background-image: url('{{ asset('assets/images/about-us-background.png') }}');">
     <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
@@ -44,12 +44,12 @@
                 <div class="overlap-grid overlap-grid-2">
                     <div class="item">
                         <figure class="rounded shadow">
-                            <img src="{{ asset('assets/images/about2.webp') }}" srcset="{{ asset('assets/images/about2.webp') }} 2x" alt="About Image One">
+                            <img src="{{ asset('assets/images/about-two.jpg') }}" srcset="{{ asset('assets/images/about-two.jpg') }} 2x" alt="About Image One">
                         </figure>
                     </div>
                     <div class="item">
                         <figure class="rounded shadow">
-                            <img src="{{ asset('assets/images/about3.webp') }}" srcset="{{ asset('assets/images/about3.webp') }} 2x" alt="About Image Two">
+                            <img src="{{ asset('assets/images/about-one.jpg') }}" srcset="{{ asset('assets/images/about-one.jpg') }} 2x" alt="About Image Two">
                         </figure>
                     </div>
                 </div>
@@ -140,7 +140,6 @@
                 <p class="lead fs-lg pe-lg-5">With years of experience delivering SaaS-based solutions, our platform integrates the latest cloud-based technologies to support small, medium, and large enterprises worldwide.</p>
                 <p>We have a rich history of providing innovative solutions that empower businesses to thrive in the digital landscape. Our commitment to excellence ensures that we continually adapt to meet the evolving needs of our clients.</p>
                 <p class="mb-6">From concept to execution, our journey is driven by a passion for innovation and a dedication to customer satisfaction. We pride ourselves on our ability to deliver tailored solutions that drive growth and enhance productivity.</p>
-                <a href="#" class="btn btn-primary rounded-pill mb-0">Learn More</a>
             </div>
         </div>
     </div>

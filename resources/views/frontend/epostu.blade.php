@@ -24,119 +24,19 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/epostu-bg.webp') }}">
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/pricing.jpg') }}">
     <div class="container pt-18 pt-md-20 pb-12 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <h1 class="display-1 text-white mb-3">Comprehensive Email Hosting Solution</h1>
-                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">ePostu is a robust, user-friendly, and secure email hosting solution tailored to meet the needs of modern businesses. With ePostu, you gain more than just an email host; it’s an all-encompassing platform designed for efficient communication, privacy, and productivity. Here’s why ePostu is the ideal choice for managing business email needs.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="wrapper bg-light">
-    <div class="container pt-14 pb-12 pt-md-16 pb-md-14">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-            <div class="col-lg-7 order-lg-2">
-                <div class="row gx-md-5 gy-5">
-                    <div class="col-md-5 offset-md-1 align-self-end">
-                        <div class="card bg-pale-yellow">
-                            <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="EposTu Services" />
-                                <h4>Reliable Uptime</h4>
-                                <p class="mb-0">Guaranteed 99.9% uptime, ensuring you’re always connected with minimal downtime.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 align-self-end">
-                        <div class="card bg-pale-red">
-                            <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Enhanced Security Picture" />
-                                <h4>Enhanced Security</h4>
-                                <p class="mb-0">Advanced security protocols, including spam filtering, virus scanning, and two-factor authentication, safeguard your communications.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="card bg-pale-leaf">
-                            <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/cloud-computing-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Easy Integration Picture" />
-                                <h4>Easy Integration</h4>
-                                <p class="mb-0">Works seamlessly with existing systems, whether you use Microsoft Outlook, Apple Mail, or web-based clients.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 align-self-start">
-                        <div class="card bg-pale-primary">
-                            <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Collaborative Tools Picture" />
-                                <h4>Collaborative Tools</h4>
-                                <p class="mb-0">Shared contacts, calendars, and tasks promote team productivity and collaboration.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <h2 class="fs-15 text-uppercase text-muted mb-3">Overview</h2>
-                <h3 class="display-4 mb-5">Reliable, cloud-based email hosting designed for seamless communication.</h3>
-                <p>ePostu offers unmatched reliability, security, and flexibility. With a commitment to supporting remote teams and global communication, ePostu empowers businesses to operate smoothly and efficiently. Its rich set of features simplifies your workflow, helping teams focus on what matters most. Whether for startups, SMEs, or large enterprises, ePostu is designed to meet the diverse needs of the modern workforce</p>
-                <a href="#" class="btn btn-navy rounded-pill mt-3">More Details</a>
+                <h1 class="display-1 text-white mb-3">Flexible Plans for Every Need</h1>
+                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">Choose from a range of pricing plans designed to fit businesses of all sizes. Get access to powerful features, from advanced security and device management to seamless email and collaboration tools, with transparent pricing and no hidden fees..</p>
             </div>
         </div>
     </div>
 </section>
 
 <section class="wrapper bg-soft-primary">
-    <div class="container py-10 pt-md-16 pt-lg-0 pb-md-10">
-        <div class="row text-center">
-            <div class="col-lg-9 mx-auto">
-                <h2 class="fs-15 text-uppercase text-muted mb-3 pt-md-12">Key Features</h2>
-                <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about creating a business process model</h3>
-
-                <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9">
-                    <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="High Availability with Built-in Auto-Scaling" />
-                        <h4 class="mb-1">High Availability with Built-in Auto-Scaling</h4>
-                        <p>ePostu ensures high availability with automatic scaling to handle sudden traffic spikes, maintaining seamless performance and uninterrupted service for all users.</p>
-                    </div>
-                    <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Multi-Device Sync with Outlook Connector and ActiveSync Pictures" />
-                        <h4 class="mb-1">Multi-Device Sync with Outlook Connector and ActiveSync</h4>
-                        <p>Easily sync emails, calendars, and contacts across all your devices, with Outlook Connector and ActiveSync support for real-time updates.</p>
-                    </div>
-
-                    <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Backup and Archiving Tools for Disaster Recovery Picture" />
-                        <h4 class="mb-1">Backup and Archiving Tools for Disaster Recovery</h4>
-                        <p>Advanced backup and archiving tools allow businesses to recover vital emails and data quickly, minimizing data loss during unexpected incidents.</p>
-                    </div>
-
-                    <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/telephone.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Mobile-Friendly Webmail Interface for Accessibility" />
-                        <h4 class="mb-1">Mobile-Friendly Webmail Interface for Accessibility</h4>
-                        <p>Enjoy a sleek, mobile-optimized webmail interface that makes accessing your email and essential features simple on any device.</p>
-                    </div>
-                    <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/price-tag.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Customizable Subscription Options with Flexible Terms" />
-                        <h4 class="mb-1">Customizable Subscription Options with Flexible Terms</h4>
-                        <p>Choose from various customizable plans with flexible terms, designed to meet the unique requirements of businesses of all sizes.</p>
-                    </div>
-
-                    <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/sitemap.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Find Answers to Common Questions About ePostu" />
-                        <h4 class="mb-1">Find Answers to Common Questions About ePostu</h4>
-                        <p>Get quick answers to frequently asked questions and discover helpful tips about managing your ePostu email hosting service.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="wrapper bg-soft-primary">
-    <div class="container pt-14 pb-18 pt-md-1 pb-md-22 text-center">
+    <div class="container pt-14 pt-md-11 pb-18 pt-md-1 pb-md-22 text-center">
         <div class="row">
             <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
                 <h2 class="fs-15 text-uppercase text-muted mb-3">Our Pricing</h2>
@@ -151,7 +51,7 @@
         <div class="pricing-wrapper position-relative mt-n22 mt-md-n24">
             <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="top: 2rem; right: -2.4rem;"></div>
                 <div class="shape rounded-circle bg-line red rellax w-18 h-18 d-none d-lg-block" data-rellax-speed="1" style="bottom: 0.5rem; left: -2.5rem;"></div>
-                <div class="pricing-switcher-wrapper switcher">
+                {{-- <div class="pricing-switcher-wrapper switcher">
                     <p class="mb-0 pe-3">Monthly</p>
                     <div class="pricing-switchers">
                         <div class="pricing-switcher pricing-switcher-active"></div>
@@ -159,9 +59,9 @@
                         <div class="switcher-button bg-primary"></div>
                     </div>
                     <p class="mb-0 ps-3">Yearly</p>
-                </div>
+                </div> --}}
                 <div class="row gy-6 mt-3 mt-md-5">
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-6">
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
@@ -200,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4 popular">
+                    {{-- <div class="col-md-6 col-lg-4 popular">
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
@@ -236,9 +136,9 @@
                                 <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'premium']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0">
+                    <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-0">
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
@@ -275,11 +175,35 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="pricing card text-center">
+                            <div class="card-body">
+                                <img src="{{ asset('assets/images/icons/lineal/gift.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <h4 class="card-title">Add Ons</h4>
+
+                                <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
+                                    <li>
+                                        <i class="uil uil-check"></i>
+                                        <span>
+                                            $ 0.50 per 10 GB
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="uil uil-check"></i>
+                                        <span>
+                                            $ 0.50 Security Gateway Addon
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         </div>
     </div>
 </section>
-
+{{-- 
 <section class="wrapper bg-gray">
     <div class="container pt-10 pb-10 py-md-16">
         <h2 class="display-4 mb-3 text-center">Pricing FAQ</h2>
@@ -383,7 +307,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 @endsection
 

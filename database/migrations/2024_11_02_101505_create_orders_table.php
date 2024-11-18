@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('country')->nullable();
             $table->string('zip')->nullable();
             $table->boolean('status')->default(0);
+            $table->boolean('storage')->default(0);
+            $table->boolean('security_gateway')->default(0);
             $table->timestamps();
         });
     }

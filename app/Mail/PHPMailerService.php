@@ -17,9 +17,10 @@ class PHPMailerService
             $mail->SMTPAuth   = false;
             $mail->Username   = env('MAIL_USERNAME');
             $mail->Password   = env('MAIL_PASSWORD');
-            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = env('MAIL_PORT');
             $mail->CharSet = 'UTF-8';
+            $mail->XMailer = ''; 
 
             $mail->setFrom(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
             $mail->addAddress($to);

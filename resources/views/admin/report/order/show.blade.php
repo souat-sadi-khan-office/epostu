@@ -23,12 +23,16 @@
                     <td>{{ date('d F, Y h:i A', strtotime($model->created_at)) }}</td>
                 </tr>
                 <tr>
-                    <td width="30%">Product</td>
-                    <td>{{ ucfirst($model->product) }}</td>
+                    <td width="30%">Plan</td>
+                    <td>{{ $model->plan != 'basic' ? 'Pro' : 'Basic' }}</td>
                 </tr>
                 <tr>
-                    <td width="30%">Plan</td>
-                    <td>{{ ucfirst($model->plan) }}</td>
+                    <td width="30%">10 GB Storage</td>
+                    <td>{{ $model->storage == 1 ? 'Yes' : 'No'}}</td>
+                </tr>
+                <tr>
+                    <td width="30%">Security Gateway</td>
+                    <td>{{ $model->security_gateway == 1 ? 'Yes' : 'No'}}</td>
                 </tr>
                 <tr>
                     <td width="30%">Pricing Plan</td>

@@ -39,8 +39,8 @@
         <div class="container py-15 py-md-17">
             <div class="row text-center">
                 <div class="col-md-10 col-lg-9 col-xxl-8 mx-auto">
-                    <h2 class="fs-15 text-uppercase text-muted mb-3">Epostu - Email Hosting Solution</h2>
-                    <h3 class="display-3 ls-sm mb-9 px-xl-11">The features we offer is specifically designed to meet your needs.</h3>
+                    <h2 class="fs-15 text-uppercase text-muted mb-3">Partner with Epostu</h2>
+                    <h3 class="display-3 ls-sm mb-9 px-xl-11">Collaborate with us and expand your business offerings with our robust email hosting solutions.</h3>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">High Availability</h4>
-                            <p class="mb-0">Epostu ensures constant uptime with redundant servers and advanced infrastructure, so your email services remain accessible and stable around the clock..</p>
+                            <p class="mb-0">Ensure your clients experience uninterrupted email services with our advanced, redundant infrastructure</p>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Seamless Integration</h4>
-                            <p class="mb-0">With support for Outlook Connector and ActiveSync, Epostu integrates smoothly with Outlook and mobile devices, delivering consistent access and efficient communication.</p>
+                            <p class="mb-0">Effortlessly connect with Outlook and mobile devices using our Outlook Connector and ActiveSync support.</p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Data Protection</h4>
-                            <p class="mb-0">Epostu safeguards your data with automated backups, ensuring your emails and critical information are secure, recoverable, and protected from data loss events.</p>
+                            <p class="mb-0">Keep your clients data secure with automated backups, ensuring easy recovery and protection from loss.</p>
                         </div>
                     </div>
                 </div>
