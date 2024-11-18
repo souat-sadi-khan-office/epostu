@@ -42,13 +42,13 @@
             <div class="col-xl-10 mx-auto">
                 <div class="card">
                     <div class="row gx-0">
-                        <div class="col-lg-6 align-self-stretch">
+                        <div class="col-lg-12 align-self-stretch">
                             <div class="map map-full rounded-top rounded-lg-start">
                                 {!! get_settings('google_map') !!}
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="p-10 p-md-11 p-lg-14">
+                        <div class="col-lg-12">
+                            <div class="p-5 p-md-5 p-lg-5">
                                 <div class="d-flex flex-row">
                                     <div>
                                         <div class="icon text-primary fs-28 me-4 mt-n1"> 
@@ -60,7 +60,7 @@
                                         <address>{{ get_settings('footer_address') }}</address>
                                     </div>
                                 </div>
-                                <div class="d-flex flex-row">
+                                {{-- <div class="d-flex flex-row">
                                     <div>
                                         <div class="icon text-primary fs-28 me-4 mt-n1"> 
                                             <i class="uil uil-phone-volume"></i> 
@@ -79,7 +79,7 @@
                                         <h5 class="mb-1">E-mail</h5>
                                         <p class="mb-0"><a href="mailto:{{ get_settings('email_address') }}" class="link-body">{{ get_settings('email_address') }}</a></p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

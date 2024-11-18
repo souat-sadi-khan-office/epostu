@@ -30,7 +30,9 @@
     <div class="container pt-17 pb-20 pt-md-19 pb-md-21 text-center">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h1 class="display-1 mb-3">Thank You!</h1>
+                <h1 class="display-1 mb-3">Thank You!
+                    
+                </h1>
             </div>
         </div>
     </div>
@@ -48,8 +50,15 @@
                             <div id="seconds"></div>
                             <div id="log"></div>
                         </div>
-                        <h2 class="mb-3 ">Your Registration is Successful</h2>
-                        <p class="lead mb-6 ">Thank you for your registration. Please show this screen at our stall within <b>2 minutes</b> to collect your gift. Your Registration as below: <br> <b>{{ date('d F, Y h:i:a', strtotime($event->created_at)) }}</b></p>
+                        <h2 class="mb-3 ">Your Registration is Successful </h2>
+                        <p class="lead mb-6 ">Thank you for your registration. Please show this screen at our stall within <b>2 minutes</b> to collect your gift. Your Registration as below: <br> <b>
+                                @php
+                                    $createdAtUTC = Carbon\Carbon::parse($event->created_at)->setTimezone('Asia/Bangkok');
+                                    $createdAtPlus2Minutes = $createdAtUTC->addMinutes( (int) get_settings('event_notification_time'));
+            
+                                    echo $createdAtPlus2Minutes;
+                                @endphp
+                            </b></p>
                         <div class="row">
                             <div class="col-md-8 mx-auto">
                                 <div class="card">
@@ -78,54 +87,62 @@
 @endsection
 
 @push('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+
     <script>
-        function countDown() {
-            var currDate = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
-            currDate = new Date(currDate);
+       function countDown() {
+    var currDate = new Date();  // Get current time in the user's local timezone
+    
+    // Event creation time from Laravel (in UTC)
+    var eventEndTime = "{{ $event->created_at }}"; 
 
-            var endTime = new Date(
-                currDate.getFullYear(),
-                currDate.getMonth(),
-                currDate.getDate(),
-                {{ date('H', strtotime($event->created_at)) }},
-                {{ date('i', strtotime($event->created_at . ' + '. (get_settings('event_notification_time') > 2 ? get_settings('event_notification_time') : 2) .' minutes')) }},
-                {{ date('s', strtotime($event->created_at)) }}
-            ).toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
+    // Create a Date object from the event's UTC time
+    var eventDateUTC = new Date(eventEndTime);
 
-            endTime = Date.parse(endTime) / 1000;
+    // Get user's local timezone offset in minutes
+    var localTimezoneOffset = currDate.getTimezoneOffset(); // This gives the difference in minutes from UTC
 
-            var now = Date.parse(new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" })) / 1000;
+    // Adjust the event's UTC time to user's local time
+    var eventDateLocal = new Date(eventDateUTC.getTime() - (localTimezoneOffset * 60000)); // Subtract offset from UTC time
 
-            var timeLeft = endTime - now;
+    // Add the dynamic notification time (in minutes) from Laravel settings
+    var notificationTimeInMinutes = {{ get_settings('event_notification_time') }};
+    var endTime = new Date(eventDateLocal.getTime() + notificationTimeInMinutes * 60000);  // Add notification time in minutes
 
-            if (timeLeft <= 0) {
-                window.location.href = "/event-registration";
-            }
+    // Add the dynamic notification time (in minutes) from Laravel settings
+    var notificationTimeInMinutes = {{ get_settings('event_notification_time') }};
+    var endTime = new Date(eventDateLocal.getTime() + notificationTimeInMinutes * 60000);  // Add minutes
 
-            var days = Math.floor(timeLeft / 86400);
-            var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-            var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
-            var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+    // Get the current time and end time in Unix timestamp (seconds)
+    var endTimeTimestamp = endTime.getTime() / 1000;
+    var now = currDate.getTime() / 1000;
+    
+    var timeLeft = endTimeTimestamp - now;
 
-            if (hours > 8) {
-                hours = 0;
-                minutes = 0;
-                seconds = 0;
-            }
+    if (timeLeft <= 0) {
+        
+        window.location.href = "/event-registration";  // Redirect if time is up
+        return false;;
+    }
 
-            if (minutes < "10") {
-                minutes = "0" + minutes;
-            }
-            if (seconds < "10") {
-                seconds = "0" + seconds;
-            }
+    // Calculate days, hours, minutes, and seconds left
+    var days = Math.floor(timeLeft / 86400);
+    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+    var seconds = Math.floor(timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60));
 
-            $("#hours").html(minutes + ":" + seconds);
-        }
+    // Ensure hours, minutes, and seconds are two digits
+    if (hours < 10) { hours = "0" + hours; }
+    if (minutes < 10) { minutes = "0" + minutes; }
+    if (seconds < 10) { seconds = "0" + seconds; }
 
-        setInterval(function () {
-            countDown();
-        }, 1000);
+    // Display the countdown timer
+    $("#hours").html(minutes + ":" + seconds);
+}
+
+// Run the countdown function every second
+setInterval(countDown, 1000);
 
     </script>
 @endpush
