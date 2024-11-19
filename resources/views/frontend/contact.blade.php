@@ -29,15 +29,15 @@
     <div class="container pt-18 pt-md-20 pb-12 pb-md-20 text-center">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <h1 class="display-1 text-white mb-3">Get in Touch with Us</h1>
-                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">We’re here to help! Reach out for any inquiries, support, or feedback. Our team is ready to assist you with prompt and reliable service, ensuring you get the answers and assistance you need.</p>
+                <h1 class="display-1 text-white mb-3">Any Queries</h1>
+                <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">We will Be Happy to Assist You in Any Way We Can.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section class="wrapper">
-    <div class="container py-14 py-md-8">
+    <div class="container py-4 py-md-8">
         <div class="row">
             <div class="col-xl-10 mx-auto">
                 <div class="card">
@@ -56,8 +56,8 @@
                                         </div>
                                     </div>
                                     <div class="align-self-start justify-content-start">
-                                        <h5 class="mb-1">Address</h5>
-                                        <address>{{ get_settings('footer_address') }}</address>
+                                        <h5 class="mb-1">{{ get_settings('footer_address') }}</h5>
+                                        <address></address>
                                     </div>
                                 </div>
                                 {{-- <div class="d-flex flex-row">
@@ -90,7 +90,7 @@
 </section>
 
 <section class="wrapper">
-    <div class="container py-14 py-md-0">
+    <div class="container py-4 py-md-0">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
                 <h2 class="display-4 mb-3 text-center">Drop Us a Line</h2>

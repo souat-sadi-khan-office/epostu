@@ -15,8 +15,8 @@
                         <div class="form-floating input-group">
                             <input type="email" name="email" required class="form-control border-0" placeholder="Enter Email Address" id="analyze" data-parsley-errors-container="#newsletter-email-error">
                             <label for="analyze">Enter Email Address</label>
-                            <button class="btn btn-success" id="newsletter_submit" style="display: none;" type="submit">Submit</button>
-                            <button class="btn btn-success" id="newsletter_submitting" type="button" disabled>
+                            <button class="btn btn-primary" id="newsletter_submit" style="display: none;" type="submit">Submit</button>
+                            <button class="btn btn-primary" id="newsletter_submitting" type="button" disabled>
                                 <span class="spinner-border spinner-border-sm pr-4 mr-4" role="status" aria-hidden="true"></span>
                             </button>
                         </div>
@@ -31,42 +31,7 @@
     </section>
 @endif
 
-@if (Request::is('contact'))
-<footer>
-    <div class="container pt-8 pt-md-10 pb-7">
-        <div class="text-center">
-            <p class="mb-3 mb-lg-3">© {{ date('Y') }} Epostu. All rights reserved.</p>
-            <nav class="nav d-flex justify-content-center social social-muted mb-0">
-                @if (get_settings('facebook_link'))
-                    <a href="{{ get_settings('facebook_link') }}" target="_blank">
-                        <i class="uil uil-facebook-f"></i>
-                    </a>
-                @endif
-                @if (get_settings('twitter_link'))
-                    <a href="{{ get_settings('twitter_link') }}" target="_blank">
-                        <i class="uil uil-twitter"></i>
-                    </a>
-                @endif
-                @if (get_settings('linkedin_link'))
-                    <a href="{{ get_settings('linkedin_link') }}" target="_blank">
-                        <i class="uil uil-linkedin"></i>
-                    </a>
-                @endif
-                @if (get_settings('instagram_link'))
-                    <a href="{{ get_settings('instagram_link') }}" target="_blank">
-                        <i class="uil uil-instagram"></i>
-                    </a>
-                @endif
-                @if (get_settings('youtube_link'))
-                    <a href="{{ get_settings('youtube_link') }}" target="_blank">
-                        <i class="uil uil-youtube"></i>
-                    </a>
-                @endif
-            </nav>
-        </div>
-    </div>
-</footer>
-@else   
+
 <footer>
     <div class="container pt-8 pt-md-10 pb-7">
         <div class="d-md-flex align-items-center justify-content-between">
@@ -174,7 +139,6 @@
         </div>
     </div>
 </footer> --}}
-@endif
 
 <div class="progress-wrap">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">

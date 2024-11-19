@@ -24,12 +24,12 @@
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 @section('content')
-    <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/epostu-bg.webp') }}" style="background-image: url('{{ asset('assets/images/epostu-bg.webp') }}');">
+    <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/homepage-banner.webp') }}" style="background-image: url('{{ asset('assets/images/homepage-banner.webp') }}');">
         <div class="container pt-19 pt-md-18 pb-18 pb-md-20 text-center">
             <div class="row">
                 <div class="col-sm-12 col-xxl-12 text-center text-sm-start" data-cues="slideInDown" data-group="page-title" data-interval="-200" data-delay="500">
-                    <h2 class="display-1 text-white fs-56 mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
-                        Reliable, cloud-based email hosting designed for 
+                    <h2 class="display-1 text-white mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
+                        Reliable, cloud-based email hosting designed <br /> for 
                         <span class="underline-2 underline-gradient-2">
                             <span class="typer text-white" 
                             data-delay="100" 
@@ -165,7 +165,7 @@
     </section>
 
     <!-- Benifits of choosing us -->
-    <section class="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
+    <!-- <section class="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
         <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ asset('assets/images/home-page-choosing.webp') }}">
             <div class="divider text-gray divider-v-end d-none d-lg-block">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200">
@@ -216,9 +216,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="wrapper  bg-white">
+    <!-- <section class="wrapper  bg-white">
         <div class="container pt-15">
             <div class="card bg-soft-primary rounded-4 mb-15 mb-md-17">
                 <div class="card-body py-14 px-lg-0">
@@ -286,7 +286,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     
 @endsection
 

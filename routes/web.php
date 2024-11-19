@@ -6,7 +6,7 @@ use App\Http\Controllers\Frontend\FrontendController;
 Route::middleware(['maintenance'])->group(function () {
     Route::get('/', [FrontendController::class, 'index'])->name('home');
     Route::get('about-us', [FrontendController::class, 'about'])->name('about');
-    Route::get('support', [FrontendController::class, 'support'])->name('support');
+    // Route::get('support', [FrontendController::class, 'support'])->name('support');
     Route::get('knowledge-base/{slug}', [FrontendController::class, 'knowledge'])->name('knowledge');
     Route::get('contact', [FrontendController::class, 'contact'])->name('contact');
     Route::get('find-partner', [FrontendController::class, 'findPartner'])->name('find.partner');

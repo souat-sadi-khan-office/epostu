@@ -46,8 +46,8 @@
                 <div class="container h-100 d-flex align-items-center justify-content-center">
                     <div class="row">
                         <div class="col-lg-12 mx-auto mt-n10 text-center">
-                            <h1 class="display-1 text-white mb-3">Become a Partner</h1>
-                            <p class="display-2 text-white lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">A company turning ideas into beautiful things.</p>
+                            <!-- <h1 class="display-1 text-white mb-3">Become a Partner</h1>
+                            <p class="display-2 text-white lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">A company turning ideas into beautiful things.</p> -->
                         </div>
                     </div>
                 </div>

@@ -15,6 +15,6 @@ class GiftItem extends Model
 
     public function events()
     {
-        return $this->hasMany(EventRegistration::class, 'gift_id');
+        return $this->hasMany(EventRegistration::class);
     }
 }

@@ -55,11 +55,7 @@
                                         </li>
                                     </ul>
                                 </li> --}}
-                                <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('support') ? 'active' : '' }}" href="{{ route('support') }}">
-                                        Support
-                                    </a>
-                                </li>
+                                
                                 <li class="nav-item">
                                     <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
                                         Contact
@@ -182,11 +178,7 @@
                                     </li>
                                 </ul>
                             </li> --}}
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::is('support') ? 'active' : '' }}" href="{{ route('support') }}">
-                                    Support
-                                </a>
-                            </li>
+                           
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
                                     Contact

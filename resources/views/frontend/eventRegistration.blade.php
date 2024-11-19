@@ -44,17 +44,13 @@
     <section class="wrapper bg-light angled upper-end">
         <div class="container py-7 py-md-8">
             <h2 class="display-4 mb-3 text-center">
-                <span class="underline-2 underline-gradient-2">
-                    <span class="typer" 
-                    data-delay="100" 
-                    data-words="Visitor Registration"></span><span class="cursor text-primary" data-owner="typer"></span>
-                </span>
+                Visitor Registration
             </h2>
             <p class="lead text-center mb-10">Thank you for visiting at DigiTech ASEAN Thailand & AI Connect 2024! <br> Please register and collect your gift.</p>
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                 <div class="col-lg-5">
                     <figure>
-                        <img class="w-auto" src="{{ asset('assets/images/event-registratoin-test.jpg') }}" srcset="{{ asset('assets/images/event-registratoin-test.jpg') }} 2x" alt="" /></figure>
+                        <img style="border-radius:10px;" class="w-auto" src="{{ asset('assets/images/event-registratoin-test.jpg') }}" srcset="{{ asset('assets/images/event-registratoin-test.jpg') }} 2x" alt="" /></figure>
                 </div>
                 <div class="col-lg-7">
                     
@@ -65,27 +61,27 @@
                             <div class="col-md-12">
                                 <div class="form-floating mb-4">
                                     <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-                                    <label for="form_name">First Name *</label>
+                                    <label for="form_name">Full Name *</label>
                                     <div class="valid-feedback"> Looks good! </div>
                                     <div class="invalid-feedback"> Please enter your first name. </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <div class="form-floating mb-4">
                                     <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
                                     <label for="form_lastname">Last Name *</label>
                                     <div class="valid-feedback"> Looks good! </div>
                                     <div class="invalid-feedback"> Please enter your last name. </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="col-md-12">
                                 <div class="form-floating mb-4">
                                     <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required>
                                     <label for="form_email">Email *</label>
                                     <div class="valid-feedback"> Looks good! </div>
-                                    <div class="invalid-feedback"> Please enter your email. </div>
+                                    <div class="invalid-feedback"> Please enter your corporate email. </div>
                                 </div>
                             </div>
                             

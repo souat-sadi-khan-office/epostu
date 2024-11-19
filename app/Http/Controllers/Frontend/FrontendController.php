@@ -192,7 +192,7 @@ class FrontendController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'surname' => 'required',
+            // 'surname' => 'required',
             'phone' => 'required',
             'email' => [
                 'required',
@@ -240,7 +240,7 @@ class FrontendController extends Controller
         // Save the email if it doesn't exist
         $model = EventRegistration::create([
             'first_name' => $request->name,
-            'last_name' => $request->surname,
+            // 'last_name' => $request->surname,
             'email' => $request->email,
             'phone' => $request->phone,
             'gift_id' => $giftId

@@ -94,6 +94,7 @@
                                             </li>
                                         @endforeach
                                     @endif
+                                    <li>&nbsp;</li>
                                 </ul>
                                 <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'basic']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
