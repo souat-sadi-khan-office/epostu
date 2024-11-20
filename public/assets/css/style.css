@@ -39179,6 +39179,7 @@ footer.bg-dark,
   background-size: cover;
   position: relative;
   z-index: 0;
+  height: 100vh;
 }
 .image-wrapper:not(.mobile) {
   background-attachment: fixed !important;
@@ -39264,6 +39265,10 @@ footer.bg-dark,
 @media (max-width: 767px) {
   .image-wrapper.bg-cover {
     min-height: 20rem;
+  }
+
+  .image-wrapper {
+    height: auto;
   }
 }
 .bg-lines {

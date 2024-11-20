@@ -220,12 +220,12 @@ class FrontendController extends Controller
             ]
         );
 
-        // if (EventRegistration::where('email', $request->email)->exists()) {
-        //     return response()->json([
-        //         'status' => false,
-        //         'message' => 'You are already registered.'
-        //     ]);
-        // }
+        if (EventRegistration::where('email', $request->email)->exists()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'You are already registered.'
+            ]);
+        }
 
         // Fetch all GiftItems matching the conditions
         $giftId = null;

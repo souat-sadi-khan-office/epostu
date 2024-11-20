@@ -1,4 +1,7 @@
 var _componentValidation = function() {
+    $('.newsletter-alert-success').hide();
+    $('.newsletter-alert-danger').hide();
+    
     $('#newsletter_form').parsley().on('field:validated', function() {
         var ok = $('.parsley-error').length === 0;
         $('.bs-callout-info').toggleClass('hidden', !ok);
@@ -7,6 +10,9 @@ var _componentValidation = function() {
     });
     $('#newsletter_form').on('submit', function(e) {
         e.preventDefault();
+
+        $('.newsletter-alert-success').hide();
+        $('.newsletter-alert-danger').hide();
         
         $('#newsletter_submit').hide();
         $('#newsletter_submitting').show();
@@ -23,9 +29,13 @@ var _componentValidation = function() {
             dataType: 'JSON',
             success: function(data) {
                 if(data.status == false) {
-                    toastr.warning(data.message);
+                    $('.newsletter-alert-danger').show();
+                    $('.newsletter-alert-danger').html('<i class="uil uil-times-circle"></i> ' + data.message);
+                    // toastr.warning(data.message);
                 } else {
-                    toastr.success(data.message);
+                    // toastr.success(data.message);
+                    $('.newsletter-alert-success').show();
+                    $('.newsletter-alert-success').html('<i class="uil uil-check-circle"></i> ' + data.message);
 
                     $("#newsletter_form")[0].reset();
                 }

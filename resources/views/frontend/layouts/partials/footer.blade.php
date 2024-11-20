@@ -1,6 +1,6 @@
 @if (!Request::is('contact'))
     <section class="wrapper bg-soft-primary">
-        <div class="container py-14 py-md-16">
+        <div class="container py-7 py-md-8">
             <div class="row mb-8">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="fs-16 text-uppercase text-primary mb-3">Stay Informed</h2>
@@ -11,6 +11,10 @@
 
             <div class="row">
                 <div class="col-lg-5 mx-auto">
+                    <div class="alert alert-success newsletter-alert-success alert-icon" role="alert"></div>
+                      
+                    <div class="alert alert-danger newsletter-alert-danger alert-icon" role="alert"></div>
+
                     <form action="{{ route('submit.newsletter.form') }}" method="POST" id="newsletter_form">
                         <div class="form-floating input-group">
                             <input type="email" name="email" required class="form-control border-0" placeholder="Enter Email Address" id="analyze" data-parsley-errors-container="#newsletter-email-error">
@@ -38,27 +42,32 @@
             <p class="mb-2 mb-lg-0">© {{ date('Y') }} Epostu. All rights reserved.</p>
             <nav class="nav social social-muted mb-0 text-md-end">
                 @if (get_settings('facebook_link'))
-                    <a href="{{ get_settings('facebook_link') }}" target="_blank">
+                    <a href="javascript:;" target="_blank">
                         <i class="uil uil-facebook-f"></i>
                     </a>
                 @endif
                 @if (get_settings('twitter_link'))
-                    <a href="{{ get_settings('twitter_link') }}" target="_blank">
+                    <a href="javascript:;" target="_blank">
                         <i class="uil uil-twitter"></i>
                     </a>
                 @endif
+                @if (get_settings('twitter_link'))
+                    <a href="javascript:;" target="_blank">
+                        <i class="uil uil-tiktok"></i>
+                    </a>
+                @endif
                 @if (get_settings('linkedin_link'))
-                    <a href="{{ get_settings('linkedin_link') }}" target="_blank">
+                    <a href="javascript:;" target="_blank">
                         <i class="uil uil-linkedin"></i>
                     </a>
                 @endif
                 @if (get_settings('instagram_link'))
-                    <a href="{{ get_settings('instagram_link') }}" target="_blank">
+                    <a href="javascript:;" target="_blank">
                         <i class="uil uil-instagram"></i>
                     </a>
                 @endif
                 @if (get_settings('youtube_link'))
-                    <a href="{{ get_settings('youtube_link') }}" target="_blank">
+                    <a href="javascript:;" target="_blank">
                         <i class="uil uil-youtube"></i>
                     </a>
                 @endif

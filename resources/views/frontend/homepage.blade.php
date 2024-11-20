@@ -46,7 +46,7 @@
 
     <!-- Features Overview -->
     <section class="wrapper bg-light">
-        <div class="container py-15 py-md-17">
+        <div class="container py-7 py-md-10">
             <div class="row text-center">
                 <div class="col-md-10 col-lg-9 col-xxl-8 mx-auto">
                     <h2 class="fs-15 text-uppercase text-muted mb-3">Epostu - Email Hosting Solution</h2>

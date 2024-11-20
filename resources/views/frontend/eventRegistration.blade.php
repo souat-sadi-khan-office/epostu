@@ -57,7 +57,14 @@
                     <form class="partner-form needs-validation" method="post" action="{{ route('submit.event.registration.form') }}" novalidate id="partner-form">
                         @csrf
                         <div class="messages"></div>
+
+                        <div class="alert alert-success event-alert-success alert-icon" role="alert"></div>
+                      
+                        <div class="alert alert-danger event-alert-danger alert-icon" role="alert"></div>
+
                         <div class="row gx-4">
+                            
+
                             <div class="col-md-12">
                                 <div class="form-floating mb-4">
                                     <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
@@ -87,10 +94,9 @@
                             
                             <div class="col-md-12">
                                 <div class="form-floating mb-4">
-                                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Phone" required>
-                                    <label for="form_phone">Phone *</label>
-                                    <div class="valid-feedback"> Looks good! </div>
-                                    <div class="invalid-feedback"> Please enter your phone. </div>
+                                    <input id="form_phone" type="tel" name="phone" class="form-control" >
+                                    <span id="valid-msg" class="hide"></span>
+                                        <span id="error-msg" class="hide"></span>
                                 </div>
                             </div>
                             
@@ -110,8 +116,196 @@
             </div>
         </div>
     </section>
+
+    <input type="hidden" id="phoneNumberVerified" value="false">
 @endsection
 
 @push('scripts')
+    <link rel="stylesheet" href="{{ asset('assets/css/intlTelInput.css') }}">
+    <style>
+        .iti { width: 100%; }
+        .iti__search-input {
+            padding: 5px 10px;
+        }
+        .hide {
+            display: none;
+        }
+
+        #error-msg {
+            color:#dc3545;
+        }
+    </style>
+    <script src="{{ asset('assets/js/intlTelInput.min.js') }}"></script>
     <script src="{{ asset('assets/js/event-registration.js') }}"></script>
+    <script>
+        var _componentPartnerValidation = function() {
+            $('.event-alert-success').hide();
+            $('.event-alert-danger').hide();
+
+            $('#partner-form').parsley().on('field:validated', function() {
+                var ok = $('.parsley-error').length === 0;
+                $('.bs-callout-info').toggleClass('hidden', !ok);
+                $('body').addClass('special-card');
+                $('.bs-callout-warning').toggleClass('hidden', ok);
+            });
+            $(document).on('submit', '#partner-form', function(e) {
+                e.preventDefault();
+
+                $('.event-alert-success').hide();
+                $('.event-alert-danger').hide();
+
+                let phoneNumberVerified = $('#phoneNumberVerified').val();
+                if(phoneNumberVerified == false) {
+                    return false;
+                }
+
+                $('#submit').hide();
+                $('#submitting').show();
+
+                var submit_url = $('#partner-form').attr('action');
+                var formData = new FormData($("#partner-form")[0]);
+                formData.append('form_submit', true);
+
+                $.ajax({
+                    url: submit_url,
+                    type: 'POST',
+                    data: formData,
+                    contentType: false, 
+                    cache: false,
+                    processData: false,
+                    dataType: 'JSON',
+                    success: function(data) {
+                        if(data.status == false) {
+                            $('.event-alert-danger').show();
+                            $('.event-alert-danger').html('<i class="uil uil-times-circle"></i> ' + data.message);
+
+                            // toastr.warning(data.message);
+                        } else {
+                            $('.event-alert-success').show();
+                            $('.event-alert-success').html('<i class="uil uil-check-circle"></i> ' + data.message);
+
+                            // toastr.success(data.message);
+                            $("#partner-form")[0].reset();
+
+                            setTimeout(() => {
+                                window.location.href=data.goto;
+                            }, 2000);
+                        }
+                        
+                        $('#submit').show();
+                        $('#submitting').hide();
+                    },
+                    error: function(data) {
+                        var jsonValue = $.parseJSON(data.responseText);
+                        const errors = jsonValue.errors;
+                        if (errors) {
+                            var i = 0;
+                            $.each(errors, function(key, value) {
+                                const first_item = Object.keys(errors)[i];
+                                const message = errors[first_item][0];
+                                if($('#' + first_item).length > 0){
+                                    $('#' + first_item).parsley().removeError('required', {updateClass: true});
+                                    $('#' + first_item).parsley().addError('required', {message: value, updateClass: true});
+                                }
+                                toastr.error(value);
+                                i++;
+                            });
+                        } else{
+                            toastr.error(jsonValue.message);
+                        }
+
+                        $('#submit').show();
+                        $('#submitting').hide();
+                    }
+                });
+            });
+        };
+
+
+// Initialize module
+// ------------------------------
+
+$(document).ready(function () {
+
+    $('#submit').show();
+    $('#submitting').hide();
+
+    const input = document.querySelector("#form_phone");
+    const errorMsg = document.querySelector("#error-msg");
+    const validMsg = document.querySelector("#valid-msg");
+    const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+    const button = document.querySelector("#submit");
+
+    const iti = window.intlTelInput(input, {
+        initialCountry: "th",
+        separateDialCode: true,
+        strictMode: true,
+        loadUtilsOnInit: "{{ asset('assets/js/utils.js') }}",
+    });
+
+    const reset = () => {
+        input.classList.remove("error");
+        errorMsg.innerHTML = "";
+        errorMsg.classList.add("hide");
+        validMsg.classList.add("hide");
+    };
+
+    const showError = (msg) => {
+        input.classList.add("error");
+        errorMsg.innerHTML = msg;
+        errorMsg.classList.remove("hide");
+    };
+
+    // on click button: validate
+    $('#phoneNumberVerified').val("false");
+    button.addEventListener('click', () => {
+        reset();
+        if (!input.value.trim()) {
+            showError("Required");
+        } else if (iti.isValidNumberPrecise()) {
+            validMsg.classList.remove("hide");
+            $('#phoneNumberVerified').val("true");
+        } else {
+            const errorCode = iti.getValidationError();
+            const msg = errorMap[errorCode] || "Invalid number";
+            showError(msg);
+        }
+    });
+
+    input.addEventListener('keyup', reset);
+
+    function validateCorporateEmail() {
+        const emailField = document.getElementById("form_email");
+        const email = emailField.value;
+        const personalDomains = [
+            "gmail.com",
+            "yahoo.com",
+            "outlook.com",
+            "hotmail.com",
+            "aol.com",
+            "icloud.com",
+            "protonmail.com",
+            "zoho.com",
+            "gmx.com"
+        ];
+    
+        // Extract the domain from the email
+        const emailDomain = email.split("@")[1];
+    
+        if (personalDomains.includes(emailDomain)) {
+            emailField.setCustomValidity("Please use a corporate email address.");
+        } else {
+            emailField.setCustomValidity("");
+        }
+    
+        emailField.reportValidity();
+    }
+    
+    // Example usage: Add an event listener to your email field
+    document.getElementById("form_email").addEventListener("input", validateCorporateEmail);
+    _componentPartnerValidation();
+    
+})
+    </script>
 @endpush

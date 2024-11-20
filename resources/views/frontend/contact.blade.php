@@ -129,10 +129,11 @@
                         
                         <div class="col-md-6">
                             <div class="form-floating mb-4">
-                                <input id="form_phone" type="text" name="phone" class="form-control" placeholder="+123456789" required>
-                                <label for="form_phone">Phone *</label>
+                                <input id="form_phone" type="tel" name="phone" class="form-control" required>
                                 <div class="valid-feedback"> Looks good! </div>
                                 <div class="invalid-feedback"> Please provide a valid Phone Number. </div>
+                                <span id="valid-msg" class="hide"></span>
+                                <span id="error-msg" class="hide"></span>
                             </div>
                         </div>
 
@@ -162,8 +163,66 @@
 @endsection
 
 @push('scripts')
+    <link rel="stylesheet" href="{{ asset('assets/css/intlTelInput.css') }}">
+    <style>
+        .iti { width: 100%; }
+        .iti__search-input {
+            padding: 5px 10px;
+        }
+        .hide {
+            display: none;
+        }
+
+        #error-msg {
+            color:#dc3545;
+        }
+    </style>
+    <script src="{{ asset('assets/js/intlTelInput.min.js') }}"></script>
     <script>
         $(document).ready(function() {
+
+            const input = document.querySelector("#form_phone");
+            const errorMsg = document.querySelector("#error-msg");
+            const validMsg = document.querySelector("#valid-msg");
+            const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+            const button = document.querySelector("#submit");
+
+            const iti = window.intlTelInput(input, {
+                initialCountry: "th",
+                separateDialCode: true,
+                strictMode: true,
+                loadUtilsOnInit: "{{ asset('assets/js/utils.js') }}",
+            });
+
+            const reset = () => {
+                input.classList.remove("error");
+                errorMsg.innerHTML = "";
+                errorMsg.classList.add("hide");
+                validMsg.classList.add("hide");
+            };
+
+            const showError = (msg) => {
+                input.classList.add("error");
+                errorMsg.innerHTML = msg;
+                errorMsg.classList.remove("hide");
+            };
+
+            // on click button: validate
+            button.addEventListener('click', () => {
+                reset();
+                if (!input.value.trim()) {
+                    showError("Required");
+                } else if (iti.isValidNumberPrecise()) {
+                    validMsg.classList.remove("hide");
+                } else {
+                    const errorCode = iti.getValidationError();
+                    const msg = errorMap[errorCode] || "Invalid number";
+                    showError(msg);
+                }
+            });
+
+            input.addEventListener('keyup', reset);
 
             $('#submitting').hide();
             $('#submit').show();

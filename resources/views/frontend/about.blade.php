@@ -36,9 +36,9 @@
     </div>
 </section>
 
-<section class="wrapper bg-light angled upper-end lower-end">
-    <div class="container py-14 py-md-16">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+<section class="wrapper bg-light">
+    <div class="container py-14 py-md-10">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-5 mb-md-7 align-items-center">
             <div class="col-lg-6 position-relative order-lg-2">
                 <div class="shape bg-dot primary rellax w-16 h-20" data-rellax-speed="1" style="top: 3rem; left: 5.5rem"></div>
                 <div class="overlap-grid overlap-grid-2">

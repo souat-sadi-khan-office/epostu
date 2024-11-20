@@ -61,7 +61,70 @@
                     <p class="mb-0 ps-3">Yearly</p>
                 </div> --}}
                 <div class="row gy-6 mt-3 mt-md-5">
-                    <div class="col-md-6 col-lg-6">
+                    <div class="col-md-12 ">
+                        <div class="pricing card text-center table-responsive">
+                            <table class="table table-striped text-successtable-border border-light">
+                                <thead class="border-light">
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">
+                                            <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                            <h4 class="card-title">{{ get_settings('basic_plan_name') }}</h4>
+                                        </th>
+                                        <th scope="col">
+                                            <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                            <h4 class="card-title">{{ get_settings('corporate_plan_name') }}</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">HDD Storage</th>
+                                        <td>700 MB</td>
+                                        <td>1,5 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Web Server</th>
+                                        <td><i class="fas fa-check"></i></td>
+                                        <td><i class="fas fa-check"></i></td>
+                                    </tr>
+                                    <tr>
+                                    <th scope="row">Database</th>
+                                        <td>
+                                            <i class="uil text-success uil-check-circle"></i>
+                                        </td>
+                                        <td>Optional</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">DNS</th>
+                                        <td><i class="fas fa-check"></i></td>
+                                        <td><i class="fas fa-check"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Backups</th>
+                                        <td><i class="fas fa-check"></i></td>
+                                        <td><i class="fas fa-check"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tech Support</th>
+                                        <td>15$/incident</td>
+                                        <td>24/7 included</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="fw-bold">Free</td>
+                                        <td class="fw-bold"><a href>Contact us</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th class=""></th>
+                                        <th class=""><button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Sign-up</button></th>
+                                        <th class=""><button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Buy Now</button></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    {{-- <div class="col-md-6 col-lg-6">
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
@@ -99,7 +162,7 @@
                                 <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'basic']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     {{-- <div class="col-md-6 col-lg-4 popular">
                         <div class="pricing card text-center">
@@ -139,7 +202,7 @@
                         </div>
                     </div> --}}
 
-                    <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-0">
+                    {{-- <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-0">
                         <div class="pricing card text-center">
                             <div class="card-body">
                                 <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
@@ -175,7 +238,7 @@
                                 <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'corporate']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-md-12 col-lg-12">
                         <div class="pricing card text-center">
