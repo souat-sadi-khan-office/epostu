@@ -50,7 +50,7 @@
                     <td colspan="2">Message</td>
                 </tr>
                 <tr>
-                    <td colspan="2">{{ nl2br($model->message) }}</td>
+                    <td colspan="2">{!! nl2br($model->message) !!}</td>
                 </tr>
             </table>
         </div>
