@@ -1,25 +1,25 @@
-@extends('frontend.layouts.app', ['title' => 'Welcome to Epostu'])
+@extends('frontend.layouts.app', ['title' => 'ePosTu | Your Trusted Cloud Based Email Provider'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<meta property="og:site_name" content="Epostu">
+<meta property="og:site_name" content="ePosTu">
  
-<meta name="title" content="Welcome to Epostu">
-<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Welcome to Epostu">	
+<meta name="title" content="ePosTu - Reliable and Secure Email Solutions for Your Business">
+<meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Discover secure and efficient email services with ePosTu. Whether you're looking for professional email hosting, secure messaging, or custom solutions, ePosTu has you covered!">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome to Epostu">	
-<meta property="og:description" content="Welcome to Epostu}">	
+<meta property="og:title" content="ePosTu - Reliable and Secure Email Solutions for Your Business">	
+<meta property="og:description" content="Discover secure and efficient email services with ePosTu. Whether you're looking for professional email hosting, secure messaging, or custom solutions, ePosTu has you covered!">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="Welcome to Epostu" /> 
-<meta name="twitter:title" content="Welcome to Epostu" />
-<meta name="twitter:description" content="Welcome to Epostu" />	
+<meta name="twitter:creator" content="ePosTu" /> 
+<meta name="twitter:title" content="ePosTu - Reliable and Secure Email Solutions for Your Business" />
+<meta name="twitter:description" content="Discover secure and efficient email services with ePosTu. Whether you're looking for professional email hosting, secure messaging, or custom solutions, ePosTu has you covered!" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
@@ -28,14 +28,14 @@
         <div class="container pt-19 pt-md-18 pb-18 pb-md-20 text-center">
             <div class="row">
                 <div class="col-sm-12 col-xxl-12 text-center text-sm-start" data-cues="slideInDown" data-group="page-title" data-interval="-200" data-delay="500">
-                    <h2 class="display-1 text-white mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
+                    <h1 class="display-1 text-white mb-4 mt-0 mt-lg-5 ls-xs pe-xl-5 pe-xxl-0">
                         Reliable, cloud-based email hosting designed <br /> for 
                         <span class="underline-2 underline-gradient-2">
                             <span class="typer text-white" 
                             data-delay="100" 
                             data-words="Your Business, Seamless Communication!, Competitive Pricing!, Seamless Collaboration!, Reliable Support!"></span><span class="cursor text-primary" data-owner="typer"></span>
                         </span>
-                    </h2>
+                    </h1>
                     <p class="lead fs-23 lh-sm mb-7 pe-lg-5 pe-xl-5 pe-xxl-0">
                         Comprehensive Email Hosting Solution that provides reliable, cloud-based email services for seamless communication. It features high availability with auto-scaling, multi-device synchronization via Outlook Connector and ActiveSync, and disaster recovery tools. The mobile-friendly webmail interface ensures easy accessibility across all devices.
                     </p>
@@ -58,7 +58,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/padlock.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/padlock.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="Secure Hosting Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Secure Hosting</h4>
@@ -69,7 +69,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Outlook & ActiveSync Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Outlook & ActiveSync</h4>
@@ -81,7 +81,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/networking.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/networking.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Seamless Device Control" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Seamless Device Control</h4>
@@ -93,7 +93,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Email Encryption Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Email Encryption</h4>
@@ -105,7 +105,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-md text-pink me-5" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-md text-pink me-5" alt="Platform Sync Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Platform Sync</h4>
@@ -116,7 +116,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/chat-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/chat-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="In-build Threat Detection Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">In-build Threat Detection</h4>
@@ -128,7 +128,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/networking-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/networking-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Bulletproof Email Security Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Bulletproof Email Security</h4>
@@ -140,7 +140,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Unbreakable Uptime Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Unbreakable Uptime</h4>
@@ -152,7 +152,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/video-camera.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/video-camera.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Real-Time Protection Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Real-Time Protection</h4>
@@ -186,7 +186,7 @@
                         <h3 class="display-3 ls-sm mb-7">Here are the 3 working steps on success.</h3>
                         <div class="d-flex flex-row mb-5">
                             <div>
-                                <img src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="Light Bulb Image" />
                             </div>
                             <div>
                             <h4 class="fs-20 ls-sm">Cost Savings</h4>
@@ -195,7 +195,7 @@
                         </div>
                         <div class="d-flex flex-row mb-5">
                             <div>
-                                <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Design Image" />
                             </div>
                             <div>
                             <h4 class="fs-20 ls-sm">Enhanced Security</h4>
@@ -205,7 +205,7 @@
 
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('assets/images/icons/lineal/pie-chart-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/pie-chart-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="Pie Chart Image" />
                             </div>
                             <div>
                                 <h4 class="fs-20 ls-sm">Improved Productivity</h4>

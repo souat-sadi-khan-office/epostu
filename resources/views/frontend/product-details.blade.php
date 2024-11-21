@@ -165,7 +165,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Basic Plan Image" />
                                 <h4 class="card-title">{{ get_settings('truspan_basic_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -204,7 +204,7 @@
                     <div class="col-md-6 col-lg-4 popular">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Premium Plan Image" />
                                 <h4 class="card-title">{{ get_settings('truspan_premium_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                 <div class="price price-show"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_premium_plan_price_monthly') }}</span> <span class="price-duration">mo</span></div>
@@ -234,7 +234,7 @@
                     <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Pro Plan Image" />
                                 <h4 class="card-title">{{ get_settings('truspan_corporate_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                 <div class="price price-show"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_corporate_plan_pricing_monthly') }}</span> <span class="price-duration">mo</span></div>

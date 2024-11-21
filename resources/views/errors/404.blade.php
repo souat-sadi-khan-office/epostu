@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-9 col-xl-8 mx-auto">
                 <figure class="mb-10">
-                    <img class="img-fluid" src="{{ asset('assets/images/404.png') }}" srcset="{{ asset('assets/images/404.png') }} 2x" alt=""></figure>
+                    <img class="img-fluid" src="{{ asset('assets/images/404.png') }}" srcset="{{ asset('assets/images/404.png') }} 2x" alt="404 Page Not Found Picture"></figure>
             </div>
             <div class="col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
                 <h1 class="mb-3">Oops! Page Not Found.</h1>

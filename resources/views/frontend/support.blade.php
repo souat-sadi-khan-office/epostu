@@ -25,19 +25,19 @@
             <div class="col-lg-8 pt-10 pt-md-0">
                 <div class="row align-items-center counter-wrapper gy-6 text-center">
                     <div class="col-md-4">
-                        <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />
+                        <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Standard Support Image" />
                         <h3 class="counter">Standard</h3>
                         <p class="mb-0">Get essential business-hours support with regular troubleshooting to keep your email services running efficiently.</p>
                     </div>
 
                     <div class="col-md-4">
-                        <img src="{{ asset('assets/images/icons/lineal/web.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
+                        <img src="{{ asset('assets/images/icons/lineal/web.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Silver Plan Support" />
                         <h3 class="counter">Silver</h3>
                         <p class="mb-0">Enjoy 24/7 phone support along with comprehensive troubleshooting reviews, ensuring your operations stay uninterrupted</p>
                     </div>
 
                     <div class="col-md-4">
-                        <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="" />
+                        <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Gold Plan Support" />
                         <h3 class="counter">Gold</h3>
                         <p class="mb-0">Access premium 24/7 support, including seamless data migration assistance, ensuring complete peace of mind and robust service continuity.</p>
                     </div>

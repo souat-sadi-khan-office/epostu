@@ -1,25 +1,25 @@
-@extends('frontend.layouts.app', ['title' => 'EposTu | Epostu'])
+@extends('frontend.layouts.app', ['title' => 'Affordable Pricing for Premium Mail Services - ePosTu'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<meta property="og:site_name" content="Epostu">
+<meta property="og:site_name" content="ePosTu">
  
-<meta name="title" content="Epostu">
-<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Epostu Meta Description">	
+<meta name="title" content="Pricing | Discover the Best Plans for Cloud Based Mail Services - ePosTu">
+<meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Explore the best pricing options for reliable email based mail services with ePosTu. Choose the perfect plan based on your needs and start communicating securely and efficiently today.">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="Epostu">	
-<meta property="og:description" content="Epostu}">	
+<meta property="og:title" content="Pricing | Discover the Best Plans for Cloud Based Mail Services - ePosTu">	
+<meta property="og:description" content="Explore the best pricing options for reliable email based mail services with ePosTu. Choose the perfect plan based on your needs and start communicating securely and efficiently today.">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="Epostu" /> 
-<meta name="twitter:title" content="Epostu" />
-<meta name="twitter:description" content="Epostu" />	
+<meta name="twitter:creator" content="ePosTu" /> 
+<meta name="twitter:title" content="Pricing | Discover the Best Plans for Cloud Based Mail Services - ePosTu" />
+<meta name="twitter:description" content="Explore the best pricing options for reliable email based mail services with ePosTu. Choose the perfect plan based on your needs and start communicating securely and efficiently today." />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
@@ -61,18 +61,18 @@
                     <p class="mb-0 ps-3">Yearly</p>
                 </div> --}}
                 <div class="row gy-6 mt-3 mt-md-5">
-                    <div class="col-md-12 ">
+                    {{-- <div class="col-md-12 ">
                         <div class="pricing card text-center table-responsive">
                             <table class="table table-striped text-successtable-border border-light">
                                 <thead class="border-light">
                                     <tr>
                                         <th scope="col"></th>
                                         <th scope="col">
-                                            <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                            <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Basic Plan Image" />
                                             <h4 class="card-title">{{ get_settings('basic_plan_name') }}</h4>
                                         </th>
                                         <th scope="col">
-                                            <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                            <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Pro Plan Image" />
                                             <h4 class="card-title">{{ get_settings('corporate_plan_name') }}</h4>
                                         </th>
                                     </tr>
@@ -123,11 +123,11 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    {{-- <div class="col-md-6 col-lg-6">
+                    </div> --}}
+                    <div class="col-md-6 col-lg-6">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Basic Plan Name Image" />
                                 <h4 class="card-title">{{ get_settings('basic_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -162,12 +162,12 @@
                                 <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'basic']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
 
                     {{-- <div class="col-md-6 col-lg-4 popular">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Premium Plan Name Image" />
                                 <h4 class="card-title">{{ get_settings('premimum_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -202,10 +202,10 @@
                         </div>
                     </div> --}}
 
-                    {{-- <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-0">
+                    <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-0">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Corporate Plan Name Image" />
                                 <h4 class="card-title">{{ get_settings('corporate_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -238,12 +238,12 @@
                                 <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'corporate']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
 
                     <div class="col-md-12 col-lg-12">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/gift.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+                                <img src="{{ asset('assets/images/icons/lineal/gift.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Add Ons Image" />
                                 <h4 class="card-title">Add Ons</h4>
 
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">

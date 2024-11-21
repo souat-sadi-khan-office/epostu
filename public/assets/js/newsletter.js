@@ -80,11 +80,14 @@ $(document).ready(function () {
     $('#newsletter_submitting').hide();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    if (!sessionStorage.getItem('modalShown')) {
-        var modal = new bootstrap.Modal(document.getElementById('event-registration-banner'));
-        modal.show();
-        
-        sessionStorage.setItem('modalShown', 'true');
-    }
-});
+const currentPath = window.location.pathname;
+if (!currentPath.includes('/event-registration')) {
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!sessionStorage.getItem('modalShown')) {
+            var modal = new bootstrap.Modal(document.getElementById('event-registration-banner'));
+            modal.show();
+            
+            sessionStorage.setItem('modalShown', 'true');
+        }
+    });
+}

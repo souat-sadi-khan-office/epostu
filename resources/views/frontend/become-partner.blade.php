@@ -1,25 +1,25 @@
-@extends('frontend.layouts.app', ['title' => 'Become a Partner'])
+@extends('frontend.layouts.app', ['title' => 'Partner with ePosTu - Grow Together'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<meta property="og:site_name" content="Epostu">
+<meta property="og:site_name" content="ePosTu">
  
-<meta name="title" content="Become a Partner | Epostu">
-<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Become a Partner Meta Description">	
+<meta name="title" content="Become a Partner | Collaborate & Expand with ePosTu">
+<meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Join ePosTu's Partner Program to grow your business with reliable cloud based mail services. Let's collaborate and achieve success together!">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="Become a Partner | Epostu">	
-<meta property="og:description" content="Become a Partner | Epostu}">	
+<meta property="og:title" content="Become a Partner | Collaborate & Expand with ePosTu">	
+<meta property="og:description" content="Join ePosTu's Partner Program to grow your business with reliable cloud based mail services. Let's collaborate and achieve success together!">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="Epostu" /> 
-<meta name="twitter:title" content="Become a Partner| Epostu" />
-<meta name="twitter:description" content="Become a Partner | Epostu" />	
+<meta name="twitter:creator" content="ePosTu" /> 
+<meta name="twitter:title" content="Become a Partner | Collaborate & Expand with ePosTu" />
+<meta name="twitter:description" content="Join ePosTu's Partner Program to grow your business with reliable cloud based mail services. Let's collaborate and achieve success together!" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
@@ -46,8 +46,8 @@
                 <div class="container h-100 d-flex align-items-center justify-content-center">
                     <div class="row">
                         <div class="col-lg-12 mx-auto mt-n10 text-center">
-                            <!-- <h1 class="display-1 text-white mb-3">Become a Partner</h1>
-                            <p class="display-2 text-white lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">A company turning ideas into beautiful things.</p> -->
+                            <h1 class="d-none display-1 text-white mb-3">Become a Partner</h1>
+                            <p class="display-2 d-none text-white lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">A company turning ideas into beautiful things.</p>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/tools.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/tools.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="High Availability Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">High Availability</h4>
@@ -91,7 +91,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/cloud-computing-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/cloud-computing-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Seamless Integration" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Seamless Integration</h4>
@@ -103,7 +103,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/shield-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="" />
+                            <img src="{{ asset('assets/images/icons/lineal/shield-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Data Protection Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Data Protection</h4>
@@ -214,7 +214,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <figure>
-                        <img class="w-auto" src="{{ asset('assets/images/partner.png') }}" srcset="{{ asset('assets/images/partner.png') }} 2x" alt="" />
+                        <img class="w-auto" src="{{ asset('assets/images/partner.png') }}" srcset="{{ asset('assets/images/partner.png') }} 2x" alt="Partner With Us Image" />
                     </figure>
                 </div>
                 <div class="col-lg-7">

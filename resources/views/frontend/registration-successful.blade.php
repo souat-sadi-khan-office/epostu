@@ -1,25 +1,25 @@
-@extends('frontend.layouts.app', ['title' => 'Event Registration Successful | Epostu'])
+@extends('frontend.layouts.app', ['title' => 'Event Registration Successful | Thank You for Registering with ePosTu'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<meta property="og:site_name" content="Epostu">
+<meta property="og:site_name" content="ePosTu">
  
-<meta name="title" content="Event Registration Successful | Epostu">
-<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Event Registration Successful">	
+<meta name="title" content="Registration Successful for DigiTech ASEAN Thailand & AI Connect 2024 | ePosTu">
+<meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Thank you for registering for DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu! We've successfully received your registration. We look forward to seeing you at the event. Stay tuned for more updates.">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="Event Registration Successful | Epostu">	
-<meta property="og:description" content="Event Registration Successful | Epostu}">	
+<meta property="og:title" content="Registration Successful for DigiTech ASEAN Thailand & AI Connect 2024 | ePosTu">	
+<meta property="og:description" content="Thank you for registering for DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu! We've successfully received your registration. We look forward to seeing you at the event. Stay tuned for more updates.">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="Epostu" /> 
-<meta name="twitter:title" content="Event Registration Successful | Epostu" />
-<meta name="twitter:description" content="Event Registration Successful | Epostu" />	
+<meta name="twitter:creator" content="ePosTu" /> 
+<meta name="twitter:title" content="Registration Successful for DigiTech ASEAN Thailand & AI Connect 2024 | ePosTu" />
+<meta name="twitter:description" content="Thank you for registering for DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu! We've successfully received your registration. We look forward to seeing you at the event. Stay tuned for more updates." />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection

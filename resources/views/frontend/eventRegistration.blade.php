@@ -1,25 +1,25 @@
-@extends('frontend.layouts.app', ['title' => 'Event Registration | ePostU'])
+@extends('frontend.layouts.app', ['title' => 'Event Registration - Join Today! | ePosTu'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<meta property="og:site_name" content="Epostu">
+<meta property="og:site_name" content="ePosTu">
  
-<meta name="title" content="Become a Partner | Epostu">
-<meta name="author" content="Event Registration : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Event Registration">	
+<meta name="title" content="Register for the DigiTech ASEAN Thailand & AI Connect 2024 | Secure Your Spot Now | ePosTu">
+<meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Sign up for the event DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu and secure your spot today! Complete the registration form and be part of an exciting event. Don't miss out on this opportunity to win an iPhone 16 or Special Gift.">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="Event Registration | Epostu">	
-<meta property="og:description" content="Event Registration | Epostu}">	
+<meta property="og:title" content="Register for the DigiTech ASEAN Thailand & AI Connect 2024 | Secure Your Spot Now | ePosTu">	
+<meta property="og:description" content="Sign up for the event DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu and secure your spot today! Complete the registration form and be part of an exciting event. Don't miss out on this opportunity to win an iPhone 16 or Special Gift">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="Epostu" /> 
-<meta name="twitter:title" content="Event Registration" />
-<meta name="twitter:description" content="Event Registration | Epostu" />	
+<meta name="twitter:creator" content="ePosTu" /> 
+<meta name="twitter:title" content="Register for the DigiTech ASEAN Thailand & AI Connect 2024 | Secure Your Spot Now | ePosTu" />
+<meta name="twitter:description" content="Sign up for the event DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu and secure your spot today! Complete the registration form and be part of an exciting event. Don't miss out on this opportunity to win an iPhone 16 or Special Gift" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
@@ -50,9 +50,9 @@
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                 <div class="col-lg-5">
                     <figure>
-                        <img style="border-radius:10px;" class="w-auto" src="{{ asset('assets/images/event-registratoin-test.jpg') }}" srcset="{{ asset('assets/images/event-registratoin-test.jpg') }} 2x" alt="" /></figure>
+                        <img style="border-radius:10px;" class="w-auto" src="{{ asset('assets/images/event-registratoin-test.jpg') }}" srcset="{{ asset('assets/images/event-registratoin-test.jpg') }} 2x" alt="Event Registration Picture" /></figure>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7" id="targetDiv">
                     
                     <form class="partner-form needs-validation" method="post" action="{{ route('submit.event.registration.form') }}" novalidate id="partner-form">
                         @csrf
@@ -226,6 +226,10 @@
 // ------------------------------
 
 $(document).ready(function () {
+
+    $('html, body').animate({
+        scrollTop: $('#targetDiv').offset().top - 250
+    }, 1000); 
 
     $('#submit').show();
     $('#submitting').hide();

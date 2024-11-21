@@ -1,25 +1,25 @@
-@extends('frontend.layouts.app', ['title' => 'Contact Us | Epostu'])
+@extends('frontend.layouts.app', ['title' => 'Contact Us - Get in Touch with ePosTu'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<meta property="og:site_name" content="Epostu">
+<meta property="og:site_name" content="ePosTu">
  
-<meta name="title" content="Contact Us | Epostu">
-<meta name="author" content="Epostu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Contact Us Meta Description">	
+<meta name="title" content="Contact Us | Reach Out to ePosTu for Reliable Support & Inquiries">
+<meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
+<meta name="description" content="Have questions or need reliable support? Contact ePosTu today for quick assistance. Reach us via email, phone, or our easy-to-use contact form.">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="Contact Us | Epostu">	
-<meta property="og:description" content="Contact Us | Epostu}">	
+<meta property="og:title" content="Contact Us | Reach Out to ePosTu for Reliable Support & Inquiries">	
+<meta property="og:description" content="Have questions or need reliable support? Contact ePosTu today for quick assistance. Reach us via email, phone, or our easy-to-use contact form.">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="Epostu" /> 
-<meta name="twitter:title" content="Contact Us| Epostu" />
-<meta name="twitter:description" content="Contact Us | Epostu" />	
+<meta name="twitter:creator" content="ePosTu" /> 
+<meta name="twitter:title" content="Contact Us | Reach Out to ePosTu for Reliable Support & Inquiries" />
+<meta name="twitter:description" content="Have questions or need reliable support? Contact ePosTu today for quick assistance. Reach us via email, phone, or our easy-to-use contact form." />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection

@@ -6,10 +6,10 @@
                     <a href="{{ route('home') }}">
                         @if (Request::is('product/truspam'))
                             <img class="logo-dark" src="{{ asset('assets/images/truspan-logo-dark.png') }}" srcset="{{ asset('assets/images/truspan-logo-dark.png') }} 2x" alt="Dark Logo" />
-                            <img class="logo-light" src="{{ asset('assets/images/truspan-logo-white.png') }}" srcset="{{ asset('assets/images/truspan-logo-white.png') }} 2x" alt="" />
+                            <img class="logo-light" src="{{ asset('assets/images/truspan-logo-white.png') }}" srcset="{{ asset('assets/images/truspan-logo-white.png') }} 2x" alt="TrusPan White Logo" />
                         @else   
                             <img class="logo-dark" src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }} 2x" alt="Dark Logo" />
-                            <img class="logo-light" src="{{ asset('assets/images/white-logo.png') }}" srcset="{{ asset('assets/images/white-logo.png') }} 2x" alt="" />
+                            <img class="logo-light" src="{{ asset('assets/images/white-logo.png') }}" srcset="{{ asset('assets/images/white-logo.png') }} 2x" alt="White Logo" />
                         @endif
                     </a>
                 </div>
