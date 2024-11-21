@@ -22,6 +22,75 @@
 <meta name="twitter:description" content="Buy your {{ $product }} {{ ucfirst($plan == 'corporate' ? 'Pro' : $plan) }} Plan and enjoy" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+@if ($plan == 'basic')
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Basic Plan - ePosTu",
+        "url": "https://epostu.com/checkout/epostu/basic",
+        "description": "Sign up for ePosTu's Basic & Corporate Plan for affordable and secure cloud-based email hosting. Ideal for businesses looking for reliable communication.",
+        "mainEntityOfPage": "https://epostu.com/checkout/epostu/basic",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Customer Support",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            }
+        },
+        "image": "https://epostu.com/assets/images/pricing.jpg",
+        "offers": {
+            "@type": "Offer",
+            "name": "Basic Plan",
+            "priceCurrency": "USD",
+            "price": "1.00",
+            "url": "https://epostu.com/checkout/epostu/basic",
+            "eligibleRegion": "Worldwide"
+        }
+    }
+</script>
+@else    
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Pro Plan - ePosTu",
+        "url": "https://epostu.com/checkout/epostu/corporate",
+        "description": "Sign up for ePosTu's Pro Plan for affordable and secure cloud-based email hosting. Ideal for businesses looking for reliable communication.",
+        "mainEntityOfPage": "https://epostu.com/checkout/epostu/corporate",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Customer Support",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            }
+        },
+        "image": "https://epostu.com/assets/images/pricing.jpg",
+        "offers": {
+            "@type": "Offer",
+            "name": "Pro Plan",
+            "priceCurrency": "USD",
+            "price": "2.00",
+            "url": "https://epostu.com/checkout/epostu/corporate",
+            "eligibleRegion": "Worldwide"
+        }
+    }
+</script>
+@endif
+
+    
 @endsection
 @section('content')
     <section class="wrapper bg-gray">

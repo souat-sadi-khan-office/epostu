@@ -42,32 +42,32 @@
             <p class="mb-2 mb-lg-0">© {{ date('Y') }} Epostu. All rights reserved.</p>
             <nav class="nav social social-muted mb-0 text-md-end">
                 @if (get_settings('facebook_link'))
-                    <a href="javascript:;" target="_blank">
+                    <a title="Visit Our Facebook Page" href="javascript:;" target="_blank">
                         <i class="uil uil-facebook-f"></i>
                     </a>
                 @endif
                 @if (get_settings('twitter_link'))
-                    <a href="javascript:;" target="_blank">
+                    <a title="Visit Our Twitter Page" href="javascript:;" target="_blank">
                         <i class="uil uil-twitter"></i>
                     </a>
                 @endif
                 @if (get_settings('twitter_link'))
-                    <a href="javascript:;" target="_blank">
+                    <a title="Visit Our Ticktok Page" href="javascript:;" target="_blank">
                         <i class="uil uil-tiktok"></i>
                     </a>
                 @endif
                 @if (get_settings('linkedin_link'))
-                    <a href="javascript:;" target="_blank">
+                    <a title="Visit Our LinkedIn Page" href="javascript:;" target="_blank">
                         <i class="uil uil-linkedin"></i>
                     </a>
                 @endif
                 @if (get_settings('instagram_link'))
-                    <a href="javascript:;" target="_blank">
+                    <a title="Visit Our Instagram Page" href="javascript:;" target="_blank">
                         <i class="uil uil-instagram"></i>
                     </a>
                 @endif
                 @if (get_settings('youtube_link'))
-                    <a href="javascript:;" target="_blank">
+                    <a title="Visit Our Youtube Channel" href="javascript:;" target="_blank">
                         <i class="uil uil-youtube"></i>
                     </a>
                 @endif
@@ -120,27 +120,27 @@
             <p class="mb-2 mb-lg-0">© {{ date('Y') }} Epostu. All rights reserved.</p>
             <nav class="nav social social-muted mb-0 text-md-end">
                 @if (get_settings('facebook_link'))
-                    <a href="{{ get_settings('facebook_link') }}" target="_blank">
+                    <a title="Visit Our Facebook Page" href="{{ get_settings('facebook_link') }}" target="_blank">
                         <i class="uil uil-facebook-f"></i>
                     </a>
                 @endif
                 @if (get_settings('twitter_link'))
-                    <a href="{{ get_settings('twitter_link') }}" target="_blank">
+                    <a title="Visit Our Twitter Account" href="{{ get_settings('twitter_link') }}" target="_blank">
                         <i class="uil uil-twitter"></i>
                     </a>
                 @endif
                 @if (get_settings('linkedin_link'))
-                    <a href="{{ get_settings('linkedin_link') }}" target="_blank">
+                    <a title="Visit Our LinkedIn Profile" href="{{ get_settings('linkedin_link') }}" target="_blank">
                         <i class="uil uil-linkedin"></i>
                     </a>
                 @endif
                 @if (get_settings('instagram_link'))
-                    <a href="{{ get_settings('instagram_link') }}" target="_blank">
+                    <a title="Visit Our Instagram Page" href="{{ get_settings('instagram_link') }}" target="_blank">
                         <i class="uil uil-instagram"></i>
                     </a>
                 @endif
                 @if (get_settings('youtube_link'))
-                    <a href="{{ get_settings('youtube_link') }}" target="_blank">
+                    <a title="Visit Our YouTube Channel" href="{{ get_settings('youtube_link') }}" target="_blank">
                         <i class="uil uil-youtube"></i>
                     </a>
                 @endif
@@ -170,7 +170,7 @@
                 <div class="newsletter-wrapper">
                     <div class="row">
                         <div class="col-md-12 py-3">
-                            <a href="{{ route('event.registration') }}" class="btn btn-expand btn-dark rounded-pill">
+                            <a title="Register now for DigiTech ASEAN Thailand & AI Connect 2024" href="{{ route('event.registration') }}" class="btn btn-expand btn-dark rounded-pill">
                                 <i class="uil uil-arrow-right"></i>
                                 <span>Register Now</span>
                             </a>

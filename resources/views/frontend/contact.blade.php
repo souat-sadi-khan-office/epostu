@@ -22,6 +22,31 @@
 <meta name="twitter:description" content="Have questions or need reliable support? Contact ePosTu today for quick assistance. Reach us via email, phone, or our easy-to-use contact form." />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Contact Us - Get in Touch with ePosTu",
+        "url": "https://epostu.com/contact",
+        "description": "Get in touch with ePosTu for any inquiries. We're here to assist you with cloud-based email hosting and communication services.",
+        "mainEntityOfPage": "https://epostu.com/contact",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Customer Support",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            }
+        },
+        "image": "https://epostu.com/assets/images/contact.jpg"
+    }
+</script>
+    
 @endsection
 @section('content')
 

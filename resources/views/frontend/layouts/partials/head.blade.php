@@ -6,7 +6,7 @@
 
 <link rel="canonical" href="{{ url()->current() }}" />
 
-<link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}">
+<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
 <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.png') }}">
 
 <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">

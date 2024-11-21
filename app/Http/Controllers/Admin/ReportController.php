@@ -9,6 +9,7 @@ use App\Models\Newsletter;
 use App\Models\ContactMessage;
 use App\Http\Controllers\Controller;
 use App\Models\EventRegistration;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -20,7 +21,9 @@ class ReportController extends Controller
             return DataTables::of($models)
                 ->addIndexColumn()
                 ->editColumn('created_at', function ($model) {
-                    return date('d F, Y h:i A', strtotime($model->created_at));
+                    $createdAtUTC = Carbon::parse($model->created_at)->setTimezone('Asia/Bangkok');
+
+                    return date('d F, Y h:i A', strtotime($createdAtUTC));
                 })
                 ->editColumn('name', function ($model) {
                     return $model->first_name. ' '. $model->last_name;
@@ -55,7 +58,9 @@ class ReportController extends Controller
                     return ++$counter;
                 })
                 ->editColumn('created_at', function ($model) {
-                    return date('d F, Y h:i A', strtotime($model->created_at));
+                    $createdAtUTC = Carbon::parse($model->created_at)->setTimezone('Asia/Bangkok');
+
+                    return date('d F, Y h:i A', strtotime($createdAtUTC));
                 })
                 ->editColumn('plan', function ($model) {
                     return $model->plan != 'basic' ? 'Pro' : 'Basic';
@@ -92,7 +97,9 @@ class ReportController extends Controller
                     return ++$counter;
                 })
                 ->editColumn('created_at', function ($model) {
-                    return date('d F, Y h:i A', strtotime($model->created_at));
+                    $createdAtUTC = Carbon::parse($model->created_at)->setTimezone('Asia/Bangkok');
+
+                    return date('d F, Y h:i A', strtotime($createdAtUTC));
                 })
                 ->editColumn('name', function ($model) {
                     return $model->first_name. ' '. $model->last_name;

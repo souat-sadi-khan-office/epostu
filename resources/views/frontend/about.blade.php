@@ -1,27 +1,58 @@
-@extends('frontend.layouts.app', ['title' => 'Your Trusted Cloud Based Email Hosting Partner | ePosTu'])
+@extends('frontend.layouts.app', ['title' => 'About ePosTu - Leading Cloud-Based Email Hosting Solutions'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 <meta property="og:site_name" content="ePosTu">
  
-<meta name="title" content="About Us | Reliable Cloud Based Mail Hosting Services, Seamless & Collaborating Communication - ePosTu">
+<meta name="title" content="About ePosTu | Your Trusted Cloud-Based Email Hosting Partner">
 <meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Discover ePosTu, your go-to platform for reliable cloud based mail services and efficient communication tools. Learn about our commitment to security, efficiency, and user satisfaction">	
+<meta name="description" content="Discover ePosTu, your reliable cloud-based mail service platform committed to security, efficiency, and user satisfaction for seamless communication">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
-<meta property="og:title" content="About Us | Reliable Cloud Based Mail Hosting Services, Seamless & Collaborating Communication - ePosTu">	
-<meta property="og:description" content="Discover ePosTu, your go-to platform for reliable cloud based mail services and efficient communication tools. Learn about our commitment to security, efficiency, and user satisfaction">	
+<meta property="og:title" content="About ePosTu | Your Trusted Cloud-Based Email Hosting Partner">	
+<meta property="og:description" content="Discover ePosTu, your reliable cloud-based mail service platform committed to security, efficiency, and user satisfaction for seamless communication">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="ePosTu" /> 
-<meta name="twitter:title" content="About Us | Reliable Cloud Based Mail Hosting Services, Seamless & Collaborating Communication - ePosTu" />
-<meta name="twitter:description" content="Discover ePosTu, your go-to platform for reliable cloud based mail services and efficient communication tools. Learn about our commitment to security, efficiency, and user satisfaction" />	
+<meta name="twitter:title" content="About ePosTu | Your Trusted Cloud-Based Email Hosting Partner" />
+<meta name="twitter:description" content="Discover ePosTu, your reliable cloud-based mail service platform committed to security, efficiency, and user satisfaction for seamless communication" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "About Us - ePosTu",
+        "url": "https://epostu.com/about-us",
+        "description": "Discover ePosTu, your reliable cloud-based mail service platform committed to security, efficiency, and user satisfaction for seamless communication.",
+        "mainEntityOfPage": "https://epostu.com/about-us",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/white-logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Customer Service",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            },
+            "sameAs": [
+            ]
+        },
+        "image": "https://www.epostu.com/about-us-background.png",
+        "author": {
+            "@type": "Organization",
+            "name": "ePosTu"
+        }
+    }
+</script>
+    
 @endsection
 @section('content')
 

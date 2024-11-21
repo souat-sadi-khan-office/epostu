@@ -6,22 +6,65 @@
  
 <meta name="title" content="Pricing | Discover the Best Plans for Cloud Based Mail Services - ePosTu">
 <meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Explore the best pricing options for reliable email based mail services with ePosTu. Choose the perfect plan based on your needs and start communicating securely and efficiently today.">	
+<meta name="description" content="Explore the best pricing options for reliable email services with ePosTu. Choose the perfect plan for secure, efficient communication today.">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pricing | Discover the Best Plans for Cloud Based Mail Services - ePosTu">	
-<meta property="og:description" content="Explore the best pricing options for reliable email based mail services with ePosTu. Choose the perfect plan based on your needs and start communicating securely and efficiently today.">	
+<meta property="og:description" content="Explore the best pricing options for reliable email services with ePosTu. Choose the perfect plan for secure, efficient communication today.">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="ePosTu" /> 
 <meta name="twitter:title" content="Pricing | Discover the Best Plans for Cloud Based Mail Services - ePosTu" />
-<meta name="twitter:description" content="Explore the best pricing options for reliable email based mail services with ePosTu. Choose the perfect plan based on your needs and start communicating securely and efficiently today." />	
+<meta name="twitter:description" content="Explore the best pricing options for reliable email services with ePosTu. Choose the perfect plan for secure, efficient communication today." />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Pricing - ePosTu",
+        "url": "https://epostu.com/product/epostu",
+        "description": "Explore ePosTu's flexible pricing plans for reliable cloud-based email hosting. Choose from our Basic plan for $1/month and Pro plan for $2/month per user.",
+        "mainEntityOfPage": "https://epostu.com/product/epostu",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Customer Support",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            }
+        },
+        "image": "https://epostu.com/assets/images/pricing.jpg",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Basic Plan",
+                "priceCurrency": "USD",
+                "price": "1.00",
+                "url": "https://epostu.com/checkout/epostu/basic",
+                "eligibleRegion": "Worldwide"
+            },
+            {
+                "@type": "Offer",
+                "name": "Pro Plan",
+                "priceCurrency": "USD",
+                "price": "2",
+                "url": "https://epostu.com/checkout/epostu/corporate",
+                "eligibleRegion": "Worldwide"
+            }
+        ]
+    }
+</script>
+    
 @endsection
 @section('content')
 <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/pricing.jpg') }}">
@@ -159,7 +202,7 @@
                                     @endif
                                     <li>&nbsp;</li>
                                 </ul>
-                                <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'basic']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a title="Buy Basic Plan" href="{{ route('checkout', ['product' => 'epostu', 'model' => 'basic']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>
@@ -197,7 +240,7 @@
                                         @endforeach
                                     @endif
                                 </ul>
-                                <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'premium']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a title="Buy Premium Plan" href="{{ route('checkout', ['product' => 'epostu', 'model' => 'premium']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div> --}}
@@ -235,7 +278,7 @@
                                         @endforeach
                                     @endif
                                 </ul>
-                                <a href="{{ route('checkout', ['product' => 'epostu', 'model' => 'corporate']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
+                                <a title="Buy Pro Plan" href="{{ route('checkout', ['product' => 'epostu', 'model' => 'corporate']) }}" class="btn btn-primary rounded-pill">Choose Plan</a>
                             </div>
                         </div>
                     </div>

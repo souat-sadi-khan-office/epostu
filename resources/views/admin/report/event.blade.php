@@ -41,6 +41,7 @@
                                     <thead>
                                         <tr>
                                             <th width="5%">ID</th>
+                                            <th>Date</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
@@ -103,6 +104,7 @@
                 ajax: "{{ route('admin.report.event') }}",
                 columns: [
                     {data: 'id', name: 'id', orderable: true},
+                    {data: 'created_at', name: 'created_at'},
                     {data: 'name', name: 'name'},
                     {data: 'email', name: 'email'},
                     {data: 'phone', name: 'phone'},

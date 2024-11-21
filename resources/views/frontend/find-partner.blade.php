@@ -6,22 +6,47 @@
  
 <meta name="title" content="Partner with ePosTu | Join Our Network of Trusted Partners">
 <meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Looking to partner with ePosTu? Explore exciting partnership opportunities with us. Collaborate with ePosTu to grow together and provide top-tier services to your customers.">	
+<meta name="description" content="Partner with ePosTu and unlock exciting opportunities. Collaborate with us to grow your business and offer premium email hosting and communication services.">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
 <meta property="og:title" content="Partner with ePosTu | Join Our Network of Trusted Partners">	
-<meta property="og:description" content="Looking to partner with ePosTu? Explore exciting partnership opportunities with us. Collaborate with ePosTu to grow together and provide top-tier services to your customers.">	
+<meta property="og:description" content="Partner with ePosTu and unlock exciting opportunities. Collaborate with us to grow your business and offer premium email hosting and communication services.">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="ePosTU" /> 
 <meta name="twitter:title" content="Partner with ePosTu | Join Our Network of Trusted Partners" />
-<meta name="twitter:description" content="Looking to partner with ePosTu? Explore exciting partnership opportunities with us. Collaborate with ePosTu to grow together and provide top-tier services to your customers." />	
+<meta name="twitter:description" content="Partner with ePosTu and unlock exciting opportunities. Collaborate with us to grow your business and offer premium email hosting and communication services." />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Become a Partner with ePosTu",
+        "url": "https://epostu.com/find-partner",
+        "description": "Partner with ePosTu and unlock exciting opportunities. Collaborate with us to grow your business and offer premium email hosting and communication services.",
+        "mainEntityOfPage": "https://epostu.com/find-partner",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Partnership Inquiries",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            }
+        },
+        "image": "https://epostu.com/assets/images/find-partner.webp"
+    }
+</script>
+    
 @endsection
 @section('content')
     {{-- <section class="wrapper bg-soft-primary">
@@ -40,7 +65,7 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
                     <h1 class="display-1 text-white mb-3">Find Partner</h1>
-                    <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">Currently we are looking New Partner in your country. Please apply <a href="{{ route('become.partner') }}"> here</a> </p>
+                    <p class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">Currently we are looking New Partner in your country. Please apply <a title="Become Partner and grow together" href="{{ route('become.partner') }}"> here</a> </p>
                 </div>
             </div>
         </div>
@@ -67,12 +92,12 @@
                                         <li class="mb-3">
                                             <i class="uil uil-envelope"></i>
                                             &nbsp;&nbsp;&nbsp;
-                                            <a href="mailto:{{ $model->email }}" target="_blank">{{ $model->email }}</a>
+                                            <a title="Write Us what you think" href="mailto:{{ $model->email }}" target="_blank">{{ $model->email }}</a>
                                         </li>
                                         <li class="mb-3">
                                             <i class="uil uil-calling"></i>
                                             &nbsp;&nbsp;&nbsp;
-                                            <a href="tel:{{ $model->phone }}">{{ $model->phone }}</a>
+                                            <a title="Call Us for more information" href="tel:{{ $model->phone }}">{{ $model->phone }}</a>
                                         </li>
                                         <li class="mb-3">
                                             <i class="uil uil-location-point"></i>
@@ -82,7 +107,7 @@
                                         <li class="mb-3">
                                             <i class="uil uil-globe"></i>
                                             &nbsp;&nbsp;&nbsp;
-                                            <a href="https://google.com" target="_blank">google.com</a>
+                                            <a title="This is google.com" href="https://google.com" target="_blank">google.com</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -132,7 +157,7 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <p><a href="tel:6584688478">+65 8468 8478</a></p>
+                                                <p><a title="Call Us for more discussion" href="tel:6584688478">+65 8468 8478</a></p>
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row">
@@ -140,7 +165,7 @@
                                                 <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
                                             </div>
                                             <div>
-                                                <p class="mb-0"><a href="javascript:window.open('mailto:epostu@techdistri.com','Contact With Us','width=600,height=400')" class="link-body">epostu@techdistri.com</a></p>
+                                                <p class="mb-0"><a title="Write Us what you think" href="javascript:window.open('mailto:epostu@techdistri.com','Contact With Us','width=600,height=400')" class="link-body">epostu@techdistri.com</a></p>
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row">
@@ -148,13 +173,13 @@
                                                 <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-globe"></i> </div>
                                             </div>
                                             <div>
-                                                <p class="mb-0"><a target="_blank" href="https://techdistri.com" class="link-body">www.techdistri.com</a></p>
+                                                <p class="mb-0"><a title="Visit Our Tech Distri Website" target="_blank" href="https://techdistri.com" class="link-body">www.techdistri.com</a></p>
                                             </div>
                                         </div>
                                         <div class="d-flex mt-4 flex-row">
                                             
                                             <div>
-                                                <p class="mb-0"><a href="javascript:window.open('mailto:epostu@techdistri.com','Contact With Us','width=600,height=400')"  class="btn btn-primary btn-sm">Contact Us</a></p>
+                                                <p class="mb-0"><a title="Write Us what you think" href="javascript:window.open('mailto:epostu@techdistri.com','Contact With Us','width=600,height=400')"  class="btn btn-primary btn-sm">Contact Us</a></p>
                                             </div>
                                         </div>
                                     </div>

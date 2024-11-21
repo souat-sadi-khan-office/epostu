@@ -22,6 +22,32 @@
 <meta name="twitter:description" content="Join ePosTu's Partner Program to grow your business with reliable cloud based mail services. Let's collaborate and achieve success together!" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Become a Partner - ePosTu",
+        "url": "https://www.epostu.com/become-partner",
+        "description": "Explore exciting partnership opportunities with ePosTu. Join us to offer top-tier email hosting services and collaborate for mutual growth.",
+        "mainEntityOfPage": "https://epostu.com/become-partner",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Partnership Inquiries",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            }
+        },
+        "image": "https://www.epostu.com/assets/images/partnership.png"
+    }
+</script>
+    
 @endsection
 @section('content')
     {{-- <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/partnership.png') }}" style="background-image: url('{{ asset('assets/images/partnership.png') }}');">

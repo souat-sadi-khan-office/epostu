@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app', ['title' => 'ePosTu | Your Trusted Cloud Based Email Provider'])
+@extends('frontend.layouts.app', ['title' => 'ePosTu | Secured Cloud Based Email Service with ActiveSync'])
 @section('meta')
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
@@ -6,22 +6,53 @@
  
 <meta name="title" content="ePosTu - Reliable and Secure Email Solutions for Your Business">
 <meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Discover secure and efficient email services with ePosTu. Whether you're looking for professional email hosting, secure messaging, or custom solutions, ePosTu has you covered!">	
+<meta name="description" content="Discover secure email services with ePosTu! Get professional email hosting, secure messaging, and custom solutions designed for your communication needs.">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
 <meta property="og:title" content="ePosTu - Reliable and Secure Email Solutions for Your Business">	
-<meta property="og:description" content="Discover secure and efficient email services with ePosTu. Whether you're looking for professional email hosting, secure messaging, or custom solutions, ePosTu has you covered!">	
+<meta property="og:description" content="Discover secure email services with ePosTu! Get professional email hosting, secure messaging, and custom solutions designed for your communication needs.">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="ePosTu" /> 
 <meta name="twitter:title" content="ePosTu - Reliable and Secure Email Solutions for Your Business" />
-<meta name="twitter:description" content="Discover secure and efficient email services with ePosTu. Whether you're looking for professional email hosting, secure messaging, or custom solutions, ePosTu has you covered!" />	
+<meta name="twitter:description" content="Discover secure email services with ePosTu! Get professional email hosting, secure messaging, and custom solutions designed for your communication needs" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Home - ePosTu",
+        "url": "https://epostu.com",
+        "description": "ePosTu is a leading provider of Comprehensive Email Hosting Solution that provides reliable, cloud-based email services for seamless communication. It features high availability with auto-scaling, multi-device synchronization via Outlook Connector and ActiveSync, and disaster recovery tools. The mobile-friendly webmail interface ensures easy accessibility across all devices.",
+        "mainEntityOfPage": "https://epostu.com",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/white-logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Customer Service",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            },
+            "sameAs": [
+            ]
+        },
+        "image": "https://epostu.com/assets/images/homepage-banner.webp",
+        "author": {
+            "@type": "Organization",
+            "name": "ePosTu"
+        }
+    }
+</script>
+    
 @endsection
 @section('content')
     <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/homepage-banner.webp') }}" style="background-image: url('{{ asset('assets/images/homepage-banner.webp') }}');">

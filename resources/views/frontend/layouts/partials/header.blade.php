@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg center-nav transparent position-absolute {{ env('APP_ENV') != 'maintenance' ? 'navbar-dark' : '' }}">
             <div class="container flex-lg-row flex-nowrap align-items-center">
                 <div class="navbar-brand w-100">
-                    <a href="{{ route('home') }}">
+                    <a title="Visit Our Home Page" href="{{ route('home') }}">
                         @if (Request::is('product/truspam'))
                             <img title="ePosTu Logo Dark" class="logo-dark" src="{{ asset('assets/images/truspan-logo-dark.png') }}" srcset="{{ asset('assets/images/truspan-logo-dark.png') }} 2x" alt="Dark Logo" />
                             <img title="ePosTu Logo White" class="logo-light" src="{{ asset('assets/images/truspan-logo-white.png') }}" srcset="{{ asset('assets/images/truspan-logo-white.png') }} 2x" alt="TrusPan White Logo" />
@@ -22,18 +22,18 @@
                         <ul class="navbar-nav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('home') }}">
+                                    <a title="Visit Our Home Page" class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('home') }}">
                                         Home
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{ route('about') }}">
+                                    <a title="Visit Our About Page" class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{ route('about') }}">
                                         About
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('products') ? 'active' : '' }}" href="{{ route('product', 'epostu') }}">
+                                    <a title="Visit ePosTu Pricing Page" class="nav-link {{ Request::is('products') ? 'active' : '' }}" href="{{ route('product', 'epostu') }}">
                                         Pricing
                                     </a>
                                 </li>
@@ -57,23 +57,23 @@
                                 </li> --}}
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
+                                    <a title="Visit Our Contact Page" class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
                                         Contact
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
+                                    <a title="Collect your gift from DigiTech ASEAN Thailand & AI Connect 2024" class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
                                         <i id="gift-box-icon" class="uil uil-gift"></i>
                                         Event Registration
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ Request::is('find-partner') ? 'active' : '' }}" href="{{ route('find.partner') }}">
+                                    <a title="Find a Partner for your needs" class="nav-link {{ Request::is('find-partner') ? 'active' : '' }}" href="{{ route('find.partner') }}">
                                         Find a Partner
                                     </a>
                                 </li>
                                 <li class="nav-item become-partner-mobile">
-                                    <a class="nav-link {{ Request::is('become-partner') ? 'active' : '' }}" href="{{ route('become.partner') }}">
+                                    <a title="Become a valuable Partner" class="nav-link {{ Request::is('become-partner') ? 'active' : '' }}" href="{{ route('become.partner') }}">
                                         Become a Partner
                                     </a>
                                 </li>
@@ -82,31 +82,31 @@
 
                         <div class="offcanvas-footer d-lg-none">
                             <div>
-                                <a href="mailto:first.last@email.com" class="link-inverse">{{ get_settings('email_address') }}</a>
+                                <a title="Mail us your thought" href="mailto:first.last@email.com" class="link-inverse">{{ get_settings('email_address') }}</a>
                                 <br /> {{ get_settings('footer_phone_one') }} <br />
                                 <nav class="nav social social-white mt-4">
                                     @if (get_settings('facebook_link'))
-                                        <a href="{{ get_settings('facebook_link') }}" target="_blank">
+                                        <a title="Visit our facebook page" href="{{ get_settings('facebook_link') }}" target="_blank">
                                             <i class="uil uil-facebook-f"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('twitter_link'))
-                                        <a href="{{ get_settings('twitter_link') }}" target="_blank">
+                                        <a title="Visit our twitter account"  href="{{ get_settings('twitter_link') }}" target="_blank">
                                             <i class="uil uil-twitter"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('linkedin_link'))
-                                        <a href="{{ get_settings('linkedin_link') }}" target="_blank">
+                                        <a title="Visit our LinkedIn Profile"  href="{{ get_settings('linkedin_link') }}" target="_blank">
                                             <i class="uil uil-linkedin"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('instagram_link'))
-                                        <a href="{{ get_settings('instagram_link') }}" target="_blank">
+                                        <a title="Visit our Instagram page"  href="{{ get_settings('instagram_link') }}" target="_blank">
                                             <i class="uil uil-instagram"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('youtube_link'))
-                                        <a href="{{ get_settings('youtube_link') }}" target="_blank">
+                                        <a title="Visit our YouTube Channel"  href="{{ get_settings('youtube_link') }}" target="_blank">
                                             <i class="uil uil-youtube"></i>
                                         </a>
                                     @endif
@@ -119,7 +119,7 @@
                 <div class="navbar-other w-100 d-flex ms-auto">
                     <ul class="navbar-nav flex-row align-items-center ms-auto">
                         <li class="nav-item d-none d-md-block">
-                            <a href="{{ route('become.partner') }}" class="btn btn-sm btn-white rounded-pill">Become a Partner</a>
+                            <a title="Become a valuable Partner" href="{{ route('become.partner') }}" class="btn btn-sm btn-white rounded-pill">Become a Partner</a>
                         </li>
                         <li class="nav-item d-lg-none">
                             <button class="hamburger offcanvas-nav-btn"><span></span></button>
@@ -134,7 +134,7 @@
         <nav class="navbar navbar-expand-lg center-logo transparent navbar-light">
             <div class="container flex-lg-row flex-nowrap align-items-center">
                 <div class="navbar-brand w-100">
-                    <a href="{{ route('home') }}">
+                    <a title="Visit Our Home Page" href="{{ route('home') }}">
                         <img title="ePosTu Logo Dark" style="width: 100px;" src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }}" alt="System Logo" />
                     </a>
                 </div>
@@ -147,17 +147,17 @@
                     <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('home') }}">
+                                <a title="Visit Our Home Page" class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('home') }}">
                                     Home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{ route('about') }}">
+                                <a title="Visit Our About Page" class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{ route('about') }}">
                                     About
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('products') ? 'active' : '' }}" href="{{ route('product', 'epostu') }}">
+                                <a title="Checkout ePosTu Pricing Plans"  class="nav-link {{ Request::is('products') ? 'active' : '' }}" href="{{ route('product', 'epostu') }}">
                                     Pricing
                                 </a>
                             </li>
@@ -180,54 +180,54 @@
                             </li> --}}
                            
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
+                                <a title="Visit Our Contact Page" class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
                                     Contact
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
+                                <a title="Collect your gift from DigiTech ASEAN Thailand & AI Connect 2024" class="nav-link {{ Request::is('event-registration') ? 'active' : '' }}" href="{{ route('event.registration') }}">
                                     <i id="gift-box-icon" class="uil uil-gift"></i>
                                     Event Registration
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('find-partner') ? 'active' : '' }}" href="{{ route('find.partner') }}">
+                                <a title="Find a Partner for your needs" class="nav-link {{ Request::is('find-partner') ? 'active' : '' }}" href="{{ route('find.partner') }}">
                                     Find a Partner
                                 </a>
                             </li>
                             <li class="nav-item become-partner-mobile">
-                                <a class="nav-link {{ Request::is('become-partner') ? 'active' : '' }}" href="{{ route('become.partner') }}">
+                                <a title="Become a valuable partner" class="nav-link {{ Request::is('become-partner') ? 'active' : '' }}" href="{{ route('become.partner') }}">
                                     Become a Partner
                                 </a>
                             </li>
                         </ul>
                         <div class="offcanvas-footer d-lg-none">
                             <div>
-                                <a href="mailto:first.last@email.com" class="link-inverse">{{ get_settings('email_address') }}</a>
+                                <a title="Write us your thought" href="mailto:first.last@email.com" class="link-inverse">{{ get_settings('email_address') }}</a>
                                 <br /> {{ get_settings('footer_phone_one') }} <br />
                                 <nav class="nav social social-white mt-4">
                                     @if (get_settings('facebook_link'))
-                                        <a href="{{ get_settings('facebook_link') }}" target="_blank">
+                                        <a title="Visit our facebook page" href="{{ get_settings('facebook_link') }}" target="_blank">
                                             <i class="uil uil-facebook-f"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('twitter_link'))
-                                        <a href="{{ get_settings('twitter_link') }}" target="_blank">
+                                        <a title="Visit our twitter account"  href="{{ get_settings('twitter_link') }}" target="_blank">
                                             <i class="uil uil-twitter"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('linkedin_link'))
-                                        <a href="{{ get_settings('linkedin_link') }}" target="_blank">
+                                        <a title="Visit our LinkedIn Profile"  href="{{ get_settings('linkedin_link') }}" target="_blank">
                                             <i class="uil uil-linkedin"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('instagram_link'))
-                                        <a href="{{ get_settings('instagram_link') }}" target="_blank">
+                                        <a title="Visit our Instagram page"  href="{{ get_settings('instagram_link') }}" target="_blank">
                                             <i class="uil uil-instagram"></i>
                                         </a>
                                     @endif
                                     @if (get_settings('youtube_link'))
-                                        <a href="{{ get_settings('youtube_link') }}" target="_blank">
+                                        <a title="Visit our YouTube Channel"  href="{{ get_settings('youtube_link') }}" target="_blank">
                                             <i class="uil uil-youtube"></i>
                                         </a>
                                     @endif
@@ -239,7 +239,7 @@
                 <div class="navbar-other w-100 d-flex ms-auto">
                     <ul class="navbar-nav flex-row align-items-center ms-auto">
                         <li class="nav-item d-none d-md-block">
-                            <a href="{{ route('become.partner') }}" class="btn btn-sm btn-primary rounded-pill">Become a Partner</a>
+                            <a title="Become a valuable Partner" href="{{ route('become.partner') }}" class="btn btn-sm btn-primary rounded-pill">Become a Partner</a>
                         </li>
                         <li class="nav-item d-lg-none">
                             <button class="hamburger offcanvas-nav-btn"><span></span></button>

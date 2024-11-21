@@ -6,22 +6,55 @@
  
 <meta name="title" content="Register for the DigiTech ASEAN Thailand & AI Connect 2024 | Secure Your Spot Now | ePosTu">
 <meta name="author" content="ePosTu : {{ route('home') }} : {{ get_settings('email_address') }}">
-<meta name="description" content="Sign up for the event DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu and secure your spot today! Complete the registration form and be part of an exciting event. Don't miss out on this opportunity to win an iPhone 16 or Special Gift.">	
+<meta name="description" content="Sign up for DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu. Complete the form, secure your spot, and stand a chance to win an iPhone 16">	
 
 <!-- For Open Graph -->
 <meta property="og:url" content="{{ url()->current() }}">	
 <meta property="og:type" content="article">
 <meta property="og:title" content="Register for the DigiTech ASEAN Thailand & AI Connect 2024 | Secure Your Spot Now | ePosTu">	
-<meta property="og:description" content="Sign up for the event DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu and secure your spot today! Complete the registration form and be part of an exciting event. Don't miss out on this opportunity to win an iPhone 16 or Special Gift">	
+<meta property="og:description" content="Sign up for DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu. Complete the form, secure your spot, and stand a chance to win an iPhone 16">	
 <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">	
 
 <!-- For Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="ePosTu" /> 
 <meta name="twitter:title" content="Register for the DigiTech ASEAN Thailand & AI Connect 2024 | Secure Your Spot Now | ePosTu" />
-<meta name="twitter:description" content="Sign up for the event DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu and secure your spot today! Complete the registration form and be part of an exciting event. Don't miss out on this opportunity to win an iPhone 16 or Special Gift" />	
+<meta name="twitter:description" content="Sign up for DigiTech ASEAN Thailand & AI Connect 2024 hosted by ePosTu. Complete the form, secure your spot, and stand a chance to win an iPhone 16" />	
 <meta name="twitter:site" content="{{ route('home') }}" />		
 <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Register for the DigiTech ASEAN Thailand & AI Connect 2024 - ePosTu",
+        "url": "https://epostu.com/event-registration",
+        "description": "Register for the DigiTech ASEAN Thailand & AI Connect 2024 events hosted by ePosTu. Fill in the details and confirm your participation in our upcoming events.",
+        "mainEntityOfPage": "https://epostu.com/event-registration",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ePosTu",
+            "logo": "https://epostu.com/assets/images/logo.png",
+            "url": "https://epostu.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "address": "30 cecil street #14-01 prudential tower, Singapore 049712",
+                "contactType": "Customer Support",
+                "areaServed": "Worldwide",
+                "availableLanguage": "English"
+            }
+        },
+        "image": "https://epostu.com/assets/images/event-registration.jpg",
+        "event": {
+            "@type": "Event",
+            "name": "Upcoming Event at ePosTu",
+            "startDate": "2024-11-20T09:00:00",
+            "endDate": "2024-11-22T17:00:00",
+            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "url": "https://epostu.com/event-registration"
+        }
+    }
+</script>
 @endsection
 @section('content')
     <section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('assets/images/event-registration.jpg') }}" style="background-image: url('{{ asset('assets/images/event-registration.jpg') }}');">
