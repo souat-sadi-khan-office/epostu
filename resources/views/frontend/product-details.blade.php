@@ -44,7 +44,7 @@
                     <div class="col-md-5 offset-md-1 align-self-end">
                         <div class="card bg-pale-yellow">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="TruSpam Services" />
+                                <img title="Reliable Uptime Icon" src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="TruSpam Services" />
                                 <h4>Reliable Uptime</h4>
                                 <p class="mb-0">Guaranteed 99.9% uptime, ensuring you’re always connected with minimal downtime.</p>
                             </div>
@@ -53,7 +53,7 @@
                     <div class="col-md-6 align-self-end">
                         <div class="card bg-pale-red">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Enhanced Security Picture" />
+                                <img title="Enhanced Security Icon" src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Enhanced Security Picture" />
                                 <h4>Enhanced Security</h4>
                                 <p class="mb-0">Advanced security protocols, including spam filtering, virus scanning, and two-factor authentication, safeguard your communications.</p>
                             </div>
@@ -62,7 +62,7 @@
                     <div class="col-md-5">
                         <div class="card bg-pale-leaf">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/cloud-computing-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Easy Integration Picture" />
+                                <img title="Easy Integration Icon" src="{{ asset('assets/images/icons/lineal/cloud-computing-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Easy Integration Picture" />
                                 <h4>Easy Integration</h4>
                                 <p class="mb-0">Works seamlessly with existing systems, whether you use Microsoft Outlook, Apple Mail, or web-based clients.</p>
                             </div>
@@ -71,7 +71,7 @@
                     <div class="col-md-6 align-self-start">
                         <div class="card bg-pale-primary">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Collaborative Tools Picture" />
+                                <img title="Collaboration Tools Icon" src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Collaborative Tools Picture" />
                                 <h4>Collaborative Tools</h4>
                                 <p class="mb-0">Shared contacts, calendars, and tasks promote team productivity and collaboration.</p>
                             </div>
@@ -98,35 +98,35 @@
 
                 <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9">
                     <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="High Availability with Built-in Auto-Scaling" />
+                        <img title="Advanced Email Security Icon" src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="High Availability with Built-in Auto-Scaling" />
                         <h4 class="mb-1">Advanced Email Security</h4>
                         <p>TruSpam prioritizes your email security by incorporating advanced threat detection and filtering mechanisms to guard against phishing, spam, malware, and other email-based attacks. Your business communications remain safe and uninterrupted.</p>
                     </div>
                     <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Multi-Device Sync with Outlook Connector and ActiveSync Pictures" />
+                        <img title="User Friendly Interface Icon" src="{{ asset('assets/images/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Multi-Device Sync with Outlook Connector and ActiveSync Pictures" />
                         <h4 class="mb-1">User-Friendly Interface</h4>
                         <p>With a clean and intuitive design, TruSpam ensures a seamless user experience. Both administrators and end-users can effortlessly manage their email settings, organize mail efficiently.</p>
                     </div>
 
                     <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Backup and Archiving Tools for Disaster Recovery Picture" />
+                        <img title="High Reliability and Uptime Icon" src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Backup and Archiving Tools for Disaster Recovery Picture" />
                         <h4 class="mb-1">High Reliability and Uptime</h4>
                         <p>TruSpam guarantees exceptional reliability with enterprise-grade infrastructure, ensuring that your business email remains operational 24/7. Enjoy peace of mind with minimal downtime and high-speed email delivery.</p>
                     </div>
 
                     <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/telephone.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Mobile-Friendly Webmail Interface for Accessibility" />
+                        <img title="Mobile Friendly Web mail Interface for Accessibility Icon" src="{{ asset('assets/images/icons/lineal/telephone.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Mobile-Friendly Webmail Interface for Accessibility" />
                         <h4 class="mb-1">Mobile-Friendly Webmail Interface for Accessibility</h4>
                         <p>Enjoy a sleek, mobile-optimized webmail interface that makes accessing your email and essential features simple on any device.</p>
                     </div>
                     <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/price-tag.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Customizable Subscription Options with Flexible Terms" />
+                        <img title="Comprehensive Privacy Protection Icon" src="{{ asset('assets/images/icons/lineal/price-tag.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="Customizable Subscription Options with Flexible Terms" />
                         <h4 class="mb-1">Comprehensive Privacy Protection</h4>
                         <p>Your data privacy is paramount. TruSpam uses state-of-the-art encryption technologies to secure all email communication, keeping sensitive business information protected from unauthorized access and breaches.</p>
                     </div>
 
                     <div class="col-md-4"> 
-                        <img src="{{ asset('assets/images/icons/lineal/sitemap.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Find Answers to Common Questions About TruSpam" />
+                        <img title="Find Answers to Common Questions About TruSpam Icon" src="{{ asset('assets/images/icons/lineal/sitemap.svg') }}" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="Find Answers to Common Questions About TruSpam" />
                         <h4 class="mb-1">Find Answers to Common Questions About TruSpam</h4>
                         <p>Get quick answers to frequently asked questions and discover helpful tips about managing your TruSpam email hosting service.</p>
                     </div>
@@ -165,7 +165,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Basic Plan Image" />
+                                <img title="TrusPan Basic Plan Icon" src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Basic Plan Image" />
                                 <h4 class="card-title">{{ get_settings('truspan_basic_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -204,7 +204,7 @@
                     <div class="col-md-6 col-lg-4 popular">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Premium Plan Image" />
+                                <img title="TrusPan Premium Plan Icon" src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Premium Plan Image" />
                                 <h4 class="card-title">{{ get_settings('truspan_premium_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                 <div class="price price-show"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_premium_plan_price_monthly') }}</span> <span class="price-duration">mo</span></div>
@@ -234,7 +234,7 @@
                     <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Pro Plan Image" />
+                                <img title="TruSpan Pro Plan Icon" src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="TrusPan Pro Plan Image" />
                                 <h4 class="card-title">{{ get_settings('truspan_corporate_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                 <div class="price price-show"><span class="price-currency">$</span><span class="price-value">{{ get_settings('truspan_corporate_plan_pricing_monthly') }}</span> <span class="price-duration">mo</span></div>
@@ -371,9 +371,3 @@
 </section>
 
 @endsection
-
-@push('scripts')
-    <script>
-
-    </script>
-@endpush

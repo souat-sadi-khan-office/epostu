@@ -68,11 +68,11 @@
                                     <tr>
                                         <th scope="col"></th>
                                         <th scope="col">
-                                            <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Basic Plan Image" />
+                                            <img title="Basic Plan Image" src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Basic Plan Image" />
                                             <h4 class="card-title">{{ get_settings('basic_plan_name') }}</h4>
                                         </th>
                                         <th scope="col">
-                                            <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Pro Plan Image" />
+                                            <img title="Pro Plan Image" src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Pro Plan Image" />
                                             <h4 class="card-title">{{ get_settings('corporate_plan_name') }}</h4>
                                         </th>
                                     </tr>
@@ -127,7 +127,7 @@
                     <div class="col-md-6 col-lg-6">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Basic Plan Name Image" />
+                                <img title="Basic Plan Icon" src="{{ asset('assets/images/icons/lineal/shopping-basket.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Basic Plan Name Image" />
                                 <h4 class="card-title">{{ get_settings('basic_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -167,7 +167,7 @@
                     {{-- <div class="col-md-6 col-lg-4 popular">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Premium Plan Name Image" />
+                                <img title="Premium Plan Icon" src="{{ asset('assets/images/icons/lineal/home.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Premium Plan Name Image" />
                                 <h4 class="card-title">{{ get_settings('premimum_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -205,7 +205,7 @@
                     <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-0">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Corporate Plan Name Image" />
+                                <img title="Pro Plan Picture" src="{{ asset('assets/images/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Corporate Plan Name Image" />
                                 <h4 class="card-title">{{ get_settings('corporate_plan_name') }}</h4>
                                 <div class="prices text-dark">
                                     <div class="price price-show">
@@ -243,7 +243,7 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="pricing card text-center">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/icons/lineal/gift.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Add Ons Image" />
+                                <img title="Add Ons Picture" src="{{ asset('assets/images/icons/lineal/gift.svg') }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="Add Ons Image" />
                                 <h4 class="card-title">Add Ons</h4>
 
                                 <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
@@ -374,9 +374,3 @@
 </section> --}}
 
 @endsection
-
-@push('scripts')
-    <script>
-
-    </script>
-@endpush

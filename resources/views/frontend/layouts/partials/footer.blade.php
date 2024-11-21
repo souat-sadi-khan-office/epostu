@@ -30,7 +30,7 @@
             </div>
         </div>
         <figure>
-            <img src="{{ asset('assets/images/clouds.png') }}" alt="Footer Background">
+            <img title="Footer Background Picture" src="{{ asset('assets/images/clouds.png') }}" alt="Footer Background">
         </figure>
     </section>
 @endif
@@ -80,7 +80,7 @@
         <div class="row gx-lg-0 gy-6">
             <div class="col-lg-4">
                 <div class="widget">
-                    <img class="mb-4" src="{{ asset('assets/images/logo.png') }}" srcset="{{ asset('assets/images/logo.png') }}" alt="Footer loto">
+                    <img title="Footer Logo" class="mb-4" src="{{ asset('assets/images/logo.png') }}" srcset="{{ asset('assets/images/logo.png') }}" alt="Footer loto">
                     <p class="lead mb-0">{{ get_settings('footer_content') }}</p>
                 </div>
             </div>
@@ -163,7 +163,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <figure>
-                            <img src="{{ asset('assets/images/popup-banner.png') }}" srcset="{{ asset('assets/images/popup-banner.png') }} 2x" alt="Register & Collec Your Gift" />
+                            <img title="Register & Collect Your Gift Banner" src="{{ asset('assets/images/popup-banner.png') }}" srcset="{{ asset('assets/images/popup-banner.png') }} 2x" alt="Register & Collect Your Gift" />
                         </figure>
                     </div>
                 </div>

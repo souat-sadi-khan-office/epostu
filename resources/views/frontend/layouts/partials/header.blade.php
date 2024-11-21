@@ -5,11 +5,11 @@
                 <div class="navbar-brand w-100">
                     <a href="{{ route('home') }}">
                         @if (Request::is('product/truspam'))
-                            <img class="logo-dark" src="{{ asset('assets/images/truspan-logo-dark.png') }}" srcset="{{ asset('assets/images/truspan-logo-dark.png') }} 2x" alt="Dark Logo" />
-                            <img class="logo-light" src="{{ asset('assets/images/truspan-logo-white.png') }}" srcset="{{ asset('assets/images/truspan-logo-white.png') }} 2x" alt="TrusPan White Logo" />
+                            <img title="ePosTu Logo Dark" class="logo-dark" src="{{ asset('assets/images/truspan-logo-dark.png') }}" srcset="{{ asset('assets/images/truspan-logo-dark.png') }} 2x" alt="Dark Logo" />
+                            <img title="ePosTu Logo White" class="logo-light" src="{{ asset('assets/images/truspan-logo-white.png') }}" srcset="{{ asset('assets/images/truspan-logo-white.png') }} 2x" alt="TrusPan White Logo" />
                         @else   
-                            <img class="logo-dark" src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }} 2x" alt="Dark Logo" />
-                            <img class="logo-light" src="{{ asset('assets/images/white-logo.png') }}" srcset="{{ asset('assets/images/white-logo.png') }} 2x" alt="White Logo" />
+                            <img title="TruSpan Logo Dark" class="logo-dark" src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }} 2x" alt="Dark Logo" />
+                            <img title="TrusPan Logo Dark" class="logo-light" src="{{ asset('assets/images/white-logo.png') }}" srcset="{{ asset('assets/images/white-logo.png') }} 2x" alt="White Logo" />
                         @endif
                     </a>
                 </div>
@@ -135,7 +135,7 @@
             <div class="container flex-lg-row flex-nowrap align-items-center">
                 <div class="navbar-brand w-100">
                     <a href="{{ route('home') }}">
-                        <img style="width: 100px;" src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }}" alt="System Logo" />
+                        <img title="ePosTu Logo Dark" style="width: 100px;" src="{{ asset('assets/images/dark-logo.png') }}" srcset="{{ asset('assets/images/dark-logo.png') }}" alt="System Logo" />
                     </a>
                 </div>
                 <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">

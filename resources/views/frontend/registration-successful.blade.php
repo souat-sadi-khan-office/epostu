@@ -72,7 +72,7 @@
                                         </h2>
                                     </div>
                                     @if ($event->gift)
-                                        <img class="card-img-bottom" src="{{ asset($event->gift->photo) }}" alt="{{ $event->gift->name }}" />
+                                        <img title="{{ $event->gift->name }} Icon" class="card-img-bottom" src="{{ asset($event->gift->photo) }}" alt="{{ $event->gift->name }}" />
                                     @endif
                                 </div>
                             </div>

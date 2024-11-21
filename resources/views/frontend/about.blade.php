@@ -44,19 +44,19 @@
                 <div class="overlap-grid overlap-grid-2">
                     <div class="item">
                         <figure class="rounded shadow">
-                            <img src="{{ asset('assets/images/about-two.jpg') }}" srcset="{{ asset('assets/images/about-two.jpg') }} 2x" alt="About Image One">
+                            <img title="About Us Page Picture One" src="{{ asset('assets/images/about-two.jpg') }}" srcset="{{ asset('assets/images/about-two.jpg') }} 2x" alt="About Image One">
                         </figure>
                     </div>
                     <div class="item">
                         <figure class="rounded shadow">
-                            <img src="{{ asset('assets/images/about-one.jpg') }}" srcset="{{ asset('assets/images/about-one.jpg') }} 2x" alt="About Image Two">
+                            <img title="About Us Page Picture Two" src="{{ asset('assets/images/about-one.jpg') }}" srcset="{{ asset('assets/images/about-one.jpg') }} 2x" alt="About Image Two">
                         </figure>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-6">
-                <img src="{{ asset('assets/images/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="Who we are" />
+                <img title="Our Mission & Vision Icon" src="{{ asset('assets/images/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="Who we are" />
                 <h2 class="display-4 mb-3">Our Mission & Vision</h2>
                 <p class="lead fs-lg">At epostu, we strive to empower businesses through secure and scalable email solutions that enhance productivity and ensure data integrity.</p>
                 <p class="mb-6">We believe in the transformative power of effective communication and aim to provide our clients with the tools necessary for success. Our commitment to innovation and excellence drives us to deliver top-tier services that meet the evolving needs of modern businesses.</p>
@@ -81,7 +81,7 @@
 
         <div class="row mb-5">
             <div class="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center">
-                <img src="{{ asset('assets/images/icons/lineal/list.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="Our Journey" />
+                <img title="Our Journey Icon" src="{{ asset('assets/images/icons/lineal/list.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="Our Journey" />
                 <h2 class="display-4 mb-4 px-lg-14">Here are 3 steps to organize our business journey.</h2>
             </div>
         </div>

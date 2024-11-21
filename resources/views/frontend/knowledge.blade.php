@@ -53,7 +53,7 @@
                     <div class="blog single mt-n17">
                         <div class="card">
                             <figure class="card-img-top">
-                                <img src="{{ $blog->main_image ? asset($blog->main_image) : asset('assets/images/b1.jpg') }}" alt="{{ $blog->name }}" />
+                                <img title="{{ $blog->name }} Picture" src="{{ $blog->main_image ? asset($blog->main_image) : asset('assets/images/b1.jpg') }}" alt="{{ $blog->name }}" />
                             </figure>
                             <div class="card-body">
                                 <div class="classic-view">
@@ -98,7 +98,7 @@
                                                     <article>
                                                         <figure class="overlay overlay-1 hover-scale rounded mb-5">
                                                             <a href="{{ route('knowledge', $related_blog->slug) }}">
-                                                                <img src="{{ $related_blog->thumb_image ? asset($related_blog->thumb_image) : asset('assets/images/b4.jpg') }}" alt="{{ $related_blog->name }}" />
+                                                                <img title="{{ $related_blog->name }} Picture" src="{{ $related_blog->thumb_image ? asset($related_blog->thumb_image) : asset('assets/images/b4.jpg') }}" alt="{{ $related_blog->name }}" />
                                                             </a>
                                                             <figcaption>
                                                                 <h5 class="from-top mb-0">Read More</h5>
@@ -133,9 +133,3 @@
         </div>
     </section>
 @endsection
-
-@push('scripts')
-    <script>
-
-    </script>
-@endpush

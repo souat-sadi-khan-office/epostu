@@ -110,7 +110,7 @@
                                 <div class="col-lg-6">
                                     <div class="p-5 p-md-5 p-lg-5">
                                         <div class="">
-                                            <img style="width:200px;margin-bottom:20px;" src="{{ asset('assets/images/techdistri-logo.png') }}" alt="TechDistry">
+                                            <img title="TechDistri Logo" style="width:200px;margin-bottom:20px;" src="{{ asset('assets/images/techdistri-logo.png') }}" alt="TechDistry">
                                                 <h2 class="fs-20 mb-0">TechDistri Pte. Ltd. </h2>
                                             </div>
                                         <div class="mt-5 d-flex flex-row">
@@ -167,9 +167,3 @@
         </div>
     </section>
 @endsection
-
-@push('scripts')
-    <script>
-
-    </script>
-@endpush

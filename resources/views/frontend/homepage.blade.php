@@ -58,7 +58,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/padlock.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="Secure Hosting Image" />
+                            <img title="Secure Hosting Icon" src="{{ asset('assets/images/icons/lineal/padlock.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="Secure Hosting Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Secure Hosting</h4>
@@ -69,7 +69,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Outlook & ActiveSync Image" />
+                            <img title="Outlook & ActiveSync Icon" src="{{ asset('assets/images/icons/lineal/shield.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Outlook & ActiveSync Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Outlook & ActiveSync</h4>
@@ -81,7 +81,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/networking.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Seamless Device Control" />
+                            <img title="Seamless Device Control Icon" src="{{ asset('assets/images/icons/lineal/networking.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Seamless Device Control" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Seamless Device Control</h4>
@@ -93,7 +93,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Email Encryption Image" />
+                            <img title="Email Encryption Icon" src="{{ asset('assets/images/icons/lineal/email-3.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Email Encryption Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Email Encryption</h4>
@@ -105,7 +105,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-md text-pink me-5" alt="Platform Sync Image" />
+                            <img title="Platform Sync Icon" src="{{ asset('assets/images/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-md text-pink me-5" alt="Platform Sync Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Platform Sync</h4>
@@ -116,7 +116,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/chat-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="In-build Threat Detection Image" />
+                            <img title="In-Build Threat Detection Icon" src="{{ asset('assets/images/icons/lineal/chat-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="In-build Threat Detection Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">In-build Threat Detection</h4>
@@ -128,7 +128,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/networking-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Bulletproof Email Security Image" />
+                            <img title="Bulletproof Email Security Icon" src="{{ asset('assets/images/icons/lineal/networking-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Bulletproof Email Security Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Bulletproof Email Security</h4>
@@ -140,7 +140,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Unbreakable Uptime Image" />
+                            <img title="Unbreakable Uptime Image" src="{{ asset('assets/images/icons/lineal/analytics.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Unbreakable Uptime Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Unbreakable Uptime</h4>
@@ -152,7 +152,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/video-camera.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Real-Time Protection Image" />
+                            <img title="Real-Time Protection Icon" src="{{ asset('assets/images/icons/lineal/video-camera.svg') }}" class="svg-inject icon-svg icon-svg-md text-purple me-5 mt-1" alt="Real-Time Protection Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Real-Time Protection</h4>
@@ -186,7 +186,7 @@
                         <h3 class="display-3 ls-sm mb-7">Here are the 3 working steps on success.</h3>
                         <div class="d-flex flex-row mb-5">
                             <div>
-                                <img src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="Light Bulb Image" />
+                                <img title="Cost Saving Icon" src="{{ asset('assets/images/icons/lineal/light-bulb.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="Light Bulb Image" />
                             </div>
                             <div>
                             <h4 class="fs-20 ls-sm">Cost Savings</h4>
@@ -195,7 +195,7 @@
                         </div>
                         <div class="d-flex flex-row mb-5">
                             <div>
-                                <img src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Design Image" />
+                                <img title="Design Icon" src="{{ asset('assets/images/icons/lineal/design.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Design Image" />
                             </div>
                             <div>
                             <h4 class="fs-20 ls-sm">Enhanced Security</h4>
@@ -205,7 +205,7 @@
 
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('assets/images/icons/lineal/pie-chart-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="Pie Chart Image" />
+                                <img title="Improved Productivity Icon" src="{{ asset('assets/images/icons/lineal/pie-chart-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green me-5 mt-1" alt="Pie Chart Image" />
                             </div>
                             <div>
                                 <h4 class="fs-20 ls-sm">Improved Productivity</h4>
@@ -232,7 +232,7 @@
                     <div class="row gx-lg-8 gx-xl-12 align-items-center">
                         <div class="col-lg-5 ms-auto col-xl-4 d-none d-lg-flex">
                             <div class="img-mask">
-                                <img src="{{ asset('assets/images/cm.webp') }}" alt="Client Testimonial" />
+                                <img title="Our Happy Client Picture" src="{{ asset('assets/images/cm.webp') }}" alt="Client Testimonial" />
                             </div>
                         </div>
 
@@ -289,9 +289,3 @@
     </section> -->
     
 @endsection
-
-@push('scripts')
-    <script>
-
-    </script>
-@endpush

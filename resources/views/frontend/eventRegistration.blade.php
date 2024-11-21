@@ -50,7 +50,7 @@
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                 <div class="col-lg-5">
                     <figure>
-                        <img style="border-radius:10px;" class="w-auto" src="{{ asset('assets/images/event-registratoin-test.jpg') }}" srcset="{{ asset('assets/images/event-registratoin-test.jpg') }} 2x" alt="Event Registration Picture" /></figure>
+                        <img title="Visitor Registration Picture Banner" style="border-radius:10px;" class="w-auto" src="{{ asset('assets/images/event-registratoin-test.jpg') }}" srcset="{{ asset('assets/images/event-registratoin-test.jpg') }} 2x" alt="Event Registration Picture" /></figure>
                 </div>
                 <div class="col-lg-7" id="targetDiv">
                     

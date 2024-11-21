@@ -80,7 +80,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/tools.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="High Availability Image" />
+                            <img title="High Availability Image" src="{{ asset('assets/images/icons/lineal/tools.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1" alt="High Availability Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">High Availability</h4>
@@ -91,7 +91,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/cloud-computing-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Seamless Integration" />
+                            <img title="Seamless Integration" src="{{ asset('assets/images/icons/lineal/cloud-computing-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1" alt="Seamless Integration" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Seamless Integration</h4>
@@ -103,7 +103,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="d-flex flex-row">
                         <div>
-                            <img src="{{ asset('assets/images/icons/lineal/shield-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Data Protection Image" />
+                            <img title="Data Protection Image" src="{{ asset('assets/images/icons/lineal/shield-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-orange me-5" alt="Data Protection Image" />
                         </div>
                         <div>
                             <h4 class="fs-20 ls-sm">Data Protection</h4>
@@ -214,7 +214,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <figure>
-                        <img class="w-auto" src="{{ asset('assets/images/partner.png') }}" srcset="{{ asset('assets/images/partner.png') }} 2x" alt="Partner With Us Image" />
+                        <img title="Partner with Us Banner" class="w-auto" src="{{ asset('assets/images/partner.png') }}" srcset="{{ asset('assets/images/partner.png') }} 2x" alt="Partner With Us Image" />
                     </figure>
                 </div>
                 <div class="col-lg-7">
